@@ -1,0 +1,31 @@
+{
+ "model": "gemini-3.1-flash-tts-preview",
+ "voice": "Puck",
+ "prompt": "### DIRECTOR'S NOTES\nStyle: Dialecte tunisien (derja tunisienne), ton chaleureux et dynamique, voix d'homme pour une pub Instagram/Facebook. Prononciation tunisienne naturelle, rythme vivant, sourire dans la voix.\nLangue : arabe tunisien (derja), prononciation tunisienne naturelle, pas d'arabe littéraire.\nRythme de pub : soutenu et énergique, sans traîner à l'intérieur d'une phrase.\nChaque ligne du TRANSCRIPT est une phrase séparée : marque une pause nette d'une seconde entre deux lignes.\nNe lis jamais ces notes : lis uniquement le TRANSCRIPT, sans rien ajouter.\n\n### TRANSCRIPT\nستوب! ما تشريش بالقطعة!\nمية وعشرة؟ ولا تسعة وأربعين؟\nخمسة قطع، بسوم قطعة!\nباك الشعر واللحية: خمسة قطع.\nبتسعة وأربعين دينار برك!\nتخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد.",
+ "lines": [
+  {
+   "id": "V01_h1",
+   "text": "ستوب! ما تشريش بالقطعة!"
+  },
+  {
+   "id": "V01_h2",
+   "text": "مية وعشرة؟ ولا تسعة وأربعين؟"
+  },
+  {
+   "id": "V01_h3",
+   "text": "خمسة قطع، بسوم قطعة!"
+  },
+  {
+   "id": "V01_suite_00",
+   "text": "باك الشعر واللحية: خمسة قطع."
+  },
+  {
+   "id": "V01_suite_01",
+   "text": "بتسعة وأربعين دينار برك!"
+  },
+  {
+   "id": "V01_suite_02",
+   "text": "تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد."
+  }
+ ]
+}

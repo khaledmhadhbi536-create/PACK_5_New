@@ -1,0 +1,31 @@
+{
+ "model": "gemini-3.1-flash-tts-preview",
+ "voice": "Puck",
+ "prompt": "### DIRECTOR'S NOTES\nStyle: Dialecte tunisien (derja tunisienne), ton chaleureux et dynamique, voix d'homme pour une pub Instagram/Facebook. Prononciation tunisienne naturelle, rythme vivant, sourire dans la voix.\nLangue : arabe tunisien (derja), prononciation tunisienne naturelle, pas d'arabe littéraire.\nRythme de pub : soutenu et énergique, sans traîner à l'intérieur d'une phrase.\nChaque ligne du TRANSCRIPT est une phrase séparée : marque une pause nette d'une seconde entre deux lignes.\nNe lis jamais ces notes : lis uniquement le TRANSCRIPT, sans rien ajouter.\n\n### TRANSCRIPT\nعشرة دقايق في الجمعة، هذا الكل!\nالديرما رولر: دقيقتين.\nزيت إكليل الجبل: دقيقة بمشط الجذور.\nماساج بالفرشة: خمسة دقايق.\nوفي الغسيل: سدر بيو وماء دافي.\nالباك الكامل بتسعة وأربعين دينار، تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد.",
+ "lines": [
+  {
+   "id": "L10_00",
+   "text": "عشرة دقايق في الجمعة، هذا الكل!"
+  },
+  {
+   "id": "L10_01",
+   "text": "الديرما رولر: دقيقتين."
+  },
+  {
+   "id": "L10_02",
+   "text": "زيت إكليل الجبل: دقيقة بمشط الجذور."
+  },
+  {
+   "id": "L10_03",
+   "text": "ماساج بالفرشة: خمسة دقايق."
+  },
+  {
+   "id": "L10_04",
+   "text": "وفي الغسيل: سدر بيو وماء دافي."
+  },
+  {
+   "id": "L10_05",
+   "text": "الباك الكامل بتسعة وأربعين دينار، تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد."
+  }
+ ]
+}

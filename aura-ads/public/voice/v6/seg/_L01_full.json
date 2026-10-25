@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3.1-flash-tts-preview",
+ "voice": "Puck",
+ "prompt": "### DIRECTOR'S NOTES\nStyle: Dialecte tunisien (derja tunisienne), ton chaleureux et dynamique, voix d'homme pour une pub Instagram/Facebook. Prononciation tunisienne naturelle, rythme vivant, sourire dans la voix.\nLangue : arabe tunisien (derja), prononciation tunisienne naturelle, pas d'arabe littéraire.\nRythme de pub : soutenu et énergique, sans traîner à l'intérieur d'une phrase.\nChaque ligne du TRANSCRIPT est une phrase séparée : marque une pause nette d'une seconde entre deux lignes.\nNe lis jamais ces notes : lis uniquement le TRANSCRIPT, sans rien ajouter.\n\n### TRANSCRIPT\nكل شي على الباك، في خمسة وأربعين ثانية!\nشنوّة فيه؟\nسدر بيو، للغسيل.\nديرما رولر، خمسمية وأربعين إبرة.\nزيت إكليل الجبل.\nمشط الجذور.\nوفرشة التدليك.\nكيفاش تستعملو؟\nالديرما رولر، بالشوية، على راس نظيف.\nزيت إكليل الجبل، بمشط الجذور.\nماساج بالفرشة، من ثلاثة لخمسة دقايق.\nوفي الغسيل، سدر بيو وماء دافي.\nزوز ولا ثلاثة مرات في الجمعة.\nالباك الكامل بتسعة وأربعين دينار، عوض مية وعشرة. تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد.",
+ "lines": [
+  {
+   "id": "L01_00",
+   "text": "كل شي على الباك، في خمسة وأربعين ثانية!"
+  },
+  {
+   "id": "L01_01",
+   "text": "شنوّة فيه؟"
+  },
+  {
+   "id": "L01_02",
+   "text": "سدر بيو، للغسيل."
+  },
+  {
+   "id": "L01_03",
+   "text": "ديرما رولر، خمسمية وأربعين إبرة."
+  },
+  {
+   "id": "L01_04",
+   "text": "زيت إكليل الجبل."
+  },
+  {
+   "id": "L01_05",
+   "text": "مشط الجذور."
+  },
+  {
+   "id": "L01_06",
+   "text": "وفرشة التدليك."
+  },
+  {
+   "id": "L01_07",
+   "text": "كيفاش تستعملو؟"
+  },
+  {
+   "id": "L01_08",
+   "text": "الديرما رولر، بالشوية، على راس نظيف."
+  },
+  {
+   "id": "L01_09",
+   "text": "زيت إكليل الجبل، بمشط الجذور."
+  },
+  {
+   "id": "L01_10",
+   "text": "ماساج بالفرشة، من ثلاثة لخمسة دقايق."
+  },
+  {
+   "id": "L01_11",
+   "text": "وفي الغسيل، سدر بيو وماء دافي."
+  },
+  {
+   "id": "L01_12",
+   "text": "زوز ولا ثلاثة مرات في الجمعة."
+  },
+  {
+   "id": "L01_13",
+   "text": "الباك الكامل بتسعة وأربعين دينار، عوض مية وعشرة. تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد."
+  }
+ ]
+}

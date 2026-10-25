@@ -1,0 +1,27 @@
+{
+ "model": "gemini-3.1-flash-tts-preview",
+ "voice": "Puck",
+ "prompt": "### DIRECTOR'S NOTES\nStyle: Dialecte tunisien (derja tunisienne), ton chaleureux et dynamique, voix d'homme pour une pub Instagram/Facebook. Prononciation tunisienne naturelle, rythme vivant, sourire dans la voix.\nLangue : arabe tunisien (derja), prononciation tunisienne naturelle, pas d'arabe littéraire.\nRythme de pub : soutenu et énergique, sans traîner à l'intérieur d'une phrase.\nChaque ligne du TRANSCRIPT est une phrase séparée : marque une pause nette d'une seconde entre deux lignes.\nNe lis jamais ces notes : lis uniquement le TRANSCRIPT, sans rien ajouter.\n\n### TRANSCRIPT\nحلّينا الكرتونة… شوف آش فيها!\nخمسة حاجات في كرتونة وحدة!\nهذا اللي يوصلك بتسعة وأربعين!\nديرما رولر، زيت إكليل الجبل، فرشة التدليك، مشط الجذور، وسدر بيو.\nالكل بتسعة وأربعين دينار، تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد.",
+ "lines": [
+  {
+   "id": "V05_h1",
+   "text": "حلّينا الكرتونة… شوف آش فيها!"
+  },
+  {
+   "id": "V05_h2",
+   "text": "خمسة حاجات في كرتونة وحدة!"
+  },
+  {
+   "id": "V05_h3",
+   "text": "هذا اللي يوصلك بتسعة وأربعين!"
+  },
+  {
+   "id": "V05_suite_00",
+   "text": "ديرما رولر، زيت إكليل الجبل، فرشة التدليك، مشط الجذور، وسدر بيو."
+  },
+  {
+   "id": "V05_suite_01",
+   "text": "الكل بتسعة وأربعين دينار، تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد."
+  }
+ ]
+}

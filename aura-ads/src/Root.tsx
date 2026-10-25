@@ -12,6 +12,7 @@ import {V3_STILLS, V3Still} from './v3/V3Still';
 import {V4_VIDEOS, V4Video} from './v4/registry';
 import {stageFor} from './v4/kit';
 import {V5_VIDEOS, V5Video} from './v5/registry5';
+import {V6_VIDEOS, V6Video} from './v6/registry6';
 
 /** Identifiant = nom du fichier final (les « - » deviennent « _ »). */
 export const adId = (ad: AdSpec) => {
@@ -84,6 +85,11 @@ export const Root: React.FC = () => (
 		<Folder name="V5-Long">
 			{V5_VIDEOS.map((v) => (
 				<Composition key={v.id} id={v.id} component={V5Video} durationInFrames={v.dur} fps={FPS} width={stageFor(v.fmt).W} height={stageFor(v.fmt).H} defaultProps={{id: v.id}} />
+			))}
+		</Folder>
+		<Folder name="V6">
+			{V6_VIDEOS.map((v) => (
+				<Composition key={v.id} id={v.id} component={V6Video} durationInFrames={v.dur} fps={FPS} width={stageFor(v.fmt).W} height={stageFor(v.fmt).H} defaultProps={{id: v.id}} />
 			))}
 		</Folder>
 	</>

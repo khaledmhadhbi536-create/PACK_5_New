@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.1-flash-tts-preview",
+ "voice": "Puck",
+ "prompt": "### DIRECTOR'S NOTES\nStyle: Dialecte tunisien (derja tunisienne), ton chaleureux et dynamique, voix d'homme pour une pub Instagram/Facebook. Prononciation tunisienne naturelle, rythme vivant, sourire dans la voix.\nLangue : arabe tunisien (derja), prononciation tunisienne naturelle, pas d'arabe littéraire.\nRythme de pub : soutenu et énergique, sans traîner à l'intérieur d'une phrase.\nChaque ligne du TRANSCRIPT est une phrase séparée : marque une pause nette d'une seconde entre deux lignes.\nNe lis jamais ces notes : lis uniquement le TRANSCRIPT, sans rien ajouter.\n\n### TRANSCRIPT\nمن الكوموند… لروتينك.\nنحضّرو الكوموند متاعك: سدر بيو، زيت إكليل الجبل، ديرما رولر، ومشط الجذور.\nونسكّرو الكوليه.\nتوصلك لباب الدار، وتخلّص كي يوصلك.\nتحلّها: خمسة قطع في باك واحد.\nوتبدا الروتين: ديرما بالشوية، ماساج، وفي الغسيل سدر بيو.\nالباك الكامل بتسعة وأربعين دينار. تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد.",
+ "lines": [
+  {
+   "id": "L08_00",
+   "text": "من الكوموند… لروتينك."
+  },
+  {
+   "id": "L08_01",
+   "text": "نحضّرو الكوموند متاعك: سدر بيو، زيت إكليل الجبل، ديرما رولر، ومشط الجذور."
+  },
+  {
+   "id": "L08_02",
+   "text": "ونسكّرو الكوليه."
+  },
+  {
+   "id": "L08_03",
+   "text": "توصلك لباب الدار، وتخلّص كي يوصلك."
+  },
+  {
+   "id": "L08_04",
+   "text": "تحلّها: خمسة قطع في باك واحد."
+  },
+  {
+   "id": "L08_05",
+   "text": "وتبدا الروتين: ديرما بالشوية، ماساج، وفي الغسيل سدر بيو."
+  },
+  {
+   "id": "L08_06",
+   "text": "الباك الكامل بتسعة وأربعين دينار. تخلّص كي يوصلك. اطلب توّا: خمسين، خمسمية، صفر خمسة واحد."
+  }
+ ]
+}
