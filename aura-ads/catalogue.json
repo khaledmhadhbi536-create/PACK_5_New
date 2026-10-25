@@ -1,0 +1,3369 @@
+[
+  {
+    "id": "AURA-C01-rituel-9x16-31s-h1",
+    "file": "AURA_C01_rituel_9x16_31s_h1.mp4",
+    "type": "video",
+    "seconds": 31.3,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C01",
+      "slug": "rituel",
+      "variant": "h1",
+      "format": "9x16",
+      "style": "ugc",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "روتين الشعر واللحية\nفي *4 خطوات*",
+          "visual": {
+            "type": "pack"
+          },
+          "sub": "روتين *طبيعي* في الدار"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_roll_side.mp4",
+          "rate": 0.75,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "photos/goutte_romarin.jpg",
+          "step": 4,
+          "title": "خلّيه يخدم",
+          "caption": "سوايع ولا *الليل الكل*",
+          "focusY": 35
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 2,
+          "mode": "card",
+          "caption": "ماساج بالسدر والبروس، *وشلّل*"
+        },
+        {
+          "kind": "steps",
+          "dur": 4.6
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Tutoriel : le rituel en 4 étapes + lavage au sidr",
+        "hook": "روتين الشعر واللحية في 4 خطوات",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "روتين الشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C01-rituel-9x16-31s-h2",
+    "file": "AURA_C01_rituel_9x16_31s_h2.mp4",
+    "type": "video",
+    "seconds": 31.3,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C01",
+      "slug": "rituel",
+      "variant": "h2",
+      "format": "9x16",
+      "style": "ugc",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "كيفاش تستعمل الديرما رولر\nمع *الروماران*؟",
+          "visual": {
+            "type": "pack"
+          },
+          "sub": "روتين *طبيعي* في الدار"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_roll_side.mp4",
+          "rate": 0.75,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "photos/goutte_romarin.jpg",
+          "step": 4,
+          "title": "خلّيه يخدم",
+          "caption": "سوايع ولا *الليل الكل*",
+          "focusY": 35
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 2,
+          "mode": "card",
+          "caption": "ماساج بالسدر والبروس، *وشلّل*"
+        },
+        {
+          "kind": "steps",
+          "dur": 4.6
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Tutoriel : le rituel en 4 étapes + lavage au sidr",
+        "hook": "كيفاش تستعمل الديرما رولر مع الروماران؟",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "روتين الشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C01-rituel-9x16-31s-h3",
+    "file": "AURA_C01_rituel_9x16_31s_h3.mp4",
+    "type": "video",
+    "seconds": 31.3,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C01",
+      "slug": "rituel",
+      "variant": "h3",
+      "format": "9x16",
+      "style": "ugc",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "*10 دقايق*\n2 ولا 3 مرات في الجمعة",
+          "visual": {
+            "type": "pack"
+          },
+          "sub": "روتين *طبيعي* في الدار"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_roll_side.mp4",
+          "rate": 0.75,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "photos/goutte_romarin.jpg",
+          "step": 4,
+          "title": "خلّيه يخدم",
+          "caption": "سوايع ولا *الليل الكل*",
+          "focusY": 35
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 2,
+          "mode": "card",
+          "caption": "ماساج بالسدر والبروس، *وشلّل*"
+        },
+        {
+          "kind": "steps",
+          "dur": 4.6
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Tutoriel : le rituel en 4 étapes + lavage au sidr",
+        "hook": "10 دقايق، 2 ولا 3 مرات في الجمعة",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "روتين الشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C01-rituel-9x16-31s-h4",
+    "file": "AURA_C01_rituel_9x16_31s_h4.mp4",
+    "type": "video",
+    "seconds": 31.3,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C01",
+      "slug": "rituel",
+      "variant": "h4",
+      "format": "9x16",
+      "style": "ugc",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "كيفاش تستعمل الديرما رولر\nمع *الروماران*؟",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/derma_in_hand.mp4"
+          },
+          "sub": "روتين *طبيعي* في الدار"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_roll_side.mp4",
+          "rate": 0.75,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "photos/goutte_romarin.jpg",
+          "step": 4,
+          "title": "خلّيه يخدم",
+          "caption": "سوايع ولا *الليل الكل*",
+          "focusY": 35
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 2,
+          "mode": "card",
+          "caption": "ماساج بالسدر والبروس، *وشلّل*"
+        },
+        {
+          "kind": "steps",
+          "dur": 4.6
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Tutoriel : le rituel en 4 étapes + lavage au sidr",
+        "hook": "كيفاش تستعمل الديرما رولر… (visuel rush)",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "روتين الشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C01-rituel-9x16-20s-court",
+    "file": "AURA_C01_rituel_9x16_20s_court.mp4",
+    "type": "video",
+    "seconds": 20.2,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C01",
+      "slug": "rituel",
+      "variant": "court",
+      "format": "9x16",
+      "style": "ugc",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "روتين الشعر واللحية\nفي *4 خطوات*",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Tutoriel : le rituel en 4 étapes + lavage au sidr",
+        "hook": "روتين الشعر واللحية في 4 خطوات (version courte)",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "روتين الشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C01-rituel-4x5-31s-h1",
+    "file": "AURA_C01_rituel_4x5_31s_h1.mp4",
+    "type": "video",
+    "seconds": 31.3,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "C01",
+      "slug": "rituel",
+      "variant": "h1",
+      "format": "4x5",
+      "style": "ugc",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "روتين الشعر واللحية\nفي *4 خطوات*",
+          "visual": {
+            "type": "pack"
+          },
+          "sub": "روتين *طبيعي* في الدار"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_roll_side.mp4",
+          "rate": 0.75,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "photos/goutte_romarin.jpg",
+          "step": 4,
+          "title": "خلّيه يخدم",
+          "caption": "سوايع ولا *الليل الكل*",
+          "focusY": 35
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 2,
+          "mode": "card",
+          "caption": "ماساج بالسدر والبروس، *وشلّل*"
+        },
+        {
+          "kind": "steps",
+          "dur": 4.6
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Tutoriel : le rituel en 4 étapes + lavage au sidr",
+        "hook": "روتين الشعر واللحية في 4 خطوات",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "روتين الشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C02-unboxing-9x16-17s-h1",
+    "file": "AURA_C02_unboxing_9x16_17s_h1.mp4",
+    "type": "video",
+    "seconds": 16.6,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C02",
+      "slug": "unboxing",
+      "variant": "h1",
+      "format": "9x16",
+      "style": "stu",
+      "music": "darbuka",
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.3,
+          "text": "شنوّة فيه\n*الباك هذا*؟",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "5 في 1"
+        },
+        {
+          "kind": "rush",
+          "dur": 1.6,
+          "src": "rushs/derma_unbox_box.mp4",
+          "caption": "يلّا *نحلّو الباك*"
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "sidr",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "derma",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "brosse",
+          "total": 5
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الـ 5 الكل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Unboxing : révélation des 5 produits un par un, prix à la fin",
+        "hook": "شنوّة فيه الباك هذا؟",
+        "primaryText": "📦 شنوّة فيه الباك؟ 5 منتوجات للعناية بالشعر واللحية:\nسدر طبيعي • زيت الروماران • ديرما رولر 540 • فلاكون • بروس ماساج\n\n💰 الكل بـ 49 دينار برك\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل ولايات تونس\n📞 50500051",
+        "headline": "5 منتوجات بـ 49 DT | تخلّص كي يوصلك"
+      }
+    }
+  },
+  {
+    "id": "AURA-C02-unboxing-9x16-17s-h2",
+    "file": "AURA_C02_unboxing_9x16_17s_h2.mp4",
+    "type": "video",
+    "seconds": 16.6,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C02",
+      "slug": "unboxing",
+      "variant": "h2",
+      "format": "9x16",
+      "style": "stu",
+      "music": "darbuka",
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.3,
+          "text": "*5 حوايج*\nفي باك واحد",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "5 في 1"
+        },
+        {
+          "kind": "rush",
+          "dur": 1.6,
+          "src": "rushs/derma_unbox_box.mp4",
+          "caption": "يلّا *نحلّو الباك*"
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "sidr",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "derma",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "brosse",
+          "total": 5
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الـ 5 الكل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Unboxing : révélation des 5 produits un par un, prix à la fin",
+        "hook": "5 حوايج في باك واحد",
+        "primaryText": "📦 شنوّة فيه الباك؟ 5 منتوجات للعناية بالشعر واللحية:\nسدر طبيعي • زيت الروماران • ديرما رولر 540 • فلاكون • بروس ماساج\n\n💰 الكل بـ 49 دينار برك\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل ولايات تونس\n📞 50500051",
+        "headline": "5 منتوجات بـ 49 DT | تخلّص كي يوصلك"
+      }
+    }
+  },
+  {
+    "id": "AURA-C02-unboxing-9x16-17s-h3",
+    "file": "AURA_C02_unboxing_9x16_17s_h3.mp4",
+    "type": "video",
+    "seconds": 16.6,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C02",
+      "slug": "unboxing",
+      "variant": "h3",
+      "format": "9x16",
+      "style": "stu",
+      "music": "darbuka",
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.3,
+          "text": "باك كامل\nللشعر *واللحية*",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "5 في 1"
+        },
+        {
+          "kind": "rush",
+          "dur": 1.6,
+          "src": "rushs/derma_unbox_box.mp4",
+          "caption": "يلّا *نحلّو الباك*"
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "sidr",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "derma",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "brosse",
+          "total": 5
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الـ 5 الكل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Unboxing : révélation des 5 produits un par un, prix à la fin",
+        "hook": "باك كامل للشعر واللحية",
+        "primaryText": "📦 شنوّة فيه الباك؟ 5 منتوجات للعناية بالشعر واللحية:\nسدر طبيعي • زيت الروماران • ديرما رولر 540 • فلاكون • بروس ماساج\n\n💰 الكل بـ 49 دينار برك\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل ولايات تونس\n📞 50500051",
+        "headline": "5 منتوجات بـ 49 DT | تخلّص كي يوصلك"
+      }
+    }
+  },
+  {
+    "id": "AURA-C02-unboxing-4x5-17s-h1",
+    "file": "AURA_C02_unboxing_4x5_17s_h1.mp4",
+    "type": "video",
+    "seconds": 16.6,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "C02",
+      "slug": "unboxing",
+      "variant": "h1",
+      "format": "4x5",
+      "style": "stu",
+      "music": "darbuka",
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.3,
+          "text": "شنوّة فيه\n*الباك هذا*؟",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "5 في 1"
+        },
+        {
+          "kind": "rush",
+          "dur": 1.6,
+          "src": "rushs/derma_unbox_box.mp4",
+          "caption": "يلّا *نحلّو الباك*"
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "sidr",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "derma",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "brosse",
+          "total": 5
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الـ 5 الكل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Unboxing : révélation des 5 produits un par un, prix à la fin",
+        "hook": "شنوّة فيه الباك هذا؟",
+        "primaryText": "📦 شنوّة فيه الباك؟ 5 منتوجات للعناية بالشعر واللحية:\nسدر طبيعي • زيت الروماران • ديرما رولر 540 • فلاكون • بروس ماساج\n\n💰 الكل بـ 49 دينار برك\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل ولايات تونس\n📞 50500051",
+        "headline": "5 منتوجات بـ 49 DT | تخلّص كي يوصلك"
+      }
+    }
+  },
+  {
+    "id": "AURA-C02-unboxing-1x1-17s-h2",
+    "file": "AURA_C02_unboxing_1x1_17s_h2.mp4",
+    "type": "video",
+    "seconds": 16.6,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "C02",
+      "slug": "unboxing",
+      "variant": "h2",
+      "format": "1x1",
+      "style": "stu",
+      "music": "darbuka",
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.3,
+          "text": "*5 حوايج*\nفي باك واحد",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "5 في 1"
+        },
+        {
+          "kind": "rush",
+          "dur": 1.6,
+          "src": "rushs/derma_unbox_box.mp4",
+          "caption": "يلّا *نحلّو الباك*"
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "sidr",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "derma",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "brosse",
+          "total": 5
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الـ 5 الكل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Unboxing : révélation des 5 produits un par un, prix à la fin",
+        "hook": "5 حوايج في باك واحد",
+        "primaryText": "📦 شنوّة فيه الباك؟ 5 منتوجات للعناية بالشعر واللحية:\nسدر طبيعي • زيت الروماران • ديرما رولر 540 • فلاكون • بروس ماساج\n\n💰 الكل بـ 49 دينار برك\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل ولايات تونس\n📞 50500051",
+        "headline": "5 منتوجات بـ 49 DT | تخلّص كي يوصلك"
+      }
+    }
+  },
+  {
+    "id": "AURA-C02-unboxing-9x16-17s-voixTEST",
+    "file": "AURA_C02_unboxing_9x16_17s_voixTEST.mp4",
+    "type": "video",
+    "seconds": 16.6,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C02",
+      "slug": "unboxing",
+      "variant": "voixTEST",
+      "format": "9x16",
+      "style": "stu",
+      "music": "darbuka",
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.3,
+          "text": "شنوّة فيه\n*الباك هذا*؟",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "5 في 1"
+        },
+        {
+          "kind": "rush",
+          "dur": 1.6,
+          "src": "rushs/derma_unbox_box.mp4",
+          "caption": "يلّا *نحلّو الباك*"
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "sidr",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "derma",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 1.8,
+          "product": "brosse",
+          "total": 5
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الـ 5 الكل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Unboxing : révélation des 5 produits un par un, prix à la fin",
+        "hook": "شنوّة فيه الباك هذا؟ (voix off)",
+        "primaryText": "📦 شنوّة فيه الباك؟ 5 منتوجات للعناية بالشعر واللحية:\nسدر طبيعي • زيت الروماران • ديرما رولر 540 • فلاكون • بروس ماساج\n\n💰 الكل بـ 49 دينار برك\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل ولايات تونس\n📞 50500051",
+        "headline": "5 منتوجات بـ 49 DT | تخلّص كي يوصلك"
+      },
+      "voiceover": "voice/C02_h1.mp3"
+    }
+  },
+  {
+    "id": "AURA-C03-heritage-9x16-19s-h1",
+    "file": "AURA_C03_heritage_9x16_19s_h1.mp4",
+    "type": "video",
+    "seconds": 19.4,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C03",
+      "slug": "heritage",
+      "variant": "h1",
+      "format": "9x16",
+      "style": "her",
+      "music": "heritage",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "السدر…\nسرّ الحمّام متاع *جدودنا*",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_spoon_grass.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "من الحمّام متاع *جدّاتنا*…\nلروتينك اليوم",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_whisk.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "السدر *الطبيعي*",
+          "sub": "ينظّف بالشوية ويقوّي الشعر",
+          "visual": {
+            "type": "product",
+            "product": "sidr"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3.2,
+          "text": "وزدنالو *زيت الروماران*",
+          "sub": "وديرما رولر، فلاكون وبروس ماساج",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 3,
+          "mode": "card",
+          "caption": "ماساج بالسدر… *كيما زمان*"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "روتين *تونسي* للشعر واللحية"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Héritage tunisien : le sidr du hammam + le romarin moderne",
+        "hook": "السدر… سرّ الحمّام متاع جدودنا",
+        "primaryText": "🇹🇳 السدر… من الحمّام متاع جدودنا لروتينك اليوم.\nفي Aura Bio زدنالو زيت الروماران، ديرما رولر، فلاكون وبروس ماساج: روتين كامل للشعر واللحية.\n\n💰 49 دينار الباك الكامل\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C03-heritage-9x16-19s-h2",
+    "file": "AURA_C03_heritage_9x16_19s_h2.mp4",
+    "type": "video",
+    "seconds": 19.4,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C03",
+      "slug": "heritage",
+      "variant": "h2",
+      "format": "9x16",
+      "style": "her",
+      "music": "heritage",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "قبل الشامبوان…\nكان فمّا *السدر*",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_spoon_grass.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "من الحمّام متاع *جدّاتنا*…\nلروتينك اليوم",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_whisk.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "السدر *الطبيعي*",
+          "sub": "ينظّف بالشوية ويقوّي الشعر",
+          "visual": {
+            "type": "product",
+            "product": "sidr"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3.2,
+          "text": "وزدنالو *زيت الروماران*",
+          "sub": "وديرما رولر، فلاكون وبروس ماساج",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 3,
+          "mode": "card",
+          "caption": "ماساج بالسدر… *كيما زمان*"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "روتين *تونسي* للشعر واللحية"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Héritage tunisien : le sidr du hammam + le romarin moderne",
+        "hook": "قبل الشامبوان… كان فمّا السدر",
+        "primaryText": "🇹🇳 السدر… من الحمّام متاع جدودنا لروتينك اليوم.\nفي Aura Bio زدنالو زيت الروماران، ديرما رولر، فلاكون وبروس ماساج: روتين كامل للشعر واللحية.\n\n💰 49 دينار الباك الكامل\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C03-heritage-4x5-19s-h1",
+    "file": "AURA_C03_heritage_4x5_19s_h1.mp4",
+    "type": "video",
+    "seconds": 19.4,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "C03",
+      "slug": "heritage",
+      "variant": "h1",
+      "format": "4x5",
+      "style": "her",
+      "music": "heritage",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "السدر…\nسرّ الحمّام متاع *جدودنا*",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_spoon_grass.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "من الحمّام متاع *جدّاتنا*…\nلروتينك اليوم",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_whisk.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "السدر *الطبيعي*",
+          "sub": "ينظّف بالشوية ويقوّي الشعر",
+          "visual": {
+            "type": "product",
+            "product": "sidr"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3.2,
+          "text": "وزدنالو *زيت الروماران*",
+          "sub": "وديرما رولر، فلاكون وبروس ماساج",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 3,
+          "mode": "card",
+          "caption": "ماساج بالسدر… *كيما زمان*"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "روتين *تونسي* للشعر واللحية"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Héritage tunisien : le sidr du hammam + le romarin moderne",
+        "hook": "السدر… سرّ الحمّام متاع جدودنا",
+        "primaryText": "🇹🇳 السدر… من الحمّام متاع جدودنا لروتينك اليوم.\nفي Aura Bio زدنالو زيت الروماران، ديرما رولر، فلاكون وبروس ماساج: روتين كامل للشعر واللحية.\n\n💰 49 دينار الباك الكامل\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C03-heritage-9x16-19s-voixTEST",
+    "file": "AURA_C03_heritage_9x16_19s_voixTEST.mp4",
+    "type": "video",
+    "seconds": 19.4,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C03",
+      "slug": "heritage",
+      "variant": "voixTEST",
+      "format": "9x16",
+      "style": "her",
+      "music": "heritage",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "السدر…\nسرّ الحمّام متاع *جدودنا*",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_spoon_grass.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "من الحمّام متاع *جدّاتنا*…\nلروتينك اليوم",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_whisk.mp4"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3,
+          "text": "السدر *الطبيعي*",
+          "sub": "ينظّف بالشوية ويقوّي الشعر",
+          "visual": {
+            "type": "product",
+            "product": "sidr"
+          }
+        },
+        {
+          "kind": "heritage",
+          "dur": 3.2,
+          "text": "وزدنالو *زيت الروماران*",
+          "sub": "وديرما رولر، فلاكون وبروس ماساج",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 3,
+          "mode": "card",
+          "caption": "ماساج بالسدر… *كيما زمان*"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "روتين *تونسي* للشعر واللحية"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Héritage tunisien : le sidr du hammam + le romarin moderne",
+        "hook": "السدر… سرّ الحمّام متاع جدودنا (voix off)",
+        "primaryText": "🇹🇳 السدر… من الحمّام متاع جدودنا لروتينك اليوم.\nفي Aura Bio زدنالو زيت الروماران، ديرما رولر، فلاكون وبروس ماساج: روتين كامل للشعر واللحية.\n\n💰 49 دينار الباك الكامل\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      },
+      "voiceover": "voice/C03_h1.mp3"
+    }
+  },
+  {
+    "id": "AURA-C04-offre-9x16-6s-prix",
+    "file": "AURA_C04_offre_9x16_6s_prix.mp4",
+    "type": "video",
+    "seconds": 6,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C04",
+      "slug": "offre",
+      "variant": "prix",
+      "format": "9x16",
+      "style": "souk",
+      "music": "punch",
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.4,
+          "text": "*49 دينار*\nبرك",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "cta",
+          "dur": 3.9,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Offre flash : prix, paiement à la livraison, livraison partout",
+        "hook": "49 دينار برك",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n5 منتوجات: سدر، زيت الروماران، ديرما رولر، فلاكون، بروس ماساج.\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك | الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-C04-offre-9x16-6s-cod",
+    "file": "AURA_C04_offre_9x16_6s_cod.mp4",
+    "type": "video",
+    "seconds": 6,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C04",
+      "slug": "offre",
+      "variant": "cod",
+      "format": "9x16",
+      "style": "souk",
+      "music": "punch",
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.4,
+          "text": "تخلّص\n*كي يوصلك*",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "cta",
+          "dur": 3.9,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Offre flash : prix, paiement à la livraison, livraison partout",
+        "hook": "تخلّص كي يوصلك",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n5 منتوجات: سدر، زيت الروماران، ديرما رولر، فلاكون، بروس ماساج.\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك | الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-C04-offre-9x16-6s-livraison",
+    "file": "AURA_C04_offre_9x16_6s_livraison.mp4",
+    "type": "video",
+    "seconds": 6,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C04",
+      "slug": "offre",
+      "variant": "livraison",
+      "format": "9x16",
+      "style": "souk",
+      "music": "punch",
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.4,
+          "text": "توصيل\nلكامل *تونس*",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "cta",
+          "dur": 3.9,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Offre flash : prix, paiement à la livraison, livraison partout",
+        "hook": "توصيل لكامل تونس",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n5 منتوجات: سدر، زيت الروماران، ديرما رولر، فلاكون، بروس ماساج.\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك | الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-C04-offre-9x16-10s-long",
+    "file": "AURA_C04_offre_9x16_10s_long.mp4",
+    "type": "video",
+    "seconds": 10.1,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C04",
+      "slug": "offre",
+      "variant": "long",
+      "format": "9x16",
+      "style": "souk",
+      "music": "punch",
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.3,
+          "text": "*49 دينار*\nبرك",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "grid",
+          "dur": 2.8,
+          "title": "5 منتوجات في باك واحد"
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الباك الكامل للشعر واللحية"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Offre flash : prix, paiement à la livraison, livraison partout",
+        "hook": "49 دينار برك (version 10 s)",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n5 منتوجات: سدر، زيت الروماران، ديرما رولر، فلاكون، بروس ماساج.\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك | الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-C04-offre-4x5-10s-long",
+    "file": "AURA_C04_offre_4x5_10s_long.mp4",
+    "type": "video",
+    "seconds": 10.1,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "C04",
+      "slug": "offre",
+      "variant": "long",
+      "format": "4x5",
+      "style": "souk",
+      "music": "punch",
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.3,
+          "text": "*49 دينار*\nبرك",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "grid",
+          "dur": 2.8,
+          "title": "5 منتوجات في باك واحد"
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الباك الكامل للشعر واللحية"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Offre flash : prix, paiement à la livraison, livraison partout",
+        "hook": "49 دينار برك (version 10 s)",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n5 منتوجات: سدر، زيت الروماران، ديرما رولر، فلاكون، بروس ماساج.\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك | الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-C04-offre-1x1-6s-prix",
+    "file": "AURA_C04_offre_1x1_6s_prix.mp4",
+    "type": "video",
+    "seconds": 6,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "C04",
+      "slug": "offre",
+      "variant": "prix",
+      "format": "1x1",
+      "style": "souk",
+      "music": "punch",
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.4,
+          "text": "*49 دينار*\nبرك",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "cta",
+          "dur": 3.9,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Offre flash : prix, paiement à la livraison, livraison partout",
+        "hook": "49 دينار برك",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n5 منتوجات: سدر، زيت الروماران، ديرما رولر، فلاكون، بروس ماساج.\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك | الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-C04-offre-9x16-10s-voixTEST",
+    "file": "AURA_C04_offre_9x16_10s_voixTEST.mp4",
+    "type": "video",
+    "seconds": 10.1,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C04",
+      "slug": "offre",
+      "variant": "voixTEST",
+      "format": "9x16",
+      "style": "souk",
+      "music": "punch",
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.3,
+          "text": "*49 دينار*\nبرك",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "grid",
+          "dur": 2.8,
+          "title": "5 منتوجات في باك واحد"
+        },
+        {
+          "kind": "offer",
+          "dur": 3,
+          "title": "الباك الكامل للشعر واللحية"
+        },
+        {
+          "kind": "cta",
+          "dur": 2.8
+        }
+      ],
+      "meta": {
+        "approach": "Offre flash : prix, paiement à la livraison, livraison partout",
+        "hook": "49 دينار برك (version 10 s, voix off)",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n5 منتوجات: سدر، زيت الروماران، ديرما رولر، فلاكون، بروس ماساج.\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك | الخلاص عند الاستلام"
+      },
+      "voiceover": "voice/C04_long.mp3"
+    }
+  },
+  {
+    "id": "AURA-C05-cadeau-9x16-13s-h1",
+    "file": "AURA_C05_cadeau_9x16_13s_h1.mp4",
+    "type": "video",
+    "seconds": 13.3,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C05",
+      "slug": "cadeau",
+      "variant": "h1",
+      "format": "9x16",
+      "style": "stu",
+      "music": "darbuka",
+      "musicStart": 8,
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "فكرة *هدية*\nللراجل؟",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "هدية"
+        },
+        {
+          "kind": "text",
+          "dur": 2.6,
+          "text": "روتين كامل للشعر\n*واللحية* في الدار",
+          "visual": {
+            "type": "product",
+            "product": "derma"
+          }
+        },
+        {
+          "kind": "grid",
+          "dur": 3,
+          "title": "5 منتوجات في باك واحد"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "هدية تفرّح… بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Cadeau : pour les femmes qui achètent pour un homme",
+        "hook": "فكرة هدية للراجل؟",
+        "primaryText": "🎁 تلوّج على هدية تفرّح بيها راجل عزيز عليك؟\nباك كامل للعناية بالشعر واللحية: سدر طبيعي، زيت الروماران، ديرما رولر، فلاكون وبروس ماساج.\n\n💰 49 دينار | 💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "هدية للراجل | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C05-cadeau-9x16-13s-h2",
+    "file": "AURA_C05_cadeau_9x16_13s_h2.mp4",
+    "type": "video",
+    "seconds": 13.3,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C05",
+      "slug": "cadeau",
+      "variant": "h2",
+      "format": "9x16",
+      "style": "stu",
+      "music": "darbuka",
+      "musicStart": 8,
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "هدية لخوك،\nلبوك ولا *لراجلك*",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "هدية"
+        },
+        {
+          "kind": "text",
+          "dur": 2.6,
+          "text": "روتين كامل للشعر\n*واللحية* في الدار",
+          "visual": {
+            "type": "product",
+            "product": "derma"
+          }
+        },
+        {
+          "kind": "grid",
+          "dur": 3,
+          "title": "5 منتوجات في باك واحد"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "هدية تفرّح… بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Cadeau : pour les femmes qui achètent pour un homme",
+        "hook": "هدية لخوك، لبوك ولا لراجلك",
+        "primaryText": "🎁 تلوّج على هدية تفرّح بيها راجل عزيز عليك؟\nباك كامل للعناية بالشعر واللحية: سدر طبيعي، زيت الروماران، ديرما رولر، فلاكون وبروس ماساج.\n\n💰 49 دينار | 💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "هدية للراجل | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C05-cadeau-4x5-13s-h1",
+    "file": "AURA_C05_cadeau_4x5_13s_h1.mp4",
+    "type": "video",
+    "seconds": 13.3,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "C05",
+      "slug": "cadeau",
+      "variant": "h1",
+      "format": "4x5",
+      "style": "stu",
+      "music": "darbuka",
+      "musicStart": 8,
+      "transition": "slide",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "فكرة *هدية*\nللراجل؟",
+          "visual": {
+            "type": "pack"
+          },
+          "sticker": "هدية"
+        },
+        {
+          "kind": "text",
+          "dur": 2.6,
+          "text": "روتين كامل للشعر\n*واللحية* في الدار",
+          "visual": {
+            "type": "product",
+            "product": "derma"
+          }
+        },
+        {
+          "kind": "grid",
+          "dur": 3,
+          "title": "5 منتوجات في باك واحد"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "هدية تفرّح… بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Cadeau : pour les femmes qui achètent pour un homme",
+        "hook": "فكرة هدية للراجل؟",
+        "primaryText": "🎁 تلوّج على هدية تفرّح بيها راجل عزيز عليك؟\nباك كامل للعناية بالشعر واللحية: سدر طبيعي، زيت الروماران، ديرما رولر، فلاكون وبروس ماساج.\n\n💰 49 دينار | 💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "هدية للراجل | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C06-asmr-9x16-12s-v1",
+    "file": "AURA_C06_asmr_9x16_12s_v1.mp4",
+    "type": "video",
+    "seconds": 11.5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C06",
+      "slug": "asmr",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "nat",
+      "music": "rituel",
+      "musicStart": 11,
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "ASMR\n*سدر شانتيي*",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_whisk.mp4"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_chantilly.mp4",
+          "trim": 3,
+          "caption": "سدر *طبيعي* + ماء دافي",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2,
+          "src": "rushs/brush_spikes.mp4",
+          "caption": "بروس *الماساج*"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.2,
+          "src": "photos/goutte_romarin.jpg",
+          "caption": "زيت *الروماران*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "ASMR : textures satisfaisantes (sidr chantilly, brosse, goutte)",
+        "hook": "ASMR : سدر شانتيي",
+        "primaryText": "😌 سدر طبيعي يولّي شانتيي… وماساج يرتّح.\nروتين Aura Bio للشعر واللحية: 5 منتوجات بـ 49 دينار.\n💵 تخلّص كي يوصلك | 📞 50500051",
+        "headline": "روتين Aura Bio | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C06-asmr-1x1-12s-v1",
+    "file": "AURA_C06_asmr_1x1_12s_v1.mp4",
+    "type": "video",
+    "seconds": 11.5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "C06",
+      "slug": "asmr",
+      "variant": "v1",
+      "format": "1x1",
+      "style": "nat",
+      "music": "rituel",
+      "musicStart": 11,
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "ASMR\n*سدر شانتيي*",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/sidr_whisk.mp4"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_chantilly.mp4",
+          "trim": 3,
+          "caption": "سدر *طبيعي* + ماء دافي",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2,
+          "src": "rushs/brush_spikes.mp4",
+          "caption": "بروس *الماساج*"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.2,
+          "src": "photos/goutte_romarin.jpg",
+          "caption": "زيت *الروماران*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "ASMR : textures satisfaisantes (sidr chantilly, brosse, goutte)",
+        "hook": "ASMR : سدر شانتيي",
+        "primaryText": "😌 سدر طبيعي يولّي شانتيي… وماساج يرتّح.\nروتين Aura Bio للشعر واللحية: 5 منتوجات بـ 49 دينار.\n💵 تخلّص كي يوصلك | 📞 50500051",
+        "headline": "روتين Aura Bio | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C07-derma-9x16-15s-h1",
+    "file": "AURA_C07_derma_9x16_15s_h1.mp4",
+    "type": "video",
+    "seconds": 15.1,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C07",
+      "slug": "derma",
+      "variant": "h1",
+      "format": "9x16",
+      "style": "nat",
+      "music": "rituel",
+      "musicStart": 4,
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "*540* إبرة صغيرة…\nعلاش؟",
+          "visual": {
+            "type": "product",
+            "product": "derma"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/derma_in_hand.mp4",
+          "caption": "إبر صغيرة برشا… *تنشّط جلدة الراس*"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/derma_roll_top.mp4",
+          "rate": 0.7,
+          "caption": "وزيت الروماران *يدخل خير* للعروق",
+          "inset": "huile"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_rinse.mp4",
+          "rate": 0.5,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "الديرما رولر + *4 منتوجات*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Curiosité : à quoi sert le derma roller et comment l’utiliser en douceur",
+        "hook": "540 إبرة صغيرة… علاش؟",
+        "primaryText": "🧐 الديرما رولر: 540 إبرة صغيرة تنشّط جلدة الراس وتخلّي زيت الروماران يدخل خير.\n⚠️ استعملو بالشوية على راس نظيف وناشف، وعقّمو قبل وبعد كل استعمال.\n\nفي الباك: ديرما رولر + زيت الروماران + سدر + فلاكون + بروس ماساج\n💰 49 دينار | 💵 تخلّص كي يوصلك | 📞 50500051",
+        "headline": "ديرما رولر + روماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C07-derma-9x16-15s-h2",
+    "file": "AURA_C07_derma_9x16_15s_h2.mp4",
+    "type": "video",
+    "seconds": 15.1,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C07",
+      "slug": "derma",
+      "variant": "h2",
+      "format": "9x16",
+      "style": "nat",
+      "music": "rituel",
+      "musicStart": 4,
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "الروماران ولّى ترند…\nأما *كيفاش* تستعملو صحيح؟",
+          "visual": {
+            "type": "product",
+            "product": "huile"
+          }
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/derma_in_hand.mp4",
+          "caption": "إبر صغيرة برشا… *تنشّط جلدة الراس*"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/derma_roll_top.mp4",
+          "rate": 0.7,
+          "caption": "وزيت الروماران *يدخل خير* للعروق",
+          "inset": "huile"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_rinse.mp4",
+          "rate": 0.5,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "offer",
+          "dur": 3.2,
+          "title": "الديرما رولر + *4 منتوجات*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Curiosité : à quoi sert le derma roller et comment l’utiliser en douceur",
+        "hook": "الروماران ولّى ترند… أما كيفاش تستعملو صحيح؟",
+        "primaryText": "🧐 الديرما رولر: 540 إبرة صغيرة تنشّط جلدة الراس وتخلّي زيت الروماران يدخل خير.\n⚠️ استعملو بالشوية على راس نظيف وناشف، وعقّمو قبل وبعد كل استعمال.\n\nفي الباك: ديرما رولر + زيت الروماران + سدر + فلاكون + بروس ماساج\n💰 49 دينار | 💵 تخلّص كي يوصلك | 📞 50500051",
+        "headline": "ديرما رولر + روماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C08-conseils-9x16-17s-v1",
+    "file": "AURA_C08_conseils_9x16_17s_v1.mp4",
+    "type": "video",
+    "seconds": 16.7,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C08",
+      "slug": "conseils",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "ugc",
+      "music": "rituel",
+      "musicStart": 20,
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "*3 حاجات* لازم تعرفهم\nعلى الديرما رولر",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/derma_in_hand.mp4"
+          }
+        },
+        {
+          "kind": "tip",
+          "dur": 3.2,
+          "n": 1,
+          "text": "*عقّمو* قبل وبعد كل استعمال",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/derma_rinse.mp4",
+            "rate": 0.5
+          }
+        },
+        {
+          "kind": "tip",
+          "dur": 3.2,
+          "n": 2,
+          "text": "بالشوية… *بلاش ما تضغط*",
+          "sub": "على راس نظيف وناشف",
+          "visual": {
+            "type": "rush",
+            "src": "rushs/derma_roll_crown.mp4"
+          }
+        },
+        {
+          "kind": "tip",
+          "dur": 3.2,
+          "n": 3,
+          "text": "*2 ولا 3 مرات* في الجمعة",
+          "sub": "النتيجة تحب صبر وانتظام",
+          "visual": {
+            "type": "photo",
+            "src": "photos/rituel_huile.jpg",
+            "focusY": 40
+          }
+        },
+        {
+          "kind": "pack",
+          "dur": 2.8,
+          "title": "وفي الباك *عندك كل شي*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3
+        }
+      ],
+      "meta": {
+        "approach": "Éducation / confiance : 3 conseils d’utilisation du derma roller",
+        "hook": "3 حاجات لازم تعرفهم على الديرما رولر",
+        "primaryText": "🧐 الديرما رولر: 540 إبرة صغيرة تنشّط جلدة الراس وتخلّي زيت الروماران يدخل خير.\n⚠️ استعملو بالشوية على راس نظيف وناشف، وعقّمو قبل وبعد كل استعمال.\n\nفي الباك: ديرما رولر + زيت الروماران + سدر + فلاكون + بروس ماساج\n💰 49 دينار | 💵 تخلّص كي يوصلك | 📞 50500051",
+        "headline": "3 نصايح + باك كامل | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C09-barbe-9x16-10s-v1",
+    "file": "AURA_C09_barbe_9x16_10s_v1.mp4",
+    "type": "video",
+    "seconds": 10.4,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C09",
+      "slug": "barbe",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "souk",
+      "music": "punch",
+      "musicStart": 16,
+      "transition": "wipe",
+      "scenes": [
+        {
+          "kind": "text",
+          "dur": 2.6,
+          "text": "مش كان للشعر…\n*للّحية زادة*",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "text",
+          "dur": 2.6,
+          "text": "زيت الروماران + ماساج\n*للّحية زادة*",
+          "visual": {
+            "type": "product",
+            "product": "huile"
+          }
+        },
+        {
+          "kind": "grid",
+          "dur": 2.8,
+          "title": "5 منتوجات في باك واحد"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.2,
+          "title": "الباك الكامل للشعر واللحية"
+        }
+      ],
+      "meta": {
+        "approach": "Élargissement : le pack sert aussi pour la barbe",
+        "hook": "مش كان للشعر… للّحية زادة",
+        "primaryText": "🧔 الباك مش كان للشعر… للّحية زادة.\nزيت الروماران + ديرما رولر + بروس ماساج + سدر + فلاكون.\n💰 49 دينار | 💵 تخلّص كي يوصلك | 📞 50500051",
+        "headline": "للشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C10-guide-9x16-44s-v1",
+    "file": "AURA_C10_guide_9x16_44s_v1.mp4",
+    "type": "video",
+    "seconds": 44.1,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "C10",
+      "slug": "guide",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "nat",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "كل شي على الباك\nفي *دقيقة*",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "sidr",
+          "withRush": true,
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "derma",
+          "withRush": true,
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "brosse",
+          "withRush": true,
+          "total": 5
+        },
+        {
+          "kind": "text",
+          "dur": 2.2,
+          "text": "كيفاش *تستعملو*؟"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_roll_side.mp4",
+          "rate": 0.75,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "photos/goutte_romarin.jpg",
+          "step": 4,
+          "title": "خلّيه يخدم",
+          "caption": "سوايع ولا *الليل الكل*",
+          "focusY": 35
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 2,
+          "mode": "card",
+          "caption": "ماساج بالسدر والبروس، *وشلّل*"
+        },
+        {
+          "kind": "steps",
+          "dur": 4.6
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.4
+        }
+      ],
+      "meta": {
+        "approach": "Guide complet : produits + rituel + offre (audiences chaudes / retargeting)",
+        "hook": "كل شي على الباك في دقيقة",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "كل شي على الباك | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-C10-guide-4x5-44s-v1",
+    "file": "AURA_C10_guide_4x5_44s_v1.mp4",
+    "type": "video",
+    "seconds": 44.1,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "C10",
+      "slug": "guide",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "nat",
+      "music": "rituel",
+      "transition": "fade",
+      "scenes": [
+        {
+          "kind": "hook",
+          "dur": 2.6,
+          "text": "كل شي على الباك\nفي *دقيقة*",
+          "visual": {
+            "type": "pack"
+          }
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "sidr",
+          "withRush": true,
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "huile",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "derma",
+          "withRush": true,
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "flacon",
+          "total": 5
+        },
+        {
+          "kind": "product",
+          "dur": 2.4,
+          "product": "brosse",
+          "withRush": true,
+          "total": 5
+        },
+        {
+          "kind": "text",
+          "dur": 2.2,
+          "text": "كيفاش *تستعملو*؟"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.4,
+          "src": "rushs/derma_roll_crown.mp4",
+          "step": 1,
+          "title": "الديرما رولر",
+          "caption": "بالشوية، على راس *نظيف وناشف*",
+          "inset": "derma"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.4,
+          "src": "rushs/derma_roll_side.mp4",
+          "rate": 0.75,
+          "caption": "عقّم الديرما رولر قبل وبعد كل استعمال"
+        },
+        {
+          "kind": "rush",
+          "dur": 3.2,
+          "src": "photos/rituel_huile.jpg",
+          "step": 2,
+          "title": "زيت الروماران",
+          "caption": "بالفلاكون، طول *على العروق*",
+          "inset": "huile",
+          "focusY": 40
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/brush_spikes.mp4",
+          "step": 3,
+          "title": "ماساج",
+          "caption": "*3 لـ 5 دقايق* بالبروس"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "photos/goutte_romarin.jpg",
+          "step": 4,
+          "title": "خلّيه يخدم",
+          "caption": "سوايع ولا *الليل الكل*",
+          "focusY": 35
+        },
+        {
+          "kind": "rush",
+          "dur": 3,
+          "src": "rushs/sidr_chantilly.mp4",
+          "title": "وقت الغسيل",
+          "caption": "*سدر + ماء دافي*، ماساج، وشلّل",
+          "inset": "sidr"
+        },
+        {
+          "kind": "rush",
+          "dur": 2.6,
+          "src": "rushs/sidr_massage.mp4",
+          "trim": 2,
+          "mode": "card",
+          "caption": "ماساج بالسدر والبروس، *وشلّل*"
+        },
+        {
+          "kind": "steps",
+          "dur": 4.6
+        },
+        {
+          "kind": "offer",
+          "dur": 3.4,
+          "title": "الباك الكامل بـ *49 دينار*"
+        },
+        {
+          "kind": "cta",
+          "dur": 3.4
+        }
+      ],
+      "meta": {
+        "approach": "Guide complet : produits + rituel + offre (audiences chaudes / retargeting)",
+        "hook": "كل شي على الباك في دقيقة",
+        "primaryText": "🌿 روتين كامل للشعر واللحية، طبيعي وساهل في الدار.\n\nالباك فيه 5 حوايج:\n1️⃣ سدر طبيعي: ينظّف بالشوية ويقوّي الشعر\n2️⃣ زيت الروماران: ينشّط جلدة الراس\n3️⃣ ديرما رولر 540: الزيت يدخل خير\n4️⃣ فلاكون: الزيت طول على العروق\n5️⃣ بروس ماساج: يفرّق الزيت ويمشي مع السدر\n\n🕒 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 كوموندي توّا: 50500051",
+        "headline": "كل شي على الباك | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I01-pack-9x16-nat",
+    "file": "AURA_I01_pack_9x16_nat.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I01",
+      "slug": "pack",
+      "variant": "nat",
+      "format": "9x16",
+      "style": "nat",
+      "layout": "packOffer",
+      "title": "باك كامل\nللشعر *واللحية*",
+      "meta": {
+        "approach": "Pack + offre",
+        "hook": "باك كامل للشعر واللحية",
+        "primaryText": "🌿 روتين كامل للشعر واللحية في باك واحد.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "الباك الكامل بـ 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I01-pack-9x16-souk",
+    "file": "AURA_I01_pack_9x16_souk.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I01",
+      "slug": "pack",
+      "variant": "souk",
+      "format": "9x16",
+      "style": "souk",
+      "layout": "packOffer",
+      "title": "*49 دينار*\nبرك",
+      "meta": {
+        "approach": "Pack + offre (prix en accroche)",
+        "hook": "49 دينار برك",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك"
+      }
+    }
+  },
+  {
+    "id": "AURA-I01-pack-4x5-nat",
+    "file": "AURA_I01_pack_4x5_nat.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I01",
+      "slug": "pack",
+      "variant": "nat",
+      "format": "4x5",
+      "style": "nat",
+      "layout": "packOffer",
+      "title": "باك كامل\nللشعر *واللحية*",
+      "meta": {
+        "approach": "Pack + offre",
+        "hook": "باك كامل للشعر واللحية",
+        "primaryText": "🌿 روتين كامل للشعر واللحية في باك واحد.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "الباك الكامل بـ 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I01-pack-4x5-souk",
+    "file": "AURA_I01_pack_4x5_souk.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I01",
+      "slug": "pack",
+      "variant": "souk",
+      "format": "4x5",
+      "style": "souk",
+      "layout": "packOffer",
+      "title": "*49 دينار*\nبرك",
+      "meta": {
+        "approach": "Pack + offre (prix en accroche)",
+        "hook": "49 دينار برك",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك"
+      }
+    }
+  },
+  {
+    "id": "AURA-I01-pack-1x1-nat",
+    "file": "AURA_I01_pack_1x1_nat.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I01",
+      "slug": "pack",
+      "variant": "nat",
+      "format": "1x1",
+      "style": "nat",
+      "layout": "packOffer",
+      "title": "باك كامل\nللشعر *واللحية*",
+      "meta": {
+        "approach": "Pack + offre",
+        "hook": "باك كامل للشعر واللحية",
+        "primaryText": "🌿 روتين كامل للشعر واللحية في باك واحد.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "الباك الكامل بـ 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I01-pack-1x1-souk",
+    "file": "AURA_I01_pack_1x1_souk.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I01",
+      "slug": "pack",
+      "variant": "souk",
+      "format": "1x1",
+      "style": "souk",
+      "layout": "packOffer",
+      "title": "*49 دينار*\nبرك",
+      "meta": {
+        "approach": "Pack + offre (prix en accroche)",
+        "hook": "49 دينار برك",
+        "primaryText": "🔥 الباك الكامل للشعر واللحية بـ 49 دينار برك!\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "49 DT برك"
+      }
+    }
+  },
+  {
+    "id": "AURA-I02-grille-4x5-v1",
+    "file": "AURA_I02_grille_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I02",
+      "slug": "grille",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "stu",
+      "layout": "grid5",
+      "title": "شنوّة فيه\n*الباك هذا*؟",
+      "meta": {
+        "approach": "Contenu du pack",
+        "hook": "شنوّة فيه الباك هذا؟",
+        "primaryText": "📦 شنوّة فيه الباك؟ 5 حوايج للشعر واللحية.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I02-grille-1x1-v1",
+    "file": "AURA_I02_grille_1x1_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I02",
+      "slug": "grille",
+      "variant": "v1",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "grid5",
+      "title": "5 منتوجات في باك واحد",
+      "meta": {
+        "approach": "Contenu du pack",
+        "hook": "5 منتوجات في باك واحد",
+        "primaryText": "📦 5 منتوجات في باك واحد.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I02-grille-9x16-v1",
+    "file": "AURA_I02_grille_9x16_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I02",
+      "slug": "grille",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "stu",
+      "layout": "grid5",
+      "title": "شنوّة فيه\n*الباك هذا*؟",
+      "meta": {
+        "approach": "Contenu du pack (story)",
+        "hook": "شنوّة فيه الباك هذا؟",
+        "primaryText": "📦 شنوّة فيه الباك؟\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I03-rituel-4x5-v1",
+    "file": "AURA_I03_rituel_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I03",
+      "slug": "rituel",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "nat",
+      "layout": "steps",
+      "meta": {
+        "approach": "Tutoriel en image",
+        "hook": "روتين الشعر واللحية في 4 خطوات",
+        "primaryText": "🕒 روتين بسيط: 2 ولا 3 مرات في الجمعة. النتيجة تحب صبر وانتظام.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "روتين في 4 خطوات"
+      }
+    }
+  },
+  {
+    "id": "AURA-I03-rituel-9x16-v1",
+    "file": "AURA_I03_rituel_9x16_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I03",
+      "slug": "rituel",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "nat",
+      "layout": "steps",
+      "meta": {
+        "approach": "Tutoriel en image (story)",
+        "hook": "روتين الشعر واللحية في 4 خطوات",
+        "primaryText": "🕒 روتين بسيط: 2 ولا 3 مرات في الجمعة.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "روتين في 4 خطوات"
+      }
+    }
+  },
+  {
+    "id": "AURA-I03-rituel-4x5-clair",
+    "file": "AURA_I03_rituel_4x5_clair.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I03",
+      "slug": "rituel",
+      "variant": "clair",
+      "format": "4x5",
+      "style": "stu",
+      "layout": "steps",
+      "meta": {
+        "approach": "Tutoriel en image (version claire)",
+        "hook": "روتين الشعر واللحية في 4 خطوات",
+        "primaryText": "🕒 روتين بسيط: 2 ولا 3 مرات في الجمعة.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "روتين في 4 خطوات"
+      }
+    }
+  },
+  {
+    "id": "AURA-I04-heritage-4x5-v1",
+    "file": "AURA_I04_heritage_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I04",
+      "slug": "heritage",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "her",
+      "layout": "heritage",
+      "title": "السدر…\nسرّ الحمّام متاع *جدودنا*",
+      "sub": "وزدنالو *زيت الروماران*",
+      "meta": {
+        "approach": "Héritage tunisien",
+        "hook": "السدر… سرّ الحمّام متاع جدودنا",
+        "primaryText": "🇹🇳 السدر… من الحمّام متاع جدودنا لروتينك اليوم.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I04-heritage-1x1-v1",
+    "file": "AURA_I04_heritage_1x1_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I04",
+      "slug": "heritage",
+      "variant": "v1",
+      "format": "1x1",
+      "style": "her",
+      "layout": "heritage",
+      "title": "السدر…\nسرّ الحمّام متاع *جدودنا*",
+      "sub": "وزدنالو *زيت الروماران*",
+      "meta": {
+        "approach": "Héritage tunisien",
+        "hook": "السدر… سرّ الحمّام متاع جدودنا",
+        "primaryText": "🇹🇳 السدر… من الحمّام متاع جدودنا لروتينك اليوم.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I04-heritage-9x16-v1",
+    "file": "AURA_I04_heritage_9x16_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I04",
+      "slug": "heritage",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "her",
+      "layout": "heritage",
+      "title": "السدر…\nسرّ الحمّام متاع *جدودنا*",
+      "sub": "وزدنالو *زيت الروماران*",
+      "meta": {
+        "approach": "Héritage tunisien",
+        "hook": "السدر… سرّ الحمّام متاع جدودنا",
+        "primaryText": "🇹🇳 السدر… من الحمّام متاع جدودنا لروتينك اليوم.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I04-heritage-4x5-h2",
+    "file": "AURA_I04_heritage_4x5_h2.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I04",
+      "slug": "heritage",
+      "variant": "h2",
+      "format": "4x5",
+      "style": "her",
+      "layout": "heritage",
+      "title": "قبل الشامبوان…\nكان فمّا *السدر*",
+      "meta": {
+        "approach": "Héritage tunisien",
+        "hook": "قبل الشامبوان… كان فمّا السدر",
+        "primaryText": "🇹🇳 قبل الشامبوان… كان فمّا السدر.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "السدر + الروماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I05-cadeau-4x5-v1",
+    "file": "AURA_I05_cadeau_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I05",
+      "slug": "cadeau",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "stu",
+      "layout": "gift",
+      "title": "هدية لخوك،\nلبوك ولا *لراجلك*",
+      "meta": {
+        "approach": "Cadeau",
+        "hook": "هدية لخوك، لبوك ولا لراجلك",
+        "primaryText": "🎁 هدية تفرّح بيها راجل عزيز عليك.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "هدية للراجل | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I05-cadeau-1x1-v1",
+    "file": "AURA_I05_cadeau_1x1_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I05",
+      "slug": "cadeau",
+      "variant": "v1",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "gift",
+      "title": "فكرة *هدية*\nللراجل؟",
+      "meta": {
+        "approach": "Cadeau",
+        "hook": "فكرة هدية للراجل؟",
+        "primaryText": "🎁 فكرة هدية للراجل؟\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "هدية للراجل | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I05-cadeau-9x16-v1",
+    "file": "AURA_I05_cadeau_9x16_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I05",
+      "slug": "cadeau",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "souk",
+      "layout": "gift",
+      "title": "فكرة *هدية*\nللراجل؟",
+      "meta": {
+        "approach": "Cadeau (story)",
+        "hook": "فكرة هدية للراجل؟",
+        "primaryText": "🎁 فكرة هدية للراجل؟\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "هدية للراجل | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I06-confiance-1x1-v1",
+    "file": "AURA_I06_confiance_1x1_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I06",
+      "slug": "confiance",
+      "variant": "v1",
+      "format": "1x1",
+      "style": "souk",
+      "layout": "trust",
+      "meta": {
+        "approach": "Réassurance (paiement à la livraison)",
+        "hook": "كوموندي وانت مرتاح",
+        "primaryText": "💵 ما تخلّص شي قبل: تخلّص كي يوصلك.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-I06-confiance-4x5-v1",
+    "file": "AURA_I06_confiance_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I06",
+      "slug": "confiance",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "souk",
+      "layout": "trust",
+      "meta": {
+        "approach": "Réassurance (paiement à la livraison)",
+        "hook": "كوموندي وانت مرتاح",
+        "primaryText": "💵 ما تخلّص شي قبل: تخلّص كي يوصلك.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "الخلاص عند الاستلام"
+      }
+    }
+  },
+  {
+    "id": "AURA-I07-carrousel-1x1-carte1",
+    "file": "AURA_I07_carrousel_1x1_carte1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I07",
+      "slug": "carrousel",
+      "variant": "carte1",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "carousel",
+      "card": 0,
+      "meta": {
+        "approach": "Carrousel : couverture, 5 produits, offre",
+        "hook": "شنوّة فيه الباك؟ (carrousel)",
+        "primaryText": "👉 اسحب وشوف الـ 5 منتوجات.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I07-carrousel-1x1-carte2",
+    "file": "AURA_I07_carrousel_1x1_carte2.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I07",
+      "slug": "carrousel",
+      "variant": "carte2",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "carousel",
+      "card": 1,
+      "meta": {
+        "approach": "Carrousel : couverture, 5 produits, offre",
+        "hook": "شنوّة فيه الباك؟ (carrousel)",
+        "primaryText": "👉 اسحب وشوف الـ 5 منتوجات.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I07-carrousel-1x1-carte3",
+    "file": "AURA_I07_carrousel_1x1_carte3.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I07",
+      "slug": "carrousel",
+      "variant": "carte3",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "carousel",
+      "card": 2,
+      "meta": {
+        "approach": "Carrousel : couverture, 5 produits, offre",
+        "hook": "شنوّة فيه الباك؟ (carrousel)",
+        "primaryText": "👉 اسحب وشوف الـ 5 منتوجات.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I07-carrousel-1x1-carte4",
+    "file": "AURA_I07_carrousel_1x1_carte4.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I07",
+      "slug": "carrousel",
+      "variant": "carte4",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "carousel",
+      "card": 3,
+      "meta": {
+        "approach": "Carrousel : couverture, 5 produits, offre",
+        "hook": "شنوّة فيه الباك؟ (carrousel)",
+        "primaryText": "👉 اسحب وشوف الـ 5 منتوجات.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I07-carrousel-1x1-carte5",
+    "file": "AURA_I07_carrousel_1x1_carte5.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I07",
+      "slug": "carrousel",
+      "variant": "carte5",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "carousel",
+      "card": 4,
+      "meta": {
+        "approach": "Carrousel : couverture, 5 produits, offre",
+        "hook": "شنوّة فيه الباك؟ (carrousel)",
+        "primaryText": "👉 اسحب وشوف الـ 5 منتوجات.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I07-carrousel-1x1-carte6",
+    "file": "AURA_I07_carrousel_1x1_carte6.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I07",
+      "slug": "carrousel",
+      "variant": "carte6",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "carousel",
+      "card": 5,
+      "meta": {
+        "approach": "Carrousel : couverture, 5 produits, offre",
+        "hook": "شنوّة فيه الباك؟ (carrousel)",
+        "primaryText": "👉 اسحب وشوف الـ 5 منتوجات.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I07-carrousel-1x1-carte7",
+    "file": "AURA_I07_carrousel_1x1_carte7.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I07",
+      "slug": "carrousel",
+      "variant": "carte7",
+      "format": "1x1",
+      "style": "stu",
+      "layout": "carousel",
+      "card": 6,
+      "meta": {
+        "approach": "Carrousel : couverture, 5 produits, offre",
+        "hook": "شنوّة فيه الباك؟ (carrousel)",
+        "primaryText": "👉 اسحب وشوف الـ 5 منتوجات.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "5 منتوجات | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I08-goutte-4x5-v1",
+    "file": "AURA_I08_goutte_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I08",
+      "slug": "goutte",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "nat",
+      "layout": "macro",
+      "sub": "ينشّط جلدة الراس… *في روتين كامل*",
+      "meta": {
+        "approach": "Nature premium (macro)",
+        "hook": "زيت الروماران",
+        "primaryText": "🌿 زيت الروماران في روتين كامل للشعر واللحية.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "زيت الروماران + 4 منتوجات"
+      }
+    }
+  },
+  {
+    "id": "AURA-I08-goutte-9x16-v1",
+    "file": "AURA_I08_goutte_9x16_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I08",
+      "slug": "goutte",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "nat",
+      "layout": "macro",
+      "sub": "ينشّط جلدة الراس… *في روتين كامل*",
+      "meta": {
+        "approach": "Nature premium (macro, story)",
+        "hook": "زيت الروماران",
+        "primaryText": "🌿 زيت الروماران في روتين كامل.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "زيت الروماران + 4 منتوجات"
+      }
+    }
+  },
+  {
+    "id": "AURA-I09-derma540-4x5-v1",
+    "file": "AURA_I09_derma540_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I09",
+      "slug": "derma540",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "nat",
+      "layout": "derma",
+      "meta": {
+        "approach": "Curiosité derma roller",
+        "hook": "540 إبرة صغيرة",
+        "primaryText": "🧐 الديرما رولر: 540 إبرة صغيرة تنشّط جلدة الراس.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "ديرما رولر + روماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I09-derma540-1x1-v1",
+    "file": "AURA_I09_derma540_1x1_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I09",
+      "slug": "derma540",
+      "variant": "v1",
+      "format": "1x1",
+      "style": "nat",
+      "layout": "derma",
+      "meta": {
+        "approach": "Curiosité derma roller",
+        "hook": "540 إبرة صغيرة",
+        "primaryText": "🧐 الديرما رولر: 540 إبرة صغيرة تنشّط جلدة الراس.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "ديرما رولر + روماران | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I10-barbe-4x5-v1",
+    "file": "AURA_I10_barbe_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I10",
+      "slug": "barbe",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "souk",
+      "layout": "beard",
+      "meta": {
+        "approach": "Barbe aussi",
+        "hook": "مش كان للشعر… للّحية زادة",
+        "primaryText": "🧔 الباك مش كان للشعر… للّحية زادة.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "للشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I10-barbe-1x1-v1",
+    "file": "AURA_I10_barbe_1x1_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1080,
+    "spec": {
+      "concept": "I10",
+      "slug": "barbe",
+      "variant": "v1",
+      "format": "1x1",
+      "style": "souk",
+      "layout": "beard",
+      "meta": {
+        "approach": "Barbe aussi",
+        "hook": "مش كان للشعر… للّحية زادة",
+        "primaryText": "🧔 الباك مش كان للشعر… للّحية زادة.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "للشعر واللحية | 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I11-geste-4x5-v1",
+    "file": "AURA_I11_geste_4x5_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1350,
+    "spec": {
+      "concept": "I11",
+      "slug": "geste",
+      "variant": "v1",
+      "format": "4x5",
+      "style": "nat",
+      "layout": "ritualPhoto",
+      "sub": "زيت الروماران *طول على العروق*",
+      "meta": {
+        "approach": "Lifestyle : le geste du rituel",
+        "hook": "روتين الشعر واللحية في الدار",
+        "primaryText": "🌿 روتين الشعر واللحية في الدار.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "الباك الكامل بـ 49 DT"
+      }
+    }
+  },
+  {
+    "id": "AURA-I11-geste-9x16-v1",
+    "file": "AURA_I11_geste_9x16_v1.jpg",
+    "type": "image",
+    "seconds": 5,
+    "width": 1080,
+    "height": 1920,
+    "spec": {
+      "concept": "I11",
+      "slug": "geste",
+      "variant": "v1",
+      "format": "9x16",
+      "style": "nat",
+      "layout": "ritualPhoto",
+      "sub": "زيت الروماران *طول على العروق*",
+      "meta": {
+        "approach": "Lifestyle (story)",
+        "hook": "روتين الشعر واللحية في الدار",
+        "primaryText": "🌿 روتين الشعر واللحية في الدار.\n\n✅ 5 منتوجات: سدر طبيعي، زيت الروماران، ديرما رولر 540، فلاكون، بروس ماساج\n💰 الباك الكامل: 49 دينار\n💵 تخلّص كي يوصلك | 🚚 توصيل لكامل تونس\n📞 50500051",
+        "headline": "الباك الكامل بـ 49 DT"
+      }
+    }
+  }
+]

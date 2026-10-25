@@ -1,0 +1,12 @@
+# Vidéos sources trop lourdes pour GitHub (> 100 Mo)
+pack 5.mp4
+pack 5 V2.mp4
+
+# Dépendances (npm install les réinstalle)
+node_modules/
+
+# Divers
+.agents/
+Thumbs.db
+desktop.ini
+.claude/
