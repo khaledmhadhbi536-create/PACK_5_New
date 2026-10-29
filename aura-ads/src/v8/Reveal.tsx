@@ -12,7 +12,7 @@ import {INTRO8_DUR, Intro8} from './Mystery';
  */
 
 type Shot = {src: string; trim?: number; rate?: number; frames: number; pos?: string};
-export type RevealSpec = {n: number; name: string; sub: string; product: string; productH: number; shots: Shot[]; voice: string; dur: number; benefits?: {t: string; at: number}[]};
+export type RevealSpec = {n: number; name: string; sub: string; product: string; productH: number; productRatio: number; shots: Shot[]; voice: string; dur: number; benefits?: {t: string; at: number}[]; header?: {t: string; at: number}};
 
 const OPEN = 14; // le rond s'ouvre
 
@@ -35,6 +35,8 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 	const hi = vertical ? top + 10 : 30;
 	const VH = vertical ? 1250 : 930; // hauteur de la vidéo ; le reste = panneau produit
 	const PH = vertical ? Math.min(spec.productH, 1920 - VH - 80) : 1350 - VH - 36;
+	// largeur dispo pour les bienfaits = tout l'écran moins le produit (à droite) et les marges
+	const colW = 1080 - (vertical ? 24 : 34) - PH * spec.productRatio - (vertical ? 50 : 40) - 24;
 	// 1) le rond n grossit jusqu'à remplir l'écran
 	const grow = interpolate(f, [0, OPEN], [1, 14], {extrapolateRight: 'clamp', easing: (x) => x * x});
 	// 2) vidéos d'utilisation
@@ -99,8 +101,15 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 
 			{/* bienfaits qui tombent un par un, cochés */}
 			{spec.benefits ? (
-				<Abs top={VH + (vertical ? 50 : 22)} left={vertical ? 40 : 34} center={false}>
-					<div dir="rtl" style={{display: 'flex', flexDirection: 'column', gap: vertical ? 22 : 12, alignItems: 'flex-start'}}>
+				<Abs top={VH + (vertical ? 50 : 22)} left={vertical ? 24 : 34} center={false}>
+					<div dir="rtl" style={{display: 'flex', flexDirection: 'column', gap: vertical ? 20 : 10, alignItems: 'flex-start', width: colW}}>
+						{spec.header && f >= OPEN + spec.header.at ? (
+							<div style={{background: YELLOW, borderRadius: 12, padding: vertical ? '2px 18px 6px' : '0 14px 4px', transform: `scale(${spring({frame: f - (OPEN + spec.header.at), fps, config: {damping: 10, stiffness: 220}})})`, transformOrigin: 'right center'}}>
+								<T size={vertical ? 36 : 28} color="#111" style={{whiteSpace: 'nowrap'}}>
+									📚 {spec.header.t}
+								</T>
+							</div>
+						) : null}
 						{spec.benefits.map((b, i) => {
 							const p = spring({frame: f - (OPEN + b.at), fps, config: {damping: 12, stiffness: 200}});
 							if (f < OPEN + b.at) return null;
@@ -149,6 +158,7 @@ export const REVEALS: RevealSpec[] = [
 		name: 'سدر طبيعي',
 		sub: '',
 		product: 'products/v8/sidr.png',
+		productRatio: 661 / 1033,
 		productH: 560,
 		voice: 'voice/v8/reveal_1_sidr_bienfaits.wav',
 		dur: 176,
@@ -169,18 +179,20 @@ export const REVEALS: RevealSpec[] = [
 		name: 'زيت إكليل الجبل',
 		sub: '',
 		product: 'products/v8/huile.png',
+		productRatio: 557 / 1701,
 		productH: 600,
 		voice: 'voice/v8/reveal_2_huile_bienfaits.wav',
-		dur: 196,
+		dur: 220,
+		header: {t: 'حسب الدراسات', at: 41},
 		benefits: [
-			{t: 'تنشيط الدورة الدموية', at: 38},
-			{t: 'تقوية البصيلات', at: 87},
-			{t: 'التخلّص من القشرة والحكّة', at: 115},
-			{t: 'حيوية الشعر', at: 138},
+			{t: 'تنشيط الدورة الدموية', at: 64},
+			{t: 'تقوية البصيلات', at: 111},
+			{t: 'التخلّص من القشرة والحكّة', at: 134},
+			{t: 'مظهر شعر أكثف', at: 160},
 		],
 		shots: [
 			{src: 'rushs/perso/huile_goutte.mp4', trim: 0, rate: 0.65, frames: 64, pos: '50% 40%'},
-			{src: 'rushs/perso/massage.mp4', trim: 0.4, frames: 118},
+			{src: 'rushs/perso/massage.mp4', trim: 0.4, frames: 142},
 		],
 	},
 ];
