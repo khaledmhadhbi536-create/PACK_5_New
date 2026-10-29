@@ -12,7 +12,7 @@ import {END8_DUR, End8} from './End8';
  * et son nom ; les autres « ? » restent en haut (le suspense continue).
  */
 
-type Shot = {src: string; trim?: number; rate?: number; frames: number; pos?: string; band?: number; photo?: boolean};
+type Shot = {src: string; trim?: number; rate?: number; frames: number; pos?: string; band?: number; photo?: boolean; contain?: string};
 export type RevealSpec = {n: number; name: string; sub: string; product: string; productH: number; productRatio: number; shots: Shot[]; voice: string; dur: number; benefits?: {t: string; at: number; pre?: string}[]; header?: {t: string; at: number}};
 
 const OPEN = 14; // le rond s'ouvre
@@ -29,12 +29,15 @@ const Row: React.FC<{opened: number}> = ({opened}) => (
 	</div>
 );
 
-/** Photo avec lent zoom. */
-const KenBurns: React.FC<{src: string}> = ({src}) => {
+/** Photo avec lent zoom ; `contain` = photo entière sur un fond de cette couleur. */
+const KenBurns: React.FC<{src: string; pos?: string; contain?: string}> = ({src, pos = '50% 50%', contain}) => {
 	const f = useCurrentFrame();
 	return (
-		<AbsoluteFill style={{overflow: 'hidden'}}>
-			<Img src={staticFile(src)} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${1.05 + f * 0.0015})`}} />
+		<AbsoluteFill style={{overflow: 'hidden', background: contain ?? '#000'}}>
+			<Img
+				src={staticFile(src)}
+				style={{width: '100%', height: '100%', objectFit: contain ? 'contain' : 'cover', objectPosition: pos, transform: `scale(${(contain ? 0.92 : 1.05) + f * 0.0015})`}}
+			/>
 		</AbsoluteFill>
 	);
 };
@@ -82,7 +85,7 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 				{seq.map((s, i) => (
 					<Sequence key={i} from={s.from} durationInFrames={s.frames}>
 						{s.photo ? (
-							<KenBurns src={s.src} />
+							<KenBurns src={s.src} pos={s.pos} contain={s.contain} />
 						) : s.band ? (
 							<BandIn src={s.src} trim={s.trim} rate={s.rate} ratio={s.band} areaH={VH} />
 						) : (
@@ -224,7 +227,7 @@ export const REVEALS: RevealSpec[] = [
 			{t: 'مظهر شعر أكثف', at: 160},
 		],
 		shots: [
-			{src: 'rushs/perso/huile_goutte.mp4', trim: 0, rate: 0.65, frames: 64, pos: '50% 40%'},
+			{src: 'photos/v8/huile_scene.jpg', frames: 64, photo: true, pos: '50% 72%'},
 			{src: 'rushs/perso/massage.mp4', trim: 0.4, frames: 142},
 		],
 	},
@@ -246,7 +249,7 @@ export const REVEALS: RevealSpec[] = [
 		],
 		shots: [
 			{src: 'rushs/derma_roll_crown.mp4', trim: 0, frames: 100, pos: '50% 50%'},
-			{src: 'rushs/real/v2_derma.mp4', trim: 1.2, frames: 82},
+			{src: 'photos/v8/derma_scene.jpg', frames: 82, photo: true, contain: '#FFFFFF'},
 		],
 	},
 	{
