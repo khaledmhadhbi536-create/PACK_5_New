@@ -4,6 +4,7 @@ import {IconCheck} from '../components/Icons';
 import {N, T, YELLOW} from '../v2/WinStill';
 import {Abs, Clip, Flash, Sfx, useStage} from '../v4/kit';
 import {INTRO8_DUR, Intro8} from './Mystery';
+import {END8_DUR, End8} from './End8';
 
 /**
  * V8 · ouverture des « ? » un par un. Chaque révélation :
@@ -285,7 +286,7 @@ export const REVEALS: RevealSpec[] = [
 ];
 
 /** Intro (8 s) + révélations déjà faites, à la suite. */
-export const PART_DUR = INTRO8_DUR + REVEALS.reduce((a, r) => a + r.dur, 0);
+export const PART_DUR = INTRO8_DUR + REVEALS.reduce((a, r) => a + r.dur, 0) + END8_DUR;
 export const Part: React.FC = () => {
 	let acc = INTRO8_DUR;
 	return (
@@ -302,6 +303,9 @@ export const Part: React.FC = () => {
 					</Sequence>
 				);
 			})}
+			<Sequence from={PART_DUR - END8_DUR}>
+				<End8 />
+			</Sequence>
 		</AbsoluteFill>
 	);
 };

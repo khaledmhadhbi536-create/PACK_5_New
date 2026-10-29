@@ -5,6 +5,7 @@ import {Abs, Clip, FmtProvider, In, Music, Sfx, useStage} from '../v4/kit';
 import {HOOKBA_DUR, HookBA} from './HookBA';
 import {INTRO8_DUR, Intro8} from './Mystery';
 import {PART_DUR, Part} from './Reveal';
+import {END8_DUR, End8} from './End8';
 
 /**
  * V8 · accroche (4 s) : l'homme des rushs « perso » (accord donné) applique le sidr.
@@ -119,6 +120,8 @@ export const V8_VIDEOS = [
 	{id: 'W8-intro8-4x5', fmt: '4x5' as const, dur: INTRO8_DUR, C: Intro8},
 	{id: 'W8-suite-9x16', fmt: '9x16' as const, dur: PART_DUR, C: Part},
 	{id: 'W8-suite-4x5', fmt: '4x5' as const, dur: PART_DUR, C: Part},
+	{id: 'W8-fin-9x16', fmt: '9x16' as const, dur: END8_DUR, C: End8},
+	{id: 'W8-fin-4x5', fmt: '4x5' as const, dur: END8_DUR, C: End8},
 ];
 
 export const V8Video: React.FC<{id: string}> = ({id}) => {
