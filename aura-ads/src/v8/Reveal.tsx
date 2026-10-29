@@ -12,7 +12,7 @@ import {INTRO8_DUR, Intro8} from './Mystery';
  */
 
 type Shot = {src: string; trim?: number; rate?: number; frames: number; pos?: string};
-export type RevealSpec = {n: number; name: string; sub: string; product: string; productH: number; shots: Shot[]; voice: string; dur: number};
+export type RevealSpec = {n: number; name: string; sub: string; product: string; productH: number; shots: Shot[]; voice: string; dur: number; benefits?: {t: string; at: number}[]};
 
 const OPEN = 14; // le rond s'ouvre
 
@@ -77,20 +77,44 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 								<T size={60} color="#111" style={{whiteSpace: 'nowrap'}}>
 									{spec.name}
 								</T>
-								<T size={32} color="#444" weight={700} style={{whiteSpace: 'nowrap', marginTop: -4}}>
-									{spec.sub}
-								</T>
+								{spec.sub ? (
+									<T size={32} color="#444" weight={700} style={{whiteSpace: 'nowrap', marginTop: -4}}>
+										{spec.sub}
+									</T>
+								) : null}
 							</div>
 						</div>
 					</div>
 				</Abs>
 			) : null}
 
-			{/* produit détouré, centré dans le panneau du bas */}
+			{/* produit détouré dans le panneau du bas (à droite s'il y a des bienfaits) */}
 			{f >= OPEN + 14 ? (
-				<Abs top={VH + (vertical ? 40 : 18)}>
+				<Abs top={VH + (vertical ? 40 : 18)} right={spec.benefits ? (vertical ? 50 : 40) : undefined} center={!spec.benefits}>
 					<div style={{transform: `translateY(${(1 - pp) * 400}px) scale(${0.6 + 0.4 * pp}) rotate(${(1 - pp) * 10}deg)`}}>
 						<Img src={staticFile(spec.product)} style={{height: PH, width: 'auto', filter: 'drop-shadow(0 18px 26px rgba(0,0,0,0.7))'}} />
+					</div>
+				</Abs>
+			) : null}
+
+			{/* bienfaits qui tombent un par un, cochés */}
+			{spec.benefits ? (
+				<Abs top={VH + (vertical ? 50 : 22)} left={vertical ? 40 : 34} center={false}>
+					<div dir="rtl" style={{display: 'flex', flexDirection: 'column', gap: vertical ? 22 : 12, alignItems: 'flex-start'}}>
+						{spec.benefits.map((b, i) => {
+							const p = spring({frame: f - (OPEN + b.at), fps, config: {damping: 12, stiffness: 200}});
+							if (f < OPEN + b.at) return null;
+							return (
+								<div key={i} style={{display: 'flex', alignItems: 'center', gap: 12, background: 'rgba(255,255,255,0.95)', borderRadius: 999, padding: vertical ? '6px 26px 10px 10px' : '4px 20px 8px 8px', transform: `translateX(${(1 - p) * -300}px)`, opacity: Math.min(1, p * 2), boxShadow: '0 8px 20px rgba(0,0,0,0.4)'}}>
+									<div style={{width: vertical ? 54 : 44, height: vertical ? 54 : 44, borderRadius: '50%', background: '#2FA35A', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
+										<IconCheck size={vertical ? 34 : 28} color="#fff" />
+									</div>
+									<T size={vertical ? 42 : 34} color="#111" style={{whiteSpace: 'nowrap'}}>
+										{b.t}
+									</T>
+								</div>
+							);
+						})}
 					</div>
 				</Abs>
 			) : null}
@@ -122,14 +146,21 @@ export const REVEALS: RevealSpec[] = [
 	{
 		n: 1,
 		name: 'سدر طبيعي',
-		sub: 'ينظّف جلدة الراس بالشوية',
+		sub: '',
 		product: 'products/v8/sidr.png',
 		productH: 560,
-		voice: 'voice/v8/reveal_1_sidr.wav',
-		dur: 140,
+		voice: 'voice/v8/reveal_1_sidr_bienfaits.wav',
+		dur: 176,
+		// calés sur la voix : « ينظّف… / ينحّي القشرة / يقوّي الجذور / كثافة ولمعة »
+		benefits: [
+			{t: 'ينظّف جلدة الراس', at: 38},
+			{t: 'ينحّي القشرة', at: 60},
+			{t: 'يقوّي الجذور', at: 78},
+			{t: 'كثافة ولمعة للشعر', at: 110},
+		],
 		shots: [
-			{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, frames: 52},
-			{src: 'rushs/perso/sidr_top.mp4', trim: 0.6, frames: 74},
+			{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, frames: 56},
+			{src: 'rushs/perso/sidr_top.mp4', trim: 0.4, frames: 106},
 		],
 	},
 ];
