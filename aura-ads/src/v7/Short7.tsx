@@ -9,6 +9,7 @@ import {Abs, Below, Clip, CtaAnim, FooterPill, In, Music, Pulse, Sfx, Spin, Stag
 import {V01, V01_DUR} from '../v4/V01';
 import {V03, V03_DUR} from '../v4/Offers';
 import {Breathe, MASSAGE, WASH} from '../v6/kit6';
+import {BrushShot} from './kit7';
 
 /**
  * Courtes V7 : copie de V6 (V6 reste intact). Seul V08 change : étapes huile, massage et sidr
@@ -185,11 +186,11 @@ const useHigh = () => {
 
 // ======================= V08 · 4 étapes (plans nets) =======================
 
-type Step = {k: PKey; t: string; s: string; src?: string; photo?: string; trim?: number; rate?: number; band?: boolean};
+type Step = {k: PKey; t: string; s: string; src?: string; photo?: string; trim?: number; rate?: number; band?: boolean; brush?: boolean};
 const STEPS: Step[] = [
 	{k: 'derma', t: 'الديرما رولر', s: 'بالشوية على راس نظيف', src: 'rushs/derma_roll_crown.mp4', trim: 0, rate: 1},
 	{k: 'huile', t: 'زيت إكليل الجبل', s: 'بمشط الجذور، طول على العروق', src: 'rushs/perso/huile_goutte.mp4', trim: 0, rate: 0.5},
-	{k: 'brosse', t: 'ماساج', s: 'بفرشة التدليك، 3 لـ 5 دقايق', src: 'rushs/perso/massage.mp4', trim: 0.3, rate: 1},
+	{k: 'brosse', t: 'ماساج', s: 'بفرشة التدليك، 3 لـ 5 دقايق', brush: true},
 	{k: 'sidr', t: 'وقت الغسيل', s: 'سدر بيو وماء دافي', src: 'rushs/perso/sidr_top.mp4', trim: 0.8, rate: 1},
 ];
 const ST = 84;
@@ -202,7 +203,7 @@ export const V08_7: React.FC = () => {
 		<AbsoluteFill style={{background: '#000'}}>
 			{STEPS.map((s, i) => (
 				<Sequence key={i} from={i * ST} durationInFrames={ST}>
-					{s.band ? <Band src={s.src!} trim={s.trim!} rate={s.rate!} /> : <Punch>{s.src ? <Clip src={s.src} trim={s.trim} rate={s.rate} /> : <Photo src={s.photo!} />}</Punch>}
+					{s.brush ? <BrushShot frames={ST} caption={false} w9x16={758} top9x16={150} w4x5={1000} top4x5={250} /> : s.band ? <Band src={s.src!} trim={s.trim!} rate={s.rate!} /> : <Punch>{s.src ? <Clip src={s.src} trim={s.trim} rate={s.rate} /> : <Photo src={s.photo!} />}</Punch>}
 					<Scrim top={0.5} bottom={0.5} />
 					<Abs top={low - 40} left={40} right={40} center={false}>
 						<In at={i === 0 ? -30 : 3} kind="up">

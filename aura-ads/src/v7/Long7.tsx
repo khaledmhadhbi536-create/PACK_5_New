@@ -6,10 +6,11 @@ import {Abs, Below, In, Sfx, Stage, useStage} from '../v4/kit';
 import {Chapter, Framed, KText, longDuration, ProductHero, RushShot, Sc, TextCard, Timeline} from '../v5/kit5';
 import {ThemeBg} from '../v5/theme';
 import {BandShot, Breathe, HookShot, MASSAGE, PhotoShot, StaticText, WASH, washRate} from '../v6/kit6';
+import {BrushShot} from './kit7';
 
 /**
- * Longues V7 : copies de V6 (V6 reste intact) où les étapes huile, massage et sidr
- * sont filmées avec la personne des rushs « perso » (public/rushs/perso, accord de la personne).
+ * Longues V7 : copies de V6 (V6 reste intact) où les étapes huile, massage (à la brosse) et sidr
+ * utilisent les rushs « perso » (public/rushs/perso, accord des personnes filmées).
  *
  * Rappel V6 :
  *  - L01, L07, L08 : la frame 0 montre déjà l'accroche.
@@ -47,7 +48,7 @@ const L01_SCENES: Sc[] = [
 	},
 	{dur: 105, el: <RushShot src="rushs/derma_roll_crown.mp4" n={1} title="الديرما رولر" sub="بالشوية، على راس نظيف وناشف" />},
 	{dur: 105, el: <RushShot src="rushs/perso/huile_goutte.mp4" rate={0.41} n={2} title="زيت إكليل الجبل" sub="بمشط الجذور، طول على العروق" />},
-	{dur: 105, el: <RushShot src="rushs/perso/massage.mp4" n={3} title="ماساج بفرشة التدليك" sub="من 3 لـ 5 دقايق" />},
+	{dur: 105, el: <BrushShot frames={105} n={3} title="ماساج بفرشة التدليك" sub="من 3 لـ 5 دقايق" />},
 	{dur: 105, el: <RushShot src="rushs/perso/sidr_top.mp4" n={4} title="وقت الغسيل" sub="سدر بيو وماء دافي، ماساج وشلّل" />},
 	{dur: 90, el: <TextCard text={'*2 ولا 3* مرات\nفي الجمعة'} sub="النتيجة تحب صبر وانتظام" size={104} marker="rgba(47,107,42,0.25)" />},
 ];
@@ -263,7 +264,7 @@ const L08_SCENES: Sc[] = [
 	{dur: 80, el: <RushShot src="rushs/real/v2_tous.mp4" trim={0.4} top={<Chapter n={3} text="تحلّها" />} title="5 قطع في باك واحد" />},
 	{dur: 50, el: <RushShot src="rushs/real/v2_derma.mp4" trim={1.4} title="ديرما رولر 540" />},
 	{dur: 75, el: <RushShot src="rushs/derma_roll_crown.mp4" top={<Chapter n={4} text="تبدا الروتين" />} title="ديرما بالشوية" />},
-	{dur: 70, el: <RushShot src="rushs/perso/massage.mp4" title="ماساج بفرشة التدليك" />},
+	{dur: 70, el: <BrushShot frames={70} title="ماساج بفرشة التدليك" />},
 	{dur: 70, el: <RushShot src="rushs/perso/sidr_top.mp4" trim={1} title="وفي الغسيل: سدر بيو" />},
 ];
 const L08_END = 220;
@@ -303,7 +304,7 @@ const L04_SCENES: Sc[] = [
 	{dur: 150, el: <RushShot src="rushs/sidr_chantilly.mp4" trim={1} rate={0.8} title="سدر بيو" sub="رغوة خفيفة، كيما في الحمّام" />},
 	{dur: 140, el: <RushShot photo="photos/goutte_romarin.jpg" title="زيت إكليل الجبل" sub="قطرات على العروق" />},
 	{dur: 120, el: <RushShot src="rushs/derma_in_hand.mp4" rate={0.75} title="ديرما رولر 540" sub="بالشوية" />},
-	{dur: 150, el: <RushShot src="rushs/perso/massage.mp4" rate={0.9} title="ماساج" sub="بفرشة التدليك، على خاطرك" />},
+	{dur: 150, el: <BrushShot frames={150} title="ماساج" sub="بفرشة التدليك، على خاطرك" />},
 	{dur: 140, el: <RushShot src="rushs/perso/sidr_front.mp4" rate={0.7} title="وشلّل" sub="سدر بيو وماء دافي" />},
 	{dur: 120, el: <EditoPack />, sfx: <Sfx at={4} s="sparkle" v={0.4} />},
 ];
@@ -367,7 +368,7 @@ const L10_SCENES: Sc[] = [
 	{dur: 60, el: <StaticCard t="clean" text={'*10 دقايق* في الجمعة\nهذا الكل'} size={100} marker="rgba(31,164,99,0.22)" />, sfx: <Sfx at={0} s="pop2" v={0.6} />},
 	{dur: 120, el: <RushShot src="rushs/derma_roll_crown.mp4" n={1} title="الديرما رولر" sub="دقيقتين" />},
 	{dur: 100, el: <RushShot src="rushs/perso/huile_goutte.mp4" rate={0.43} n={2} title="زيت إكليل الجبل" sub="دقيقة بمشط الجذور" />},
-	{dur: 130, el: <RushShot src="rushs/perso/massage.mp4" n={3} title="ماساج بفرشة التدليك" sub="5 دقايق" />},
+	{dur: 130, el: <BrushShot frames={130} n={3} title="ماساج بفرشة التدليك" sub="5 دقايق" top9x16={110} />},
 	{dur: 110, el: <RushShot src="rushs/perso/sidr_top.mp4" n={4} title="وفي الغسيل" sub="سدر بيو وماء دافي" />},
 ];
 const L10_END = 230;
