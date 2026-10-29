@@ -201,17 +201,17 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 661 / 1033,
 		productH: 560,
 		voice: 'voice/v8/reveal_1_sidr_bienfaits.wav',
-		dur: 191,
+		dur: 170,
 		// calés sur la voix : « ينظّف… / ينحّي القشرة / يقوّي الجذور / كثافة ولمعة »
 		benefits: [
-			{t: 'تنظيف جلدة الراس', at: 44},
-			{t: 'التخلّص من القشرة', at: 77},
-			{t: 'تقوية الجذور', at: 99},
-			{t: 'كثافة ولمعة الشعر', at: 124},
+			{t: 'تنظيف جلدة الراس', at: 39},
+			{t: 'التخلّص من القشرة', at: 67},
+			{t: 'تقوية الجذور', at: 87},
+			{t: 'كثافة ولمعة الشعر', at: 110},
 		],
 		shots: [
-			{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, frames: 70},
-			{src: 'rushs/perso/sidr_top.mp4', trim: 0.4, frames: 107},
+			{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, frames: 64},
+			{src: 'rushs/perso/sidr_top.mp4', trim: 0.4, frames: 92},
 		],
 	},
 	{
@@ -222,17 +222,17 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 557 / 1701,
 		productH: 600,
 		voice: 'voice/v8/reveal_2_huile_bienfaits.wav',
-		dur: 288,
-		header: {t: 'حسب الدراسات', at: 45},
+		dur: 257,
+		header: {t: 'حسب الدراسات', at: 40},
 		benefits: [
-			{t: 'تنشيط الدورة الدموية', at: 78},
-			{t: 'تقوية البصيلات', at: 132},
-			{t: 'التخلّص من القشرة والحكّة', at: 172},
-			{t: 'مظهر شعر أكثف', at: 222},
+			{t: 'تنشيط الدورة الدموية', at: 69},
+			{t: 'تقوية البصيلات', at: 117},
+			{t: 'التخلّص من القشرة والحكّة', at: 154},
+			{t: 'مظهر شعر أكثف', at: 198},
 		],
 		shots: [
-			{src: 'photos/v8/huile_scene.jpg', frames: 100, photo: true, pos: '50% 72%'},
-			{src: 'rushs/perso/massage.mp4', trim: 0.4, rate: 0.85, frames: 174},
+			{src: 'photos/v8/huile_scene.jpg', frames: 80, photo: true, pos: '50% 72%'},
+			{src: 'rushs/perso/massage.mp4', trim: 0.4, rate: 0.91, frames: 163},
 		],
 	},
 	{
@@ -243,17 +243,16 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 1109 / 966,
 		productH: 360,
 		voice: 'voice/v8/reveal_3_derma.wav',
-		dur: 251,
-		header: {t: 'قبل الزيت', at: 45},
+		dur: 208,
+		header: {t: 'قبل الزيت', at: 40},
 		benefits: [
-			{t: 'يساعد الزيت يدخل للجذور', at: 80, pre: ''},
-			{t: 'تنشيط جلدة الراس', at: 127},
-			{t: '540 إبرة صغيرة', at: 164, pre: ''},
-			{t: 'بالشوية، على راس نظيف', at: 207, pre: ''},
+			{t: 'يساعد الزيت يدخل للجذور', at: 71, pre: ''},
+			{t: 'تنشيط جلدة الراس', at: 113},
+			{t: '540 إبرة صغيرة', at: 146, pre: ''},
 		],
 		shots: [
-			{src: 'rushs/derma_roll_crown.mp4', trim: 0, frames: 120, pos: '50% 50%'},
-			{src: 'photos/v8/derma_scene.jpg', frames: 117, photo: true, contain: '#FFFFFF'},
+			{src: 'rushs/derma_roll_crown.mp4', trim: 0, frames: 110, pos: '50% 50%'},
+			{src: 'photos/v8/derma_scene.jpg', frames: 84, photo: true, contain: '#FFFFFF'},
 		],
 	},
 	{
@@ -264,14 +263,13 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 717 / 738,
 		productH: 290,
 		voice: 'voice/v8/reveal_4_brosse.wav',
-		dur: 245,
+		dur: 198,
 		benefits: [
-			{t: 'تنشيط الدورة الدموية', at: 45},
-			{t: 'توزيع الزيت والسدر', at: 105},
-			{t: 'تنظيف جلدة الراس بعمق', at: 149},
-			{t: 'ماساج يرتّح', at: 197, pre: ''},
+			{t: 'تنشيط الدورة الدموية', at: 41},
+			{t: 'توزيع الزيت والسدر', at: 94},
+			{t: 'تنظيف جلدة الراس بعمق', at: 133},
 		],
-		shots: [{src: 'rushs/perso/brosse_massage.mp4', trim: 0, rate: 0.58, frames: 231, band: 576 / 452}],
+		shots: [{src: 'rushs/perso/brosse_massage.mp4', trim: 0, rate: 0.73, frames: 184, band: 576 / 452}],
 	},
 	{
 		n: 5,
@@ -281,14 +279,13 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 389 / 1408,
 		productH: 600,
 		voice: 'voice/v8/reveal_5_applicateur.wav',
-		dur: 203,
+		dur: 163,
 		benefits: [
-			{t: 'بالزيت', at: 53, pre: ''},
-			{t: 'ولا بخلطة السدر السايلة', at: 67, pre: ''},
-			{t: 'يوصّل طول للجذور', at: 116, pre: ''},
-			{t: 'بلا تبذير', at: 157, pre: ''},
+			{t: 'بالزيت', at: 48, pre: ''},
+			{t: 'ولا بخلطة السدر السايلة', at: 60, pre: ''},
+			{t: 'يوصّل طول للجذور', at: 103, pre: ''},
 		],
-		shots: [{src: 'photos/rituel_huile.jpg', frames: 189, photo: true}],
+		shots: [{src: 'photos/rituel_huile.jpg', frames: 149, photo: true}],
 	},
 ];
 
@@ -302,7 +299,7 @@ const BED_VOICE: [number, number][] = (() => {
 		w.push([a + OPEN, a + r.dur - 12]);
 		a += r.dur;
 	}
-	w.push([a + 6, a + 6 + 160]);
+	w.push([a + 6, a + 6 + 150]);
 	return w;
 })();
 export const Part: React.FC = () => {

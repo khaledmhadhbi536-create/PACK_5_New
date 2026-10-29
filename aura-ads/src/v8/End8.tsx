@@ -11,12 +11,12 @@ import {Bed8, Sfx8} from './sound8';
  * Tout est calé sur la voix (public/voice/v8/fin_offre.wav).
  */
 
-export const END8_DUR = 240;
+export const END8_DUR = 210;
 const V = 6; // départ de la voix
-const T_PRICE = V + 42; // « بتسعة وأربعين »
-const T_STRIKE = V + 81; // « عوض مية وعشرة »
-const T_COD = V + 110; // « تخلّص كي يوصلك »
-const T_CTA = V + 135; // « اطلب توّا من هنا »
+const T_PRICE = V + 38; // « بتسعة وأربعين »
+const T_STRIKE = V + 74; // « عوض مية وعشرة »
+const T_COD = V + 101; // « تخلّص كي يوصلك »
+const T_CTA = V + 124; // « اطلب توّا من هنا »
 
 const useSpring = (at: number, cfg = {damping: 11, stiffness: 180}) => {
 	const f = useCurrentFrame();
@@ -152,7 +152,7 @@ export const End8: React.FC<{music?: boolean}> = ({music = true}) => {
 			) : null}
 
 			<Flash at={T_PRICE} max={0.4} color={YELLOW} />
-			{music ? <Bed8 voice={[[V, V + 160]]} dur={END8_DUR} /> : null}
+			{music ? <Bed8 voice={[[V, V + 150]]} dur={END8_DUR} /> : null}
 			<Sequence from={V} layout="none">
 				<Audio src={staticFile('voice/v8/fin_offre.wav')} volume={1.4} />
 			</Sequence>
