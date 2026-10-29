@@ -163,6 +163,25 @@ export const REVEALS: RevealSpec[] = [
 			{src: 'rushs/perso/sidr_top.mp4', trim: 0.4, frames: 106},
 		],
 	},
+	{
+		n: 2,
+		name: 'زيت إكليل الجبل',
+		sub: '',
+		product: 'products/v8/huile.png',
+		productH: 600,
+		voice: 'voice/v8/reveal_2_huile_bienfaits.wav',
+		dur: 196,
+		benefits: [
+			{t: 'ينشّط الدورة الدموية', at: 38},
+			{t: 'يقوّي البصيلات', at: 87},
+			{t: 'ينحّي القشرة والحكّة', at: 115},
+			{t: 'حيوية للشعر', at: 138},
+		],
+		shots: [
+			{src: 'rushs/perso/huile_goutte.mp4', trim: 0, rate: 0.65, frames: 64, pos: '50% 40%'},
+			{src: 'rushs/perso/massage.mp4', trim: 0.4, frames: 118},
+		],
+	},
 ];
 
 /** Intro (8 s) + révélations déjà faites, à la suite. */

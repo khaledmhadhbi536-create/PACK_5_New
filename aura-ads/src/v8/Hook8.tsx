@@ -117,8 +117,8 @@ export const V8_VIDEOS = [
 	{id: 'W8-hook-avantapres-4x5', fmt: '4x5' as const, dur: HOOKBA_DUR, C: HookBA},
 	{id: 'W8-intro8-9x16', fmt: '9x16' as const, dur: INTRO8_DUR, C: Intro8},
 	{id: 'W8-intro8-4x5', fmt: '4x5' as const, dur: INTRO8_DUR, C: Intro8},
-	{id: 'W8-sidr-9x16', fmt: '9x16' as const, dur: PART_DUR, C: Part},
-	{id: 'W8-sidr-4x5', fmt: '4x5' as const, dur: PART_DUR, C: Part},
+	{id: 'W8-suite-9x16', fmt: '9x16' as const, dur: PART_DUR, C: Part},
+	{id: 'W8-suite-4x5', fmt: '4x5' as const, dur: PART_DUR, C: Part},
 ];
 
 export const V8Video: React.FC<{id: string}> = ({id}) => {
