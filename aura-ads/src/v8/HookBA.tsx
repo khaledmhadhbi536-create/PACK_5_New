@@ -1,7 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Img, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {T, YELLOW} from '../v2/WinStill';
-import {Abs, Flash, Sfx, useStage} from '../v4/kit';
+import {Abs, Flash, useStage} from '../v4/kit';
+import {Sfx8} from './sound8';
 
 /**
  * V8 · accroche 3 s « كيفاش شعرو من هكا… ولّى هكا؟ »
@@ -61,10 +62,10 @@ export const HookBA: React.FC = () => {
 			</Abs>
 
 			<Flash at={CUT} max={0.85} dur={6} />
-			<Audio src={staticFile('audio/v8/suspense.wav')} volume={0.9} />
-			<Sfx at={CUT - 1} s="bass" v={1} />
-			<Sfx at={CUT} s="slam" v={0.9} />
-			<Sfx at={CUT + 1} s="whoosh" v={0.4} />
+			<Audio src={staticFile('audio/v8/suspense8_hook.wav')} volume={0.9} />
+			<Sfx8 at={CUT - 30} s="rev_swell" v={0.55} />
+			<Sfx8 at={CUT} s="impact" v={0.95} />
+			<Sfx8 at={CUT + 1} s="whoosh" v={0.35} />
 		</AbsoluteFill>
 	);
 };

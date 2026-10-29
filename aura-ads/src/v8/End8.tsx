@@ -2,7 +2,8 @@ import React from 'react';
 import {AbsoluteFill, Audio, Img, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {IconCheck, IconPhone} from '../components/Icons';
 import {N, RED, T, YELLOW} from '../v2/WinStill';
-import {Abs, Below, Flash, Music, Sfx, useStage} from '../v4/kit';
+import {Abs, Below, Flash, useStage} from '../v4/kit';
+import {Bed8, Sfx8} from './sound8';
 
 /**
  * V8 · écran de fin : le pack (5 produits v8), 49 د.ت (110 barré), réassurance,
@@ -12,10 +13,10 @@ import {Abs, Below, Flash, Music, Sfx, useStage} from '../v4/kit';
 
 export const END8_DUR = 240;
 const V = 6; // départ de la voix
-const T_PRICE = V + 44; // « بتسعة وأربعين »
-const T_STRIKE = V + 83; // « عوض مية وعشرة »
-const T_COD = V + 115; // « تخلّص كي يوصلك »
-const T_CTA = V + 151; // « اطلب توّا من هنا »
+const T_PRICE = V + 42; // « بتسعة وأربعين »
+const T_STRIKE = V + 81; // « عوض مية وعشرة »
+const T_COD = V + 110; // « تخلّص كي يوصلك »
+const T_CTA = V + 135; // « اطلب توّا من هنا »
 
 const useSpring = (at: number, cfg = {damping: 11, stiffness: 180}) => {
 	const f = useCurrentFrame();
@@ -64,7 +65,7 @@ const Arrow: React.FC<{size: number}> = ({size}) => {
 	);
 };
 
-export const End8: React.FC = () => {
+export const End8: React.FC<{music?: boolean}> = ({music = true}) => {
 	const f = useCurrentFrame();
 	const {vertical, top} = useStage();
 	const st = vertical ? top : 0;
@@ -151,19 +152,20 @@ export const End8: React.FC = () => {
 			) : null}
 
 			<Flash at={T_PRICE} max={0.4} color={YELLOW} />
-			<Music src="audio/v4/beat_promo.wav" vol={0.32} start={4} />
+			{music ? <Bed8 voice={[[V, V + 160]]} dur={END8_DUR} /> : null}
 			<Sequence from={V} layout="none">
 				<Audio src={staticFile('voice/v8/fin_offre.wav')} volume={1.4} />
 			</Sequence>
-			<Sfx at={0} s="whoosh" v={0.5} />
+			<Sfx8 at={0} s="whoosh" v={0.45} />
 			{[0, 3, 6, 9, 12].map((d, i) => (
-				<Sfx key={i} at={d} s={`pop${i + 1}` as 'pop1'} v={0.5} />
+				<Sfx8 key={i} at={d} s={`pop${i + 1}` as 'pop1'} v={0.35} />
 			))}
-			<Sfx at={T_PRICE} s="stamp" v={0.9} />
-			<Sfx at={T_PRICE + 4} s="cash" v={0.6} />
-			<Sfx at={T_STRIKE} s="marker" v={0.7} />
-			<Sfx at={T_COD} s="check" v={0.6} />
-			<Sfx at={T_CTA} s="pop5" v={0.7} />
+			<Sfx8 at={T_PRICE} s="impact" v={0.6} />
+			<Sfx8 at={T_PRICE + 4} s="coin" v={0.4} />
+			<Sfx8 at={T_STRIKE} s="scribble" v={0.55} />
+			<Sfx8 at={T_COD} s="ding" v={0.4} />
+			<Sfx8 at={T_CTA} s="hit" v={0.5} />
+			<Sfx8 at={T_CTA + 2} s="shimmer" v={0.3} />
 		</AbsoluteFill>
 	);
 };

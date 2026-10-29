@@ -2,7 +2,8 @@ import React from 'react';
 import {AbsoluteFill, Audio, Img, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {IconCheck} from '../components/Icons';
 import {N, T, YELLOW} from '../v2/WinStill';
-import {Abs, Clip, Flash, Sfx, useStage} from '../v4/kit';
+import {Abs, Clip, Flash, useStage} from '../v4/kit';
+import {Bed8, Sfx8} from './sound8';
 import {INTRO8_DUR, Intro8} from './Mystery';
 import {END8_DUR, End8} from './End8';
 
@@ -179,11 +180,14 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 			<Sequence from={OPEN} layout="none">
 				<Audio src={staticFile(spec.voice)} volume={1.4} />
 			</Sequence>
-			<Sfx at={0} s="riser" v={0.5} />
-			<Sfx at={OPEN} s="slam" v={0.7} />
-			<Sfx at={OPEN + 1} s="sparkle" v={0.6} />
-			<Sfx at={OPEN + 4} s="pop2" v={0.6} />
-			<Sfx at={OPEN + 14} s="pop4" v={0.7} />
+			<Sfx8 at={0} s="whoosh" v={0.45} />
+			<Sfx8 at={OPEN} s="hit" v={0.55} />
+			<Sfx8 at={OPEN + 1} s="shimmer" v={0.45} />
+			<Sfx8 at={OPEN + 14} s="pop3" v={0.4} />
+			{spec.header ? <Sfx8 at={OPEN + spec.header.at} s="ding" v={0.3} /> : null}
+			{(spec.benefits ?? []).map((b, i) => (
+				<Sfx8 key={i} at={OPEN + b.at} s={`pop${(i % 5) + 1}` as 'pop1'} v={0.32} />
+			))}
 		</AbsoluteFill>
 	);
 };
@@ -197,17 +201,17 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 661 / 1033,
 		productH: 560,
 		voice: 'voice/v8/reveal_1_sidr_bienfaits.wav',
-		dur: 176,
+		dur: 191,
 		// calés sur la voix : « ينظّف… / ينحّي القشرة / يقوّي الجذور / كثافة ولمعة »
 		benefits: [
-			{t: 'تنظيف جلدة الراس', at: 38},
-			{t: 'التخلّص من القشرة', at: 60},
-			{t: 'تقوية الجذور', at: 78},
-			{t: 'كثافة ولمعة الشعر', at: 110},
+			{t: 'تنظيف جلدة الراس', at: 44},
+			{t: 'التخلّص من القشرة', at: 77},
+			{t: 'تقوية الجذور', at: 99},
+			{t: 'كثافة ولمعة الشعر', at: 124},
 		],
 		shots: [
-			{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, frames: 56},
-			{src: 'rushs/perso/sidr_top.mp4', trim: 0.4, frames: 106},
+			{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, frames: 70},
+			{src: 'rushs/perso/sidr_top.mp4', trim: 0.4, frames: 107},
 		],
 	},
 	{
@@ -218,17 +222,17 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 557 / 1701,
 		productH: 600,
 		voice: 'voice/v8/reveal_2_huile_bienfaits.wav',
-		dur: 220,
-		header: {t: 'حسب الدراسات', at: 41},
+		dur: 288,
+		header: {t: 'حسب الدراسات', at: 45},
 		benefits: [
-			{t: 'تنشيط الدورة الدموية', at: 64},
-			{t: 'تقوية البصيلات', at: 111},
-			{t: 'التخلّص من القشرة والحكّة', at: 134},
-			{t: 'مظهر شعر أكثف', at: 160},
+			{t: 'تنشيط الدورة الدموية', at: 78},
+			{t: 'تقوية البصيلات', at: 132},
+			{t: 'التخلّص من القشرة والحكّة', at: 172},
+			{t: 'مظهر شعر أكثف', at: 222},
 		],
 		shots: [
-			{src: 'photos/v8/huile_scene.jpg', frames: 64, photo: true, pos: '50% 72%'},
-			{src: 'rushs/perso/massage.mp4', trim: 0.4, frames: 142},
+			{src: 'photos/v8/huile_scene.jpg', frames: 100, photo: true, pos: '50% 72%'},
+			{src: 'rushs/perso/massage.mp4', trim: 0.4, rate: 0.85, frames: 174},
 		],
 	},
 	{
@@ -239,17 +243,17 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 1109 / 966,
 		productH: 360,
 		voice: 'voice/v8/reveal_3_derma.wav',
-		dur: 196,
-		header: {t: 'قبل الزيت', at: 32},
+		dur: 251,
+		header: {t: 'قبل الزيت', at: 45},
 		benefits: [
-			{t: 'يساعد الزيت يدخل للجذور', at: 64, pre: ''},
-			{t: 'تنشيط جلدة الراس', at: 102},
-			{t: '540 إبرة صغيرة', at: 132, pre: ''},
-			{t: 'بالشوية، على راس نظيف', at: 163, pre: ''},
+			{t: 'يساعد الزيت يدخل للجذور', at: 80, pre: ''},
+			{t: 'تنشيط جلدة الراس', at: 127},
+			{t: '540 إبرة صغيرة', at: 164, pre: ''},
+			{t: 'بالشوية، على راس نظيف', at: 207, pre: ''},
 		],
 		shots: [
-			{src: 'rushs/derma_roll_crown.mp4', trim: 0, frames: 100, pos: '50% 50%'},
-			{src: 'photos/v8/derma_scene.jpg', frames: 82, photo: true, contain: '#FFFFFF'},
+			{src: 'rushs/derma_roll_crown.mp4', trim: 0, frames: 120, pos: '50% 50%'},
+			{src: 'photos/v8/derma_scene.jpg', frames: 117, photo: true, contain: '#FFFFFF'},
 		],
 	},
 	{
@@ -260,14 +264,14 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 717 / 738,
 		productH: 290,
 		voice: 'voice/v8/reveal_4_brosse.wav',
-		dur: 201,
+		dur: 245,
 		benefits: [
-			{t: 'تنشيط الدورة الدموية', at: 42},
-			{t: 'توزيع الزيت والسدر', at: 88},
-			{t: 'تنظيف جلدة الراس بعمق', at: 118},
-			{t: 'ماساج يرتّح', at: 156, pre: ''},
+			{t: 'تنشيط الدورة الدموية', at: 45},
+			{t: 'توزيع الزيت والسدر', at: 105},
+			{t: 'تنظيف جلدة الراس بعمق', at: 149},
+			{t: 'ماساج يرتّح', at: 197, pre: ''},
 		],
-		shots: [{src: 'rushs/perso/brosse_massage.mp4', trim: 0, rate: 0.7, frames: 187, band: 576 / 452}],
+		shots: [{src: 'rushs/perso/brosse_massage.mp4', trim: 0, rate: 0.58, frames: 231, band: 576 / 452}],
 	},
 	{
 		n: 5,
@@ -277,19 +281,30 @@ export const REVEALS: RevealSpec[] = [
 		productRatio: 389 / 1408,
 		productH: 600,
 		voice: 'voice/v8/reveal_5_applicateur.wav',
-		dur: 190,
+		dur: 203,
 		benefits: [
-			{t: 'بالزيت', at: 45, pre: ''},
-			{t: 'ولا بخلطة السدر السايلة', at: 76, pre: ''},
+			{t: 'بالزيت', at: 53, pre: ''},
+			{t: 'ولا بخلطة السدر السايلة', at: 67, pre: ''},
 			{t: 'يوصّل طول للجذور', at: 116, pre: ''},
-			{t: 'بلا تبذير', at: 149, pre: ''},
+			{t: 'بلا تبذير', at: 157, pre: ''},
 		],
-		shots: [{src: 'photos/rituel_huile.jpg', frames: 176, photo: true}],
+		shots: [{src: 'photos/rituel_huile.jpg', frames: 189, photo: true}],
 	},
 ];
 
 /** Intro (8 s) + révélations déjà faites, à la suite. */
 export const PART_DUR = INTRO8_DUR + REVEALS.reduce((a, r) => a + r.dur, 0) + END8_DUR;
+// fenêtres de voix (relatives au début de la musique) pour baisser la musique
+const BED_VOICE: [number, number][] = (() => {
+	const w: [number, number][] = [];
+	let a = 0;
+	for (const r of REVEALS) {
+		w.push([a + OPEN, a + r.dur - 12]);
+		a += r.dur;
+	}
+	w.push([a + 6, a + 6 + 160]);
+	return w;
+})();
 export const Part: React.FC = () => {
 	let acc = INTRO8_DUR;
 	return (
@@ -307,7 +322,11 @@ export const Part: React.FC = () => {
 				);
 			})}
 			<Sequence from={PART_DUR - END8_DUR}>
-				<End8 />
+				<End8 music={false} />
+			</Sequence>
+			{/* une seule musique continue des révélations jusqu'à la fin, baissée sous la voix */}
+			<Sequence from={INTRO8_DUR}>
+				<Bed8 voice={BED_VOICE} dur={PART_DUR - INTRO8_DUR} />
 			</Sequence>
 		</AbsoluteFill>
 	);

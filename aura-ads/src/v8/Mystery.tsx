@@ -1,7 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Img, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {N, T, YELLOW} from '../v2/WinStill';
-import {Abs, Sfx, useStage} from '../v4/kit';
+import {Abs, useStage} from '../v4/kit';
+import {Sfx8} from './sound8';
 import {HOOKBA_DUR, HookBA} from './HookBA';
 
 /**
@@ -63,7 +64,7 @@ export const Mystery: React.FC = () => {
 					</div>
 				</Abs>
 			</AbsoluteFill>
-			<Audio src={staticFile('audio/v8/suspense_numeros.wav')} volume={0.85} />
+			<Audio src={staticFile('audio/v8/suspense8_numeros.wav')} volume={0.8} />
 			<Sequence from={2} layout="none">
 				<Audio src={staticFile('voice/v8/mystere_1.wav')} volume={1.4} />
 			</Sequence>
@@ -72,8 +73,8 @@ export const Mystery: React.FC = () => {
 			</Sequence>
 			{DROPS.map((d, i) => (
 				<React.Fragment key={i}>
-					<Sfx at={d - 2} s="tick" v={0.6} />
-					<Sfx at={d} s="stamp" v={0.45 + i * 0.08} />
+					<Sfx8 at={d - 3} s="swipe" v={0.3} />
+					<Sfx8 at={d} s="hit" v={0.4 + i * 0.07} />
 				</React.Fragment>
 			))}
 		</AbsoluteFill>
