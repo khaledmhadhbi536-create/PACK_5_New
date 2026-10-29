@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Img, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {N, T, YELLOW} from '../v2/WinStill';
 import {Abs, Clip, FmtProvider, In, Music, Sfx, useStage} from '../v4/kit';
+import {HOOKBA_DUR, HookBA} from './HookBA';
 
 /**
  * V8 · accroche (4 s) : l'homme des rushs « perso » (accord donné) applique le sidr.
@@ -108,15 +109,17 @@ export const Hook8: React.FC = () => {
 };
 
 export const V8_VIDEOS = [
-	{id: 'W8-hook-preview-9x16', fmt: '9x16' as const, dur: HOOK8_DUR},
-	{id: 'W8-hook-preview-4x5', fmt: '4x5' as const, dur: HOOK8_DUR},
+	{id: 'W8-hook-preview-9x16', fmt: '9x16' as const, dur: HOOK8_DUR, C: Hook8},
+	{id: 'W8-hook-preview-4x5', fmt: '4x5' as const, dur: HOOK8_DUR, C: Hook8},
+	{id: 'W8-hook-avantapres-9x16', fmt: '9x16' as const, dur: HOOKBA_DUR, C: HookBA},
+	{id: 'W8-hook-avantapres-4x5', fmt: '4x5' as const, dur: HOOKBA_DUR, C: HookBA},
 ];
 
 export const V8Video: React.FC<{id: string}> = ({id}) => {
 	const e = V8_VIDEOS.find((v) => v.id === id)!;
 	return (
 		<FmtProvider fmt={e.fmt}>
-			<Hook8 />
+			<e.C />
 		</FmtProvider>
 	);
 };
