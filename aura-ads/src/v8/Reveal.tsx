@@ -109,7 +109,8 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 									<div style={{width: vertical ? 54 : 44, height: vertical ? 54 : 44, borderRadius: '50%', background: '#2FA35A', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
 										<IconCheck size={vertical ? 34 : 28} color="#fff" />
 									</div>
-									<T size={vertical ? 42 : 34} color="#111" style={{whiteSpace: 'nowrap'}}>
+									<T size={vertical ? 40 : 32} color="#111" style={{whiteSpace: 'nowrap'}}>
+										<span style={{fontWeight: 600, color: '#555', fontSize: '0.8em'}}>يساعد في </span>
 										{b.t}
 									</T>
 								</div>
@@ -153,10 +154,10 @@ export const REVEALS: RevealSpec[] = [
 		dur: 176,
 		// calés sur la voix : « ينظّف… / ينحّي القشرة / يقوّي الجذور / كثافة ولمعة »
 		benefits: [
-			{t: 'ينظّف جلدة الراس', at: 38},
-			{t: 'ينحّي القشرة', at: 60},
-			{t: 'يقوّي الجذور', at: 78},
-			{t: 'كثافة ولمعة للشعر', at: 110},
+			{t: 'تنظيف جلدة الراس', at: 38},
+			{t: 'التخلّص من القشرة', at: 60},
+			{t: 'تقوية الجذور', at: 78},
+			{t: 'كثافة ولمعة الشعر', at: 110},
 		],
 		shots: [
 			{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, frames: 56},
@@ -172,10 +173,10 @@ export const REVEALS: RevealSpec[] = [
 		voice: 'voice/v8/reveal_2_huile_bienfaits.wav',
 		dur: 196,
 		benefits: [
-			{t: 'ينشّط الدورة الدموية', at: 38},
-			{t: 'يقوّي البصيلات', at: 87},
-			{t: 'ينحّي القشرة والحكّة', at: 115},
-			{t: 'حيوية للشعر', at: 138},
+			{t: 'تنشيط الدورة الدموية', at: 38},
+			{t: 'تقوية البصيلات', at: 87},
+			{t: 'التخلّص من القشرة والحكّة', at: 115},
+			{t: 'حيوية الشعر', at: 138},
 		],
 		shots: [
 			{src: 'rushs/perso/huile_goutte.mp4', trim: 0, rate: 0.65, frames: 64, pos: '50% 40%'},
