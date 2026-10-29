@@ -11,8 +11,8 @@ import {INTRO8_DUR, Intro8} from './Mystery';
  * et son nom ; les autres « ? » restent en haut (le suspense continue).
  */
 
-type Shot = {src: string; trim?: number; rate?: number; frames: number; pos?: string};
-export type RevealSpec = {n: number; name: string; sub: string; product: string; productH: number; productRatio: number; shots: Shot[]; voice: string; dur: number; benefits?: {t: string; at: number}[]; header?: {t: string; at: number}};
+type Shot = {src: string; trim?: number; rate?: number; frames: number; pos?: string; band?: number; photo?: boolean};
+export type RevealSpec = {n: number; name: string; sub: string; product: string; productH: number; productRatio: number; shots: Shot[]; voice: string; dur: number; benefits?: {t: string; at: number; pre?: string}[]; header?: {t: string; at: number}};
 
 const OPEN = 14; // le rond s'ouvre
 
@@ -28,13 +28,39 @@ const Row: React.FC<{opened: number}> = ({opened}) => (
 	</div>
 );
 
+/** Photo avec lent zoom. */
+const KenBurns: React.FC<{src: string}> = ({src}) => {
+	const f = useCurrentFrame();
+	return (
+		<AbsoluteFill style={{overflow: 'hidden'}}>
+			<Img src={staticFile(src)} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${1.05 + f * 0.0015})`}} />
+		</AbsoluteFill>
+	);
+};
+
+/** Rush paysage (ex. la brosse) affiché en entier, net, sur fond flouté du même plan. */
+const BandIn: React.FC<{src: string; trim?: number; rate?: number; ratio: number; areaH: number}> = ({src, trim, rate, ratio, areaH}) => {
+	const w = Math.min(1080, Math.round((areaH - 330) * ratio));
+	const bh = Math.round(w / ratio);
+	return (
+		<AbsoluteFill>
+			<AbsoluteFill style={{filter: 'blur(28px) brightness(0.5)', transform: 'scale(1.2)'}}>
+				<Clip src={src} trim={trim} rate={rate} />
+			</AbsoluteFill>
+			<div style={{position: 'absolute', left: (1080 - w) / 2, width: w, top: areaH - bh - 24, height: bh, overflow: 'hidden', borderRadius: 24, border: '4px solid rgba(255,255,255,0.85)', boxShadow: '0 18px 50px rgba(0,0,0,0.6)'}}>
+				<Clip src={src} trim={trim} rate={rate} />
+			</div>
+		</AbsoluteFill>
+	);
+};
+
 export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 	const f = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const {vertical, top, h} = useStage();
 	const hi = vertical ? top + 10 : 30;
 	const VH = vertical ? 1250 : 930; // hauteur de la vidéo ; le reste = panneau produit
-	const PH = vertical ? Math.min(spec.productH, 1920 - VH - 80) : 1350 - VH - 36;
+	const PH = vertical ? Math.min(spec.productH, 1920 - VH - 80) : Math.min(spec.productH, 1350 - VH - 36);
 	// largeur dispo pour les bienfaits = tout l'écran moins le produit (à droite) et les marges
 	const colW = 1080 - (vertical ? 24 : 34) - PH * spec.productRatio - (vertical ? 50 : 40) - 24;
 	// 1) le rond n grossit jusqu'à remplir l'écran
@@ -54,7 +80,13 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 			<div style={{position: 'absolute', left: 0, right: 0, top: 0, height: VH, overflow: 'hidden'}}>
 				{seq.map((s, i) => (
 					<Sequence key={i} from={s.from} durationInFrames={s.frames}>
-						<Clip src={s.src} trim={s.trim} rate={s.rate} pos={s.pos ?? '50% 35%'} />
+						{s.photo ? (
+							<KenBurns src={s.src} />
+						) : s.band ? (
+							<BandIn src={s.src} trim={s.trim} rate={s.rate} ratio={s.band} areaH={VH} />
+						) : (
+							<Clip src={s.src} trim={s.trim} rate={s.rate} pos={s.pos ?? '50% 35%'} />
+						)}
 					</Sequence>
 				))}
 				<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.85) 100%)'}} />
@@ -119,7 +151,7 @@ export const Reveal: React.FC<{spec: RevealSpec}> = ({spec}) => {
 										<IconCheck size={vertical ? 34 : 28} color="#fff" />
 									</div>
 									<T size={vertical ? 40 : 32} color="#111" style={{whiteSpace: 'nowrap'}}>
-										<span style={{fontWeight: 600, color: '#555', fontSize: '0.8em'}}>يساعد في </span>
+										{(b.pre ?? 'يساعد في') ? <span style={{fontWeight: 600, color: '#555', fontSize: '0.8em'}}>{b.pre ?? 'يساعد في'} </span> : null}
 										{b.t}
 									</T>
 								</div>
@@ -194,6 +226,61 @@ export const REVEALS: RevealSpec[] = [
 			{src: 'rushs/perso/huile_goutte.mp4', trim: 0, rate: 0.65, frames: 64, pos: '50% 40%'},
 			{src: 'rushs/perso/massage.mp4', trim: 0.4, frames: 142},
 		],
+	},
+	{
+		n: 3,
+		name: 'ديرما رولر 540',
+		sub: '',
+		product: 'products/v8/derma.png',
+		productRatio: 1109 / 966,
+		productH: 360,
+		voice: 'voice/v8/reveal_3_derma.wav',
+		dur: 196,
+		header: {t: 'قبل الزيت', at: 32},
+		benefits: [
+			{t: 'يساعد الزيت يدخل للجذور', at: 64, pre: ''},
+			{t: 'تنشيط جلدة الراس', at: 102},
+			{t: '540 إبرة صغيرة', at: 132, pre: ''},
+			{t: 'بالشوية، على راس نظيف', at: 163, pre: ''},
+		],
+		shots: [
+			{src: 'rushs/derma_roll_crown.mp4', trim: 0, frames: 100, pos: '50% 50%'},
+			{src: 'rushs/real/v2_derma.mp4', trim: 1.2, frames: 82},
+		],
+	},
+	{
+		n: 4,
+		name: 'بروس الماساج',
+		sub: '',
+		product: 'products/v8/brosse.png',
+		productRatio: 717 / 738,
+		productH: 290,
+		voice: 'voice/v8/reveal_4_brosse.wav',
+		dur: 201,
+		benefits: [
+			{t: 'تنشيط الدورة الدموية', at: 42},
+			{t: 'توزيع الزيت والسدر', at: 88},
+			{t: 'تنظيف جلدة الراس بعمق', at: 118},
+			{t: 'ماساج يرتّح', at: 156, pre: ''},
+		],
+		shots: [{src: 'rushs/perso/brosse_massage.mp4', trim: 0, rate: 0.7, frames: 187, band: 576 / 452}],
+	},
+	{
+		n: 5,
+		name: 'الأبليكاتور',
+		sub: '',
+		product: 'products/v8/applicateur.png',
+		productRatio: 389 / 1408,
+		productH: 600,
+		voice: 'voice/v8/reveal_5_applicateur.wav',
+		dur: 190,
+		benefits: [
+			{t: 'بالزيت', at: 45, pre: ''},
+			{t: 'ولا بخلطة السدر السايلة', at: 76, pre: ''},
+			{t: 'يوصّل طول للجذور', at: 116, pre: ''},
+			{t: 'بلا تبذير', at: 149, pre: ''},
+		],
+		shots: [{src: 'photos/rituel_huile.jpg', frames: 176, photo: true}],
 	},
 ];
 
