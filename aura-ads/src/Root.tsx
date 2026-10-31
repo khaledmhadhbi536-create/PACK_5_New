@@ -15,6 +15,7 @@ import {V5_VIDEOS, V5Video} from './v5/registry5';
 import {V6_VIDEOS, V6Video} from './v6/registry6';
 import {V7_VIDEOS, V7Video} from './v7/registry7';
 import {V8_VIDEOS, V8Video} from './v8/Hook8';
+import {V9_VIDEOS, V9Video} from './v9/Film9';
 
 /** Identifiant = nom du fichier final (les « - » deviennent « _ »). */
 export const adId = (ad: AdSpec) => {
@@ -102,6 +103,11 @@ export const Root: React.FC = () => (
 		<Folder name="V8">
 			{V8_VIDEOS.map((v) => (
 				<Composition key={v.id} id={v.id} component={V8Video} durationInFrames={v.dur} fps={FPS} width={stageFor(v.fmt).W} height={stageFor(v.fmt).H} defaultProps={{id: v.id}} />
+			))}
+		</Folder>
+		<Folder name="V9">
+			{V9_VIDEOS.map((v) => (
+				<Composition key={v.id} id={v.id} component={V9Video} durationInFrames={v.dur} fps={FPS} width={stageFor(v.fmt).W} height={stageFor(v.fmt).H} defaultProps={{id: v.id}} />
 			))}
 		</Folder>
 	</>
