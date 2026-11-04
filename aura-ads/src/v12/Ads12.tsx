@@ -95,7 +95,8 @@ const SPLITS: Split[] = [
 	{
 		name: 'زيت إكليل الجبل', img: 'products/v8/huile.png', ground: 'accent', head: 'حسب الدراسات', pre: 'يساعد في',
 		chips: ['تنشيط الدورة الدموية', 'تقوية البصيلات', 'التخلّص من القشرة والحكّة', 'مظهر شعر أكثف'],
-		clips: [{src: 'photos/v12/homme_huile.jpg', pos: '50% 72%', photo: true}, {src: 'rushs/perso/massage.mp4', trim: 0.4, pos: '50% 35%'}, {src: 'rushs/real/v2_huile.mp4', trim: 0.5, pos: '50% 50%'}],
+		// l'homme tient la bouteille, puis il met l'huile sur sa tête (vue de dessus), puis il masse
+		clips: [{src: 'photos/v12/homme_huile.jpg', pos: '50% 72%', photo: true}, {src: 'rushs/perso/huile_application.mp4', trim: 0, rate: 0.65, pos: '50% 45%'}, {src: 'rushs/perso/massage.mp4', trim: 0.4, pos: '50% 35%'}],
 	},
 	{
 		name: 'ديرما رولر 540', img: 'products/v8/derma.png', ground: 'paper', head: 'قبل الزيت',
