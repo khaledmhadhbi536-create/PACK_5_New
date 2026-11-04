@@ -18,7 +18,7 @@ import {V8_VIDEOS, V8Video} from './v8/Hook8';
 import {V9_VIDEOS, V9Video} from './v9/Film9';
 import {V10_VIDEOS, V10Video} from './v10/Film10';
 import {V11_VIDEOS, V11Video} from './v11/Film11';
-import {V12_VIDEOS, V12Video} from './v12/V01';
+import {V12_VIDEOS, V12Video} from './v12/Ads12';
 
 /** Identifiant = nom du fichier final (les « - » deviennent « _ »). */
 export const adId = (ad: AdSpec) => {
