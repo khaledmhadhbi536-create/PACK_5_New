@@ -83,15 +83,15 @@ const StopSign: React.FC<{size: number}> = ({size}) => {
 	);
 };
 
-type Split = {name: string; tag: string; img: string; clip: string; trim: number; pos: string; rate?: number; ground: 'paper' | 'accent'};
+type Split = {name: string; tag: string; img: string; clip: string; trim: number; pos: string; rate?: number; ground: 'paper' | 'accent'; photo?: boolean};
 const SPLITS: Split[] = [
-	{name: 'سدر طبيعي', tag: 'ينظّف وينحّي القشرة', img: 'products/v8/sidr.png', clip: 'rushs/perso/sidr_front.mp4', trim: 0.6, pos: '50% 40%', ground: 'paper'},
-	{name: 'زيت إكليل الجبل', tag: 'ينشّط الدورة الدموية', img: 'products/v8/huile.png', clip: 'rushs/perso/huile_goutte.mp4', trim: 0.2, pos: '50% 50%', ground: 'accent'},
-	{name: 'ديرما رولر 540', tag: 'قبل الزيت', img: 'products/v8/derma.png', clip: 'rushs/derma_roll_crown.mp4', trim: 0.5, pos: '50% 50%', ground: 'paper'},
-	{name: 'بروس الماساج', tag: 'ماساج لجلدة الراس', img: 'products/v8/brosse.png', clip: 'rushs/perso/brosse_massage.mp4', trim: 0.4, pos: '50% 50%', ground: 'accent'},
+	{name: 'سدر طبيعي', tag: 'ينظّف جلدة الراس', img: 'products/v8/sidr.png', clip: 'rushs/perso/sidr_front.mp4', trim: 0.6, pos: '50% 40%', ground: 'paper'},
+	{name: 'زيت إكليل الجبل', tag: 'ينشّط الدورة الدموية', img: 'products/v8/huile.png', clip: 'photos/v12/homme_huile.jpg', trim: 0, pos: '50% 72%', ground: 'accent', photo: true},
+	{name: 'ديرما رولر 540', tag: 'يعاون الزيت يدخل للجذور', img: 'products/v8/derma.png', clip: 'rushs/derma_roll_crown.mp4', trim: 0.5, pos: '50% 50%', ground: 'paper'},
+	{name: 'بروس الماساج', tag: 'يرتّحلك جلدة الراس', img: 'products/v8/brosse.png', clip: 'rushs/perso/brosse_massage.mp4', trim: 0.4, pos: '50% 50%', ground: 'accent'},
 ];
 
-const SplitShot: React.FC<{s: Split; i: number; dur: number}> = ({s, i, dur}) => {
+const SplitShot: React.FC<{s: Split; i: number; dur: number; tagAt?: number}> = ({s, i, dur, tagAt = 6}) => {
 	const f = useCurrentFrame();
 	const {vertical, W, H, top, h} = useLay();
 	// 9:16 : la ligne de partage au milieu de la zone utile ; 4:5 : moitié gauche / droite
@@ -105,7 +105,7 @@ const SplitShot: React.FC<{s: Split; i: number; dur: number}> = ({s, i, dur}) =>
 		<AbsoluteFill style={{background: '#000'}}>
 			{/* vidéo d'utilisation */}
 			<div style={{...half, ...(vertical ? {top: 0, height: splitY} : {left: 0, width: W / 2}), overflow: 'hidden', transform: vertical ? `translateX(${sg * (1 - enter) * W}px)` : `translateY(${sg * (1 - enter) * H}px)`}}>
-				<Clip src={s.clip} trim={s.trim} rate={s.rate} pos={s.pos} zoom={1.1} />
+				{s.photo ? <Push src={s.clip} dur={dur} pos={s.pos} from={1.05} to={1.2} pan={30} /> : <Clip src={s.clip} trim={s.trim} rate={s.rate} pos={s.pos} zoom={1.1} />}
 				<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.25), transparent 30%, transparent 70%, rgba(0,0,0,0.35))'}} />
 			</div>
 			{/* le produit (nouvelle photo) */}
@@ -122,7 +122,7 @@ const SplitShot: React.FC<{s: Split; i: number; dur: number}> = ({s, i, dur}) =>
 					<span style={{fontFamily: F.latin, fontWeight: 800, fontSize: 64, color: P.accent}}>{i + 1}</span>
 					<span style={{fontFamily: F.display, fontSize: 84, color: P.paper, whiteSpace: 'nowrap'}}>{s.name}</span>
 				</div>
-				<div dir="rtl" style={{background: P.paper, color: P.ink, fontFamily: F.body, fontWeight: 900, fontSize: 42, padding: '0 22px 6px', borderRadius: 12, opacity: tw(f, 6, 5), transform: `translateY(${(1 - tw(f, 6, 5)) * 20}px)`}}>
+				<div dir="rtl" style={{background: P.paper, color: P.ink, fontFamily: F.body, fontWeight: 900, fontSize: 52, padding: '0 26px 8px', borderRadius: 12, opacity: tw(f, tagAt, 5), transform: `translateY(${(1 - tw(f, tagAt, 5)) * 20}px) scale(${0.9 + 0.1 * tw(f, tagAt, 5)})`}}>
 					{s.tag}
 				</div>
 			</div>
@@ -156,15 +156,15 @@ const Pill: React.FC<{at: number; y: number; children: React.ReactNode; bg?: str
 // ---------------------------------------------------------------- données : minutage mesuré mot à mot sur chaque voix
 
 type Offer = {start: number; price: number; strike: number; deliv: number; cod: number; cta: number; strikeFirst?: boolean; bridge?: number};
-type Body = {intro?: 'pack' | 'four'; prods: number[]; offer: Offer; end: number};
-// tout est en images (30 i/s) depuis le début du corps
+type Body = {intro?: 'pack' | 'four'; prods: number[]; tags: number[]; offer: Offer; end: number};
+// tout est en images (30 i/s) depuis le début du corps (voix à vitesse normale)
 const BODIES: Record<'V01' | 'V03' | 'V05', Body> = {
-	// « باك Aura Bio فيه: سدر… الكل بتسعة وثلاثين… عوض أربعة وستين… التوصيل… تخلّص… انزل على كومندي »
-	V01: {intro: 'pack', prods: [35, 59, 83, 104], offer: {start: 123, price: 135, strike: 173, deliv: 200, cod: 233, cta: 260}, end: 279},
-	// « أربعة قطع لشعرك: سدر… بالقطعة يجيو أربعة وستين… أما في الباك تسعة وثلاثين… »
-	V03: {intro: 'four', prods: [32, 54, 76, 98], offer: {start: 119, strike: 140, bridge: 166, price: 183, deliv: 215, cod: 248, cta: 276, strikeFirst: true}, end: 306},
-	// « سدر طبيعي، زيت… الكل بتسعة وثلاثين… »
-	V05: {prods: [0, 27, 51, 77], offer: {start: 101, price: 113, strike: 152, deliv: 184, cod: 235, cta: 260}, end: 282},
+	// « باك Aura Bio فيه أربعة حاجات: السدر الطبيعي، ينظّف… زيت… ينشّط… الديرما… يعاون… بروس… يرتّحلك… الكل… »
+	V01: {intro: 'pack', prods: [62, 132, 208, 284], tags: [94, 166, 233, 314], offer: {start: 356, price: 370, strike: 415, deliv: 445, cod: 494, cta: 520}, end: 550},
+	// « أربعة قطع لشعرك: … بالقطعة يجيو أربعة وستين… أما في الباك تسعة وثلاثين… »
+	V03: {intro: 'four', prods: [41, 112, 187, 270], tags: [75, 142, 214, 301], offer: {start: 349, strike: 380, bridge: 413, price: 439, deliv: 478, cod: 530, cta: 559, strikeFirst: true}, end: 587},
+	// « السدر الطبيعي، ينظّف… الكل بتسعة وثلاثين… »
+	V05: {prods: [0, 77, 159, 239], tags: [36, 111, 185, 270], offer: {start: 320, price: 333, strike: 383, deliv: 422, cod: 476, cta: 514}, end: 540},
 };
 const HOLD = 60; // l'écran final reste 2 s après la voix
 
@@ -190,13 +190,13 @@ const HookWrap: React.FC<{id: string; dur: number; g?: string; hits?: number[]; 
 const HookStop: React.FC<HookP> = ({dur}) => {
 	const {vertical, cy, W} = useLay();
 	return (
-		<HookWrap id="hs" dur={dur} hits={[0, 46]} after={<><Blink at={46} len={3} /><Sfx at={48} s="hit" v={0.5} /></>}>
+		<HookWrap id="hs" dur={dur} hits={[0, 53]} after={<><Blink at={53} len={3} /><Sfx at={55} s="hit" v={0.5} /></>}>
 			<div style={{position: 'absolute', left: 0, right: 0, top: cy - (vertical ? 560 : 520), display: 'flex', justifyContent: 'center'}}>
 				<StopSign size={vertical ? 420 : 340} />
 			</div>
 			<Slam at={0} from={1.1} text="ما تشريش" y={cy + (vertical ? 60 : 10)} max={190} width={W * 0.8} />
-			<Slam at={46} text="بالقطعة!" y={cy + (vertical ? 290 : 230)} max={210} color={P.accent} />
-			<Rays at={46} y={cy + 290} />
+			<Slam at={53} text="بالقطعة!" y={cy + (vertical ? 290 : 230)} max={210} color={P.accent} />
+			<Rays at={53} y={cy + 290} />
 		</HookWrap>
 	);
 };
@@ -225,12 +225,12 @@ const PriceCard: React.FC<{at: number; label: string; price: string; ok: boolean
 const HookDiff: React.FC<HookP> = ({dur}) => {
 	const {vertical, cy} = useLay();
 	return (
-		<HookWrap id="hd" dur={dur} hits={[0, 21, 68]} after={<><Sfx at={21} s="hit" v={0.45} /><Sfx at={29} s="scribble" v={0.5} /><Sfx at={68} s="coin" v={0.45} /></>}>
+		<HookWrap id="hd" dur={dur} hits={[0, 24, 78]} after={<><Sfx at={24} s="hit" v={0.45} /><Sfx at={33} s="scribble" v={0.5} /><Sfx at={78} s="coin" v={0.45} /></>}>
 			<Slam at={0} from={1.1} text="شوف الفرق" y={cy - (vertical ? 380 : 380)} max={200} />
-			<PriceCard at={21} label="بالقطعة" price="64" ok={false} y={cy - (vertical ? 170 : 180)} />
-			<PriceCard at={68} label="في الباك" price="39" ok y={cy + (vertical ? 170 : 120)} />
-			{vertical ? <PackRow at={72} y={cy + 330} h={300} /> : null}
-			<Rays at={68} y={cy + 200} />
+			<PriceCard at={24} label="بالقطعة" price="64" ok={false} y={cy - (vertical ? 170 : 180)} />
+			<PriceCard at={78} label="في الباك" price="39" ok y={cy + (vertical ? 170 : 120)} />
+			{vertical ? <PackRow at={83} y={cy + 330} h={300} /> : null}
+			<Rays at={78} y={cy + 200} />
 		</HookWrap>
 	);
 };
@@ -240,11 +240,11 @@ const HookFour: React.FC<HookP> = ({dur}) => {
 	const {vertical, cy} = useLay();
 	const packH = vertical ? 380 : 300;
 	return (
-		<HookWrap id="hf" dur={dur} g="accent" hits={[0, 51]} after={<Sfx at={51} s="coin" v={0.45} />}>
+		<HookWrap id="hf" dur={dur} g="accent" hits={[0, 59]} after={<Sfx at={59} s="coin" v={0.45} />}>
 			<Num at={0} text="4" y={cy - (vertical ? 360 : 330)} size={vertical ? 420 : 340} color={P.ink} />
-			<Slam at={9} text="قطع لشعرك" y={cy - (vertical ? 90 : 120)} max={170} color={P.ink} shadow={false} />
-			<PackRow at={14} y={cy + (vertical ? 20 : -20)} h={packH} />
-			<Pill at={51} y={cy + (vertical ? 460 : 330)} bg={P.ink} color={P.paper}>
+			<Slam at={10} text="قطع لشعرك" y={cy - (vertical ? 90 : 120)} max={170} color={P.ink} shadow={false} />
+			<PackRow at={16} y={cy + (vertical ? 20 : -20)} h={packH} />
+			<Pill at={59} y={cy + (vertical ? 460 : 330)} bg={P.ink} color={P.paper}>
 				كل قطعة بأقل من <span style={{fontFamily: F.latin, fontWeight: 800, color: P.accent, fontSize: 64}}>10</span> د.ت
 			</Pill>
 		</HookWrap>
@@ -256,9 +256,9 @@ const HookAsk: React.FC<HookP> = ({dur}) => {
 	const f = useCurrentFrame();
 	const {vertical, cy} = useLay();
 	return (
-		<HookWrap id="ha" dur={dur} hits={[0, 15]}>
+		<HookWrap id="ha" dur={dur} hits={[0, 17]}>
 			<Slam at={0} from={1.1} text="قدّاش تحسب" y={cy - (vertical ? 440 : 400)} max={190} />
-			<Slam at={13} text="يسوى الباك؟" y={cy - (vertical ? 250 : 230)} max={190} color={P.accent} />
+			<Slam at={15} text="يسوى الباك؟" y={cy - (vertical ? 250 : 230)} max={190} color={P.accent} />
 			<PackRow at={2} y={cy - 40} h={vertical ? 400 : 300} />
 			<div style={{position: 'absolute', left: 0, right: 0, top: cy + (vertical ? 330 : 230), display: 'flex', justifyContent: 'center'}}>
 				<div style={{fontFamily: F.latin, fontWeight: 800, fontSize: vertical ? 240 : 180, lineHeight: 1, color: P.accent, transform: `scale(${1 + Math.abs(Math.sin(f / 4)) * 0.12}) rotate(${Math.sin(f / 6) * 6}deg)`, textShadow: `0 0 50px ${theme.colors.glow}`}}>?</div>
@@ -271,14 +271,14 @@ const HookAsk: React.FC<HookP> = ({dur}) => {
 const HookDrop: React.FC<HookP> = ({dur}) => {
 	const f = useCurrentFrame();
 	const {vertical, cy} = useLay();
-	const fall = tw(f, 4, 10, theme.ease.inOut);
+	const fall = tw(f, 5, 12, theme.ease.inOut);
 	return (
-		<HookWrap id="hp" dur={dur} hits={[0, 14]} after={<Sfx at={12} s="hit" v={0.5} />}>
+		<HookWrap id="hp" dur={dur} hits={[0, 16]} after={<Sfx at={14} s="hit" v={0.5} />}>
 			<Slam at={0} from={1.1} text="السوم طاح!" y={cy - (vertical ? 400 : 380)} max={230} color={P.accent} />
 			<div style={{position: 'absolute', left: 0, right: 0, top: cy - 120, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 30}} dir="ltr">
 				<div style={{fontFamily: F.latin, fontWeight: 800, fontSize: vertical ? 230 : 190, color: P.paper, opacity: 1 - fall * 0.6, transform: `translateY(${fall * 260}px) rotate(${fall * 25}deg)`, textDecoration: 'line-through', textDecorationColor: theme.colors.danger}}>64</div>
-				<svg width={130} height={230} viewBox="0 0 70 120" style={{opacity: tw(f, 6, 4)}}><path d="M35 5 V100 M10 75 L35 105 L60 75" stroke={P.accent} strokeWidth={12} fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
-				<div style={{fontFamily: F.latin, fontWeight: 800, fontSize: vertical ? 320 : 260, color: P.accent, opacity: tw(f, 12, 4), transform: `scale(${1.6 - 0.6 * tw(f, 12, 6)})`}}>39</div>
+				<svg width={130} height={230} viewBox="0 0 70 120" style={{opacity: tw(f, 7, 5)}}><path d="M35 5 V100 M10 75 L35 105 L60 75" stroke={P.accent} strokeWidth={12} fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+				<div style={{fontFamily: F.latin, fontWeight: 800, fontSize: vertical ? 320 : 260, color: P.accent, opacity: tw(f, 14, 5), transform: `scale(${1.6 - 0.6 * tw(f, 14, 7)})`}}>39</div>
 			</div>
 		</HookWrap>
 	);
@@ -288,15 +288,15 @@ const HookDrop: React.FC<HookP> = ({dur}) => {
 const HookBefore: React.FC<HookP> = ({dur}) => {
 	const {vertical, cy} = useLay();
 	return (
-		<HookWrap id="hb" dur={dur} hits={[0, 41]} after={<Sfx at={43} s="hit" v={0.5} />}>
+		<HookWrap id="hb" dur={dur} hits={[0, 47]} after={<Sfx at={49} s="hit" v={0.5} />}>
 			<AbsoluteFill>
 				<Clip src="rushs/perso/sidr_top.mp4" trim={0.5} pos="50% 40%" zoom={1.1} />
 				<AbsoluteFill style={{background: 'rgba(0,0,0,0.45)'}} />
 			</AbsoluteFill>
 			<Slam at={0} from={1.1} text="قبل ما تشري" y={cy - (vertical ? 260 : 240)} max={210} />
-			<Slam at={16} text="أي حاجة لشعرك" y={cy - (vertical ? 50 : 50)} max={180} />
-			<Slam at={41} text="شوف هذا!" y={cy + (vertical ? 210 : 180)} max={240} color={P.accent} />
-			<Rays at={41} y={cy + 210} />
+			<Slam at={18} text="أي حاجة لشعرك" y={cy - (vertical ? 50 : 50)} max={180} />
+			<Slam at={47} text="شوف هذا!" y={cy + (vertical ? 210 : 180)} max={240} color={P.accent} />
+			<Rays at={47} y={cy + 210} />
 		</HookWrap>
 	);
 };
@@ -305,13 +305,13 @@ const HookBefore: React.FC<HookP> = ({dur}) => {
 const HookUnbox: React.FC<HookP> = ({dur}) => {
 	const {vertical, cy} = useLay();
 	return (
-		<HookWrap id="hu" dur={dur} hits={[0, 27]} after={<Sfx at={29} s="hit" v={0.45} />}>
+		<HookWrap id="hu" dur={dur} hits={[0, 31]} after={<Sfx at={33} s="hit" v={0.45} />}>
 			<AbsoluteFill>
 				<Clip src="rushs/real/v2_tous.mp4" trim={0.5} pos="50% 50%" zoom={1.06} />
 				<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.5))'}} />
 			</AbsoluteFill>
 			<Slam at={0} from={1.1} text="حلّينا الكرتونة" y={cy - (vertical ? 380 : 360)} max={190} />
-			<Slam at={27} text="شوف آش فيها!" y={cy + (vertical ? 300 : 240)} max={210} color={P.accent} />
+			<Slam at={31} text="شوف آش فيها!" y={cy + (vertical ? 300 : 240)} max={210} color={P.accent} />
 		</HookWrap>
 	);
 };
@@ -320,11 +320,11 @@ const HookUnbox: React.FC<HookP> = ({dur}) => {
 const HookBox4: React.FC<HookP> = ({dur}) => {
 	const {vertical, cy} = useLay();
 	return (
-		<HookWrap id="h4" dur={dur} g="accent" hits={[0, 22]}>
+		<HookWrap id="h4" dur={dur} g="accent" hits={[0, 25]}>
 			<Num at={0} text="4" y={cy - (vertical ? 380 : 340)} size={vertical ? 400 : 320} color={P.ink} />
-			<Slam at={9} text="حاجات" y={cy - (vertical ? 130 : 150)} max={190} color={P.ink} shadow={false} />
-			<Slam at={22} text="في كرتونة وحدة!" y={cy + (vertical ? 40 : -10)} max={160} color={P.ink} shadow={false} />
-			<PackRow at={4} y={cy + (vertical ? 170 : 110)} h={vertical ? 400 : 260} />
+			<Slam at={10} text="حاجات" y={cy - (vertical ? 130 : 150)} max={190} color={P.ink} shadow={false} />
+			<Slam at={25} text="في كرتونة وحدة!" y={cy + (vertical ? 40 : -10)} max={160} color={P.ink} shadow={false} />
+			<PackRow at={5} y={cy + (vertical ? 170 : 110)} h={vertical ? 400 : 260} />
 		</HookWrap>
 	);
 };
@@ -333,14 +333,14 @@ const HookBox4: React.FC<HookP> = ({dur}) => {
 const HookDeliver: React.FC<HookP> = ({dur}) => {
 	const {vertical, cy} = useLay();
 	return (
-		<HookWrap id="hv" dur={dur} hits={[0, 20]} after={<Sfx at={22} s="coin" v={0.45} />}>
+		<HookWrap id="hv" dur={dur} hits={[0, 23]} after={<Sfx at={25} s="coin" v={0.45} />}>
 			<AbsoluteFill>
 				<Clip src="rushs/real/v2_tous.mp4" trim={2.5} pos="50% 50%" zoom={1.06} />
 				<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.1) 45%, rgba(0,0,0,0.55))'}} />
 			</AbsoluteFill>
 			<Slam at={0} from={1.1} text="هذا اللي يوصلك" y={cy - (vertical ? 380 : 360)} max={190} />
 			<div style={{position: 'absolute', left: 0, right: 0, top: cy + (vertical ? 220 : 160)}}>
-				<Pill at={20} y={0} bg={P.accent} color={P.ink}>
+				<Pill at={23} y={0} bg={P.accent} color={P.ink}>
 					<span style={{fontFamily: F.latin, fontWeight: 800, fontSize: 110, lineHeight: 1}}>39</span>
 					<span style={{fontSize: 70}}>د.ت</span>
 				</Pill>
@@ -401,17 +401,20 @@ const Intro: React.FC<{kind: 'pack' | 'four'; dur: number}> = ({kind, dur}) => {
 };
 
 /** Les 4 écrans partagés, chacun calé sur le nom dit par la voix. */
-const Products: React.FC<{times: number[]; end: number}> = ({times, end}) => (
+const Products: React.FC<{times: number[]; tags: number[]; end: number}> = ({times, tags, end}) => (
 	<AbsoluteFill>
 		{SPLITS.map((s, i) => {
 			const from = i === 0 ? 0 : times[i] - LEAD - times[0];
 			const to = (i + 1 < times.length ? times[i + 1] - LEAD : end - LEAD) - times[0];
 			return (
 				<Sequence key={i} from={from} durationInFrames={to - from}>
-					<SplitShot s={s} i={i} dur={to - from} />
+					<SplitShot s={s} i={i} dur={to - from} tagAt={tags[i] - LEAD - times[0] - from} />
 				</Sequence>
 			);
 		})}
+		{tags.map((t, i) => (
+			<Sfx key={`t${i}`} at={t - times[0]} s="ding" v={0.25} />
+		))}
 		{times.map((t, i) => (
 			<React.Fragment key={i}>
 				<Sfx at={t - times[0]} s="swipe" v={0.4} />
@@ -562,7 +565,7 @@ const AdFilm: React.FC<{ad: Ad}> = ({ad}) => {
 				</Sequence>
 			) : null}
 			<Sequence from={H0 + Math.max(0, introEnd)} durationInFrames={b.offer.start - Math.max(0, introEnd)}>
-				<Products times={b.prods} end={b.offer.start} />
+				<Products times={b.prods} tags={b.tags} end={b.offer.start} />
 			</Sequence>
 			<Sequence from={H0 + b.offer.start - LEAD} durationInFrames={total - (H0 + b.offer.start - LEAD)}>
 				<OfferScene o={b.offer} dur={total - (H0 + b.offer.start - LEAD)} />
@@ -585,15 +588,15 @@ const AdFilm: React.FC<{ad: Ad}> = ({ad}) => {
 
 // durée de l'accroche = durée de sa voix (images)
 const ADS: Ad[] = [
-	{id: 'V01-offre-h1', concept: 'V01', hook: 'stop', hookDur: 61, voice: 'voice/v12/V01_h1.wav'},
-	{id: 'V01-offre-h2', concept: 'V01', hook: 'diff', hookDur: 103, voice: 'voice/v12/V01_h2.wav'},
-	{id: 'V01-offre-h3', concept: 'V01', hook: 'four', hookDur: 87, voice: 'voice/v12/V01_h3.wav'},
-	{id: 'V03-prixbarre-h1', concept: 'V03', hook: 'ask', hookDur: 37, voice: 'voice/v12/V03_h1.wav'},
-	{id: 'V03-prixbarre-h2', concept: 'V03', hook: 'drop', hookDur: 24, voice: 'voice/v12/V03_h2.wav'},
-	{id: 'V03-prixbarre-h3', concept: 'V03', hook: 'before', hookDur: 59, voice: 'voice/v12/V03_h3.wav'},
-	{id: 'V05-toutca-h1', concept: 'V05', hook: 'unbox', hookDur: 47, voice: 'voice/v12/V05_h1.wav'},
-	{id: 'V05-toutca-h2', concept: 'V05', hook: 'box4', hookDur: 43, voice: 'voice/v12/V05_h2.wav'},
-	{id: 'V05-toutca-h3', concept: 'V05', hook: 'deliver', hookDur: 51, voice: 'voice/v12/V05_h3.wav'},
+	{id: 'V01-offre-h1', concept: 'V01', hook: 'stop', hookDur: 60, voice: 'voice/v12/V01_h1.wav'},
+	{id: 'V01-offre-h2', concept: 'V01', hook: 'diff', hookDur: 118, voice: 'voice/v12/V01_h2.wav'},
+	{id: 'V01-offre-h3', concept: 'V01', hook: 'four', hookDur: 100, voice: 'voice/v12/V01_h3.wav'},
+	{id: 'V03-prixbarre-h1', concept: 'V03', hook: 'ask', hookDur: 42, voice: 'voice/v12/V03_h1.wav'},
+	{id: 'V03-prixbarre-h2', concept: 'V03', hook: 'drop', hookDur: 27, voice: 'voice/v12/V03_h2.wav'},
+	{id: 'V03-prixbarre-h3', concept: 'V03', hook: 'before', hookDur: 68, voice: 'voice/v12/V03_h3.wav'},
+	{id: 'V05-toutca-h1', concept: 'V05', hook: 'unbox', hookDur: 54, voice: 'voice/v12/V05_h1.wav'},
+	{id: 'V05-toutca-h2', concept: 'V05', hook: 'box4', hookDur: 49, voice: 'voice/v12/V05_h2.wav'},
+	{id: 'V05-toutca-h3', concept: 'V05', hook: 'deliver', hookDur: 58, voice: 'voice/v12/V05_h3.wav'},
 ];
 
 export const V12_VIDEOS = ADS.flatMap((ad) =>

@@ -7,7 +7,8 @@ Chaque vidéo existe en **9:16** (Stories, Reels) et **4:5** (fil). Planches de 
 ## Ce qui change par rapport à AURA6
 
 - **Voix derja 100 %**, même voix partout (accent de Tunis), en une prise continue : l'accroche s'enchaîne sur la suite sans blanc.
-- **Écran partagé** pour chaque produit, au moment où la voix le nomme : l'homme qui l'utilise (en haut, ou à gauche en 4:5) + la nouvelle photo du produit (en bas, ou à droite), avec le nom et un bienfait.
+- **Écran partagé** pour chaque produit, au moment où la voix le nomme : l'homme qui l'utilise (en haut, ou à gauche en 4:5 ; pour l'huile, sa photo avec la bouteille Aura Bio en main) + la nouvelle photo du produit (en bas, ou à droite), avec le nom et le bienfait dit par la voix.
+- **Rythme posé** : voix à vitesse naturelle et une phrase de bienfait par produit (« ينظّف جلدة الراس », « ينشّط الدورة الدموية », « يعاون الزيت يدخل للجذور », « يرتّحلك جلدة الراس ») : chaque produit reste environ 2,5 s à l'écran.
 - Style « motion » (skill remotion-motion-graphics) : fonds en dégradé mobile, étalonnage, grain, mots qui claquent au rythme de la voix.
 - Son traité avec ffmpeg-skill : −14 LUFS (le niveau d'Instagram/Facebook), couleurs taguées BT.709, contrôle Reels/Facebook passé.
 
@@ -21,10 +22,10 @@ Seules les 2-3 premières secondes (l'accroche) changent entre h1, h2 et h3 : le
 | **V03 prix barré** | « قدّاش تحسب يسوى الباك هذا؟ » + gros « ? » | « السوم طاح! » : 64 qui tombe → 39 | Sur le vrai rush : « قبل ما تشري أي حاجة لشعرك، شوف هذا! » |
 | **V05 tout ça pour 39** | Vraie vidéo des produits : « حلّينا الكرتونة، شوف آش فيها! » | « أربعة حاجات في كرتونة وحدة! » | Vraie vidéo : « هذا اللي يوصلك بتسعة وثلاثين دينار! » |
 
-Fichiers : `videos/AURA12_<vidéo>_h<n>_<format>_<durée>.mp4` (13 à 15 s).
+Fichiers : `videos/AURA12_<vidéo>_h<n>_<format>_<durée>.mp4` (20 à 24 s).
 
 Suite commune :
-- **V01** : « باك Aura Bio فيه… » → les 4 produits en écran partagé → « الكل » → 39 (64 barré) → livraison 8 DT → « تخلّص كي يوصلك » → « انزل على كومندي ».
+- **V01** : « باك Aura Bio فيه أربعة حاجات… » → les 4 produits en écran partagé → « الكل » → 39 (64 barré) → livraison 8 DT → « تخلّص كي يوصلك » → « انزل على كومندي ».
 - **V03** : « أربعة قطع لشعرك » → les 4 produits → « بالقطعة 64 » barré → « أما في الباك » → 39 → livraison → paiement → appel.
 - **V05** : les 4 produits tout de suite → 39 → livraison → paiement → appel.
 
