@@ -6,9 +6,14 @@ Chaque vidéo existe en **9:16** (Stories, Reels) et **4:5** (fil). Planches de 
 
 ## Ce qui change par rapport à AURA6
 
-- **Voix derja 100 %**, même voix partout (accent de Tunis), en une prise continue : l'accroche s'enchaîne sur la suite sans blanc.
-- **Écran partagé** pour chaque produit, au moment où la voix le nomme : l'homme qui l'utilise (en haut, ou à gauche en 4:5 ; pour l'huile, sa photo avec la bouteille Aura Bio en main) + la nouvelle photo du produit (en bas, ou à droite), avec le nom et le bienfait dit par la voix.
-- **Rythme posé** : voix à vitesse naturelle et une phrase de bienfait par produit (« ينظّف جلدة الراس », « ينشّط الدورة الدموية », « يعاون الزيت يدخل للجذور », « يرتّحلك جلدة الراس ») : chaque produit reste environ 2,5 s à l'écran.
+- **Voix derja 100 %**, une seule prise par vidéo (même voix Fenrir du début à « انزل على كومندي »), sans blanc.
+- **Écran partagé** pour chaque produit, au moment où la voix le nomme : l'homme qui l'utilise (en haut, ou à gauche en 4:5) + la nouvelle photo du produit, avec le nom et la liste des bienfaits qui s'affichent au rythme de la voix.
+  - Sidr : se met le sidr → bol de sidr préparé. Bienfaits : تنظيف جلدة الراس، التخلّص من القشرة، تقوية الجذور، كثافة ولمعة الشعر.
+  - Huile (« حسب الدراسات ») : photo de l'homme avec la bouteille Aura Bio → il met l'huile sur sa tête → massage. Bienfaits : تنشيط الدورة الدموية، تقوية البصيلات، التخلّص من القشرة والحكّة، مظهر شعر أكثف.
+  - Derma roller (« قبل الزيت ») : يعاون الزيت يدخل للجذور، تنشيط جلدة الراس.
+  - Brosse : تنشيط الدورة الدموية، توزيع الزيت والسدر، تنظيف جلدة الراس بالعمق.
+- **Applicateur retiré partout**, y compris des rushs où le flacon apparaissait en arrière-plan.
+- **Rythme posé** : voix à vitesse naturelle, chaque produit reste 5 à 8 s à l'écran.
 - Style « motion » (skill remotion-motion-graphics) : fonds en dégradé mobile, étalonnage, grain, mots qui claquent au rythme de la voix.
 - Son traité avec ffmpeg-skill : −14 LUFS (le niveau d'Instagram/Facebook), couleurs taguées BT.709, contrôle Reels/Facebook passé.
 
@@ -22,9 +27,11 @@ Seules les 2-3 premières secondes (l'accroche) changent entre h1, h2 et h3 : le
 | **V03 prix barré** | « قدّاش تحسب يسوى الباك هذا؟ » + gros « ? » | « السوم طاح! » : 64 qui tombe → 39 | Sur le vrai rush : « قبل ما تشري أي حاجة لشعرك، شوف هذا! » |
 | **V05 tout ça pour 39** | Vraie vidéo des produits : « حلّينا الكرتونة، شوف آش فيها! » | « أربعة حاجات في كرتونة وحدة! » | Vraie vidéo : « هذا اللي يوصلك بتسعة وثلاثين دينار! » |
 
-Fichiers : `videos/AURA12_<vidéo>_h<n>_<format>_<durée>.mp4` (29 à 32 s).
+Fichiers : `videos/AURA12_<vidéo>_h<n>_<format>_<durée>.mp4` (44 à 47 s).
 
-Avant l'appel final, toutes les vidéos ajoutent : « باك فعّال، والأهم طبيعي مية بالمية! صالح زادة للّحية. وطريقة الاستعمال توصلك مع الباك: ساهلة وما تاخوش وقت. » (à l'écran : باك فعّال avec l'avant/après de l'homme et « تجربة شخصية » → طبيعي 100% → صالح زادة للّحية sur le plan de sa barbe au sidr → طريقة الاستعمال توصلك مع الباك ✓ → ساهلة وما تاخوش وقت).
+Ordre : accroche → les 4 produits → « باك فعّال… » → prix, livraison, paiement → « انزل على كومندي ».
+
+Juste après les produits, toutes les vidéos ajoutent : « باك فعّال، والأهم طبيعي مية بالمية! صالح زادة للّحية. وطريقة الاستعمال توصلك مع الباك: ساهلة وما تاخوش وقت. » (à l'écran : باك فعّال avec l'avant/après de l'homme et « تجربة شخصية » → طبيعي 100% → صالح زادة للّحية sur le plan de sa barbe au sidr → طريقة الاستعمال توصلك مع الباك ✓ → ساهلة وما تاخوش وقت).
 
 Suite commune :
 - **V01** : « باك Aura Bio فيه أربعة حاجات… » → les 4 produits en écran partagé → « الكل » → 39 (64 barré) → livraison 8 DT → « تخلّص كي يوصلك » → « انزل على كومندي ».
@@ -64,4 +71,4 @@ cd aura-ads
 node scripts/render-v12.mjs                 # tout
 node scripts/render-v12.mjs V03 9x16        # filtre : tous les mots doivent correspondre
 ```
-Code : `aura-ads/src/v12/Ads12.tsx` (minutage mesuré mot à mot sur chaque voix, dans `BODIES` et `ADS`). Voix : `aura-ads/public/voice/v12/`.
+Code : `aura-ads/src/v12/Ads12.tsx` (minutage mesuré mot à mot sur chaque voix par `scripts/align_v12.py`, écrit dans `src/v12/timings12.ts`). Voix : `aura-ads/public/voice/v12/`.

@@ -362,7 +362,7 @@ const HookBefore: React.FC<HookP> = ({dur, k}) => {
 			</AbsoluteFill>
 			<Slam at={0} from={1.1} text="قبل ما تشري" y={cy - (vertical ? 260 : 240)} max={210} />
 			<Slam at={k[0] - LEAD} text="أي حاجة لشعرك" y={cy - (vertical ? 50 : 50)} max={180} />
-			<Slam at={k[1] - LEAD} text="شوف هذا!" y={cy + (vertical ? 210 : 180)} max={240} color={P.accent} />
+			<Slam at={k[1] - LEAD} text="شوف هذا!" y={cy + (vertical ? 210 : 180)} max={175} color={P.accent} />
 			<Rays at={k[1] - LEAD} y={cy + 210} />
 		</HookWrap>
 	);
@@ -378,7 +378,7 @@ const HookUnbox: React.FC<HookP> = ({dur, k}) => {
 				<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.5))'}} />
 			</AbsoluteFill>
 			<Slam at={0} from={1.1} text="حلّينا الكرتونة" y={cy - (vertical ? 380 : 360)} max={190} />
-			<Slam at={k[0] - LEAD} text="شوف آش فيها!" y={cy + (vertical ? 300 : 240)} max={210} color={P.accent} />
+			<Slam at={k[0] - LEAD} text="شوف آش فيها!" y={cy + (vertical ? 300 : 240)} max={160} color={P.accent} />
 		</HookWrap>
 	);
 };
