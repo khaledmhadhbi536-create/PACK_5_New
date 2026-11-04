@@ -90,7 +90,7 @@ const SPLITS: Split[] = [
 	{
 		name: 'سدر طبيعي', img: 'products/v8/sidr.png', ground: 'paper', pre: 'يساعد في',
 		chips: ['تنظيف جلدة الراس', 'التخلّص من القشرة', 'تقوية الجذور', 'كثافة ولمعة الشعر'],
-		clips: [{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, pos: '50% 40%'}, {src: 'rushs/perso/sidr_top.mp4', trim: 0.4, pos: '50% 40%'}, {src: 'rushs/real/v2_sidr.mp4', trim: 1.0, pos: '50% 50%'}],
+		clips: [{src: 'rushs/perso/sidr_front.mp4', trim: 0.3, pos: '50% 40%'}, {src: 'rushs/perso/sidr_top.mp4', trim: 0.4, pos: '50% 40%'}, {src: 'rushs/perso/sidr_bol.mp4', trim: 0, rate: 0.35, pos: '50% 45%'}],
 	},
 	{
 		name: 'زيت إكليل الجبل', img: 'products/v8/huile.png', ground: 'accent', head: 'حسب الدراسات', pre: 'يساعد في',
@@ -101,7 +101,7 @@ const SPLITS: Split[] = [
 	{
 		name: 'ديرما رولر 540', img: 'products/v8/derma.png', ground: 'paper', head: 'قبل الزيت',
 		chips: ['يعاون الزيت يدخل للجذور', 'تنشيط جلدة الراس'],
-		clips: [{src: 'rushs/derma_roll_crown.mp4', trim: 0, pos: '50% 50%'}, {src: 'rushs/real/v2_derma.mp4', trim: 0.5, pos: '50% 50%'}],
+		clips: [{src: 'rushs/derma_roll_crown.mp4', trim: 0, pos: '50% 50%'}, {src: 'rushs/real/v2_derma.mp4', trim: 1.0, pos: '50% 50%'}],
 	},
 	{
 		name: 'بروس الماساج', img: 'products/v8/brosse.png', ground: 'accent', pre: 'يساعد في',
@@ -374,7 +374,7 @@ const HookUnbox: React.FC<HookP> = ({dur, k}) => {
 	return (
 		<HookWrap id="hu" dur={dur} hits={[0, k[0] - LEAD]} after={<Sfx at={k[0]} s="hit" v={0.45} />}>
 			<AbsoluteFill>
-				<Clip src="rushs/real/v2_tous.mp4" trim={0.5} pos="50% 50%" zoom={1.06} />
+				<Clip src="rushs/real/v2_tous.mp4" trim={0.8} pos="50% 50%" zoom={1.06} />
 				<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.5))'}} />
 			</AbsoluteFill>
 			<Slam at={0} from={1.1} text="حلّينا الكرتونة" y={cy - (vertical ? 380 : 360)} max={190} />
@@ -402,7 +402,7 @@ const HookDeliver: React.FC<HookP> = ({dur, k}) => {
 	return (
 		<HookWrap id="hv" dur={dur} hits={[0, k[0] - LEAD]} after={<Sfx at={k[0]} s="coin" v={0.45} />}>
 			<AbsoluteFill>
-				<Clip src="rushs/real/v2_tous.mp4" trim={2.5} pos="50% 50%" zoom={1.06} />
+				<Clip src="rushs/real/v2_tous.mp4" trim={0.8} pos="50% 50%" zoom={1.06} />
 				<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.1) 45%, rgba(0,0,0,0.55))'}} />
 			</AbsoluteFill>
 			<Slam at={0} from={1.1} text="هذا اللي يوصلك" y={cy - (vertical ? 380 : 360)} max={190} />
