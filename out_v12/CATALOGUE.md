@@ -22,9 +22,9 @@ Seules les 2-3 premières secondes (l'accroche) changent entre h1, h2 et h3 : le
 | **V03 prix barré** | « قدّاش تحسب يسوى الباك هذا؟ » + gros « ? » | « السوم طاح! » : 64 qui tombe → 39 | Sur le vrai rush : « قبل ما تشري أي حاجة لشعرك، شوف هذا! » |
 | **V05 tout ça pour 39** | Vraie vidéo des produits : « حلّينا الكرتونة، شوف آش فيها! » | « أربعة حاجات في كرتونة وحدة! » | Vraie vidéo : « هذا اللي يوصلك بتسعة وثلاثين دينار! » |
 
-Fichiers : `videos/AURA12_<vidéo>_h<n>_<format>_<durée>.mp4` (28 à 31 s).
+Fichiers : `videos/AURA12_<vidéo>_h<n>_<format>_<durée>.mp4` (29 à 32 s).
 
-Avant l'appel final, toutes les vidéos ajoutent : « باك فعّال، والأهم طبيعي مية بالمية! صالح زادة للّحية. وطريقة الاستعمال توصلك مع الباك: ساهلة وما تاخوش وقت. » (à l'écran : باك فعّال → طبيعي 100% → صالح زادة للّحية → طريقة الاستعمال توصلك مع الباك ✓ → ساهلة وما تاخوش وقت).
+Avant l'appel final, toutes les vidéos ajoutent : « باك فعّال، والأهم طبيعي مية بالمية! صالح زادة للّحية. وطريقة الاستعمال توصلك مع الباك: ساهلة وما تاخوش وقت. » (à l'écran : باك فعّال avec l'avant/après de l'homme et « تجربة شخصية » → طبيعي 100% → صالح زادة للّحية sur le plan de sa barbe au sidr → طريقة الاستعمال توصلك مع الباك ✓ → ساهلة وما تاخوش وقت).
 
 Suite commune :
 - **V01** : « باك Aura Bio فيه أربعة حاجات… » → les 4 produits en écran partagé → « الكل » → 39 (64 barré) → livraison 8 DT → « تخلّص كي يوصلك » → « انزل على كومندي ».
