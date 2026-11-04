@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
-import {IconPhone, IconTruck} from '../components/Icons';
+import {IconCheck, IconClock, IconLeaf, IconPhone, IconTruck} from '../components/Icons';
 import {F} from '../theme/brand';
 import {Clip, FmtProvider, useStage} from '../v4/kit';
 import {Sfx8} from '../v8/sound8';
@@ -155,16 +155,18 @@ const Pill: React.FC<{at: number; y: number; children: React.ReactNode; bg?: str
 
 // ---------------------------------------------------------------- données : minutage mesuré mot à mot sur chaque voix
 
-type Offer = {start: number; price: number; strike: number; deliv: number; cod: number; cta: number; strikeFirst?: boolean; bridge?: number};
+type Offer = {start: number; price: number; strike: number; deliv: number; cod: number; extra: number; cta: number; strikeFirst?: boolean; bridge?: number};
+// « باك فعّال، والأهم طبيعي مية بالمية! صالح زادة للّحية. وطريقة الاستعمال توصلك مع الباك: ساهلة وما تاخوش وقت. » (images depuis `extra`)
+const EX = {nat: 31, beard: 86, guide: 121, easy: 190};
 type Body = {intro?: 'pack' | 'four'; prods: number[]; tags: number[]; offer: Offer; end: number};
 // tout est en images (30 i/s) depuis le début du corps (voix à vitesse normale)
 const BODIES: Record<'V01' | 'V03' | 'V05', Body> = {
 	// « باك Aura Bio فيه أربعة حاجات: السدر الطبيعي، ينظّف… زيت… ينشّط… الديرما… يعاون… بروس… يرتّحلك… الكل… »
-	V01: {intro: 'pack', prods: [62, 132, 208, 284], tags: [94, 166, 233, 314], offer: {start: 356, price: 370, strike: 415, deliv: 445, cod: 494, cta: 520}, end: 550},
+	V01: {intro: 'pack', prods: [62, 132, 208, 284], tags: [94, 166, 233, 314], offer: {start: 356, price: 370, strike: 415, deliv: 445, cod: 494, extra: 516, cta: 754}, end: 784},
 	// « أربعة قطع لشعرك: … بالقطعة يجيو أربعة وستين… أما في الباك تسعة وثلاثين… »
-	V03: {intro: 'four', prods: [41, 112, 187, 270], tags: [75, 142, 214, 301], offer: {start: 349, strike: 380, bridge: 413, price: 439, deliv: 478, cod: 530, cta: 559, strikeFirst: true}, end: 587},
+	V03: {intro: 'four', prods: [41, 112, 187, 270], tags: [75, 142, 214, 301], offer: {start: 349, strike: 380, bridge: 413, price: 439, deliv: 478, cod: 530, extra: 554, cta: 793, strikeFirst: true}, end: 821},
 	// « السدر الطبيعي، ينظّف… الكل بتسعة وثلاثين… »
-	V05: {prods: [0, 77, 159, 239], tags: [36, 111, 185, 270], offer: {start: 320, price: 333, strike: 383, deliv: 422, cod: 476, cta: 514}, end: 540},
+	V05: {prods: [0, 77, 159, 239], tags: [36, 111, 185, 270], offer: {start: 320, price: 333, strike: 383, deliv: 422, cod: 476, extra: 513, cta: 748}, end: 774},
 };
 const HOLD = 60; // l'écran final reste 2 s après la voix
 
@@ -429,12 +431,13 @@ const OfferScene: React.FC<{o: Offer; dur: number}> = ({o, dur}) => {
 	const f = useCurrentFrame();
 	const {vertical, top, h, H, cy} = useLay();
 	const r = (t: number) => t - o.start - LEAD;
-	const [PR, ST, DL, CD, CT] = [r(o.price), r(o.strike), r(o.deliv), r(o.cod), r(o.cta)];
+	const [PR, ST, DL, CD, EXT, CT] = [r(o.price), r(o.strike), r(o.deliv), r(o.cod), r(o.extra), r(o.cta)];
 	const BR = o.bridge !== undefined ? r(o.bridge) : -1;
 	// étapes : « الكل » | (« بالقطعة 64 » → « أما في الباك ») → 39 → livraison → paiement → appel
-	const stage = f >= CT ? 'cta' : f >= CD ? 'cod' : f >= DL ? 'deliv' : f >= PR ? 'price' : o.strikeFirst ? (f >= BR ? 'bridge' : 'piece') : 'all';
-	const ground = {all: 'paper', piece: 'bg', bridge: 'paper', price: 'accent', deliv: 'bg', cod: 'paper', cta: 'accent'}[stage];
-	const sh = useShake([0, PR, DL, CD, CT], 16);
+	const stage = f >= CT ? 'cta' : f >= EXT ? 'extra' : f >= CD ? 'cod' : f >= DL ? 'deliv' : f >= PR ? 'price' : o.strikeFirst ? (f >= BR ? 'bridge' : 'piece') : 'all';
+	const xs = f < EXT + EX.nat ? 0 : f < EXT + EX.beard ? 1 : f < EXT + EX.guide ? 2 : f < EXT + EX.easy ? 3 : 4; // étape de « باك فعّال… »
+	const ground = stage === 'extra' ? (['paper', 'bg', 'accent', 'paper', 'bg'] as const)[xs] : {all: 'paper', piece: 'bg', bridge: 'paper', price: 'accent', deliv: 'bg', cod: 'paper', cta: 'accent'}[stage];
+	const sh = useShake([0, PR, DL, CD, EXT, EXT + EX.nat, EXT + EX.beard, EXT + EX.guide, EXT + EX.easy, CT], 16);
 	const strike = tw(f, ST + 4, 8);
 	const bounce = Math.abs(Math.sin((f - CT) / 5)) * 40;
 	const arrowY = vertical ? top + h - 150 : H - 200;
@@ -500,6 +503,45 @@ const OfferScene: React.FC<{o: Offer; dur: number}> = ({o, dur}) => {
 							</Pill>
 						</>
 					) : null}
+					{stage === 'extra' ? (
+						<>
+							{xs === 0 ? <Slam at={EXT} text="باك فعّال" y={cy - 40} max={300} color={P.ink} shadow={false} echo echoColor={P.ink} /> : null}
+							{xs === 1 ? (
+								<>
+									<Kicker at={EXT + EX.nat} text="والأهم" y={cy - 380} size={70} bg={P.accent} color={P.ink} />
+									<Slam at={EXT + EX.nat + 8} text="طبيعي" y={cy - 120} max={300} />
+									<Num at={EXT + EX.nat + 30} text="100%" y={cy + 170} size={vertical ? 300 : 250} color={P.accent} />
+									<div style={{position: 'absolute', left: 0, right: 0, top: cy + 330, display: 'flex', justifyContent: 'center', opacity: tw(f, EXT + EX.nat + 30, 6)}}>
+										<IconLeaf size={170} color={theme.colors.accent} />
+									</div>
+								</>
+							) : null}
+							{xs === 2 ? (
+								<>
+									<Slam at={EXT + EX.beard} text="صالح زادة" y={cy - 280} max={220} color={P.ink} shadow={false} />
+									<Slam at={EXT + EX.beard + 18} text="للّحية" y={cy + 120} max={300} color={P.ink} shadow={false} />
+								</>
+							) : null}
+							{xs === 3 ? (
+								<>
+									<Slam at={EXT + EX.guide} text="طريقة الاستعمال" y={cy - 220} max={210} color={P.ink} shadow={false} />
+									<Slam at={EXT + EX.guide + 14} text="توصلك مع الباك" y={cy - 20} max={190} color={P.ink} shadow={false} />
+									<Pill at={EXT + EX.guide + 30} y={cy + 170} bg={P.ink} color={P.paper}>
+										<IconCheck size={56} color={P.accent} /> خطوة بخطوة
+									</Pill>
+								</>
+							) : null}
+							{xs === 4 ? (
+								<>
+									<div style={{position: 'absolute', left: 0, right: 0, top: cy - (vertical ? 420 : 360), display: 'flex', justifyContent: 'center', transform: `rotate(${Math.sin(f / 5) * 8}deg)`}}>
+										<IconClock size={vertical ? 200 : 160} color={P.accent} />
+									</div>
+									<Slam at={EXT + EX.easy} text="ساهلة" y={cy} max={300} />
+									<Slam at={EXT + EX.easy + 10} text="وما تاخوش وقت" y={cy + (vertical ? 260 : 220)} max={190} color={P.accent} />
+								</>
+							) : null}
+						</>
+					) : null}
 					{stage === 'cta' ? (
 						<>
 							<Slam at={CT} text="انزل على كومندي" y={vertical ? cy - 270 : cy - 320} max={210} color={P.ink} shadow={false} />
@@ -526,7 +568,7 @@ const OfferScene: React.FC<{o: Offer; dur: number}> = ({o, dur}) => {
 				<Rays at={PR} color={P.ink} />
 				<Rays at={CT} color={P.ink} />
 			</Cam>
-			{[PR, DL, CD, CT].map((t, k) => (
+			{[PR, DL, CD, EXT, EXT + EX.nat, EXT + EX.beard, EXT + EX.guide, EXT + EX.easy, CT].map((t, k) => (
 				<Blink key={k} at={t} len={3} />
 			))}
 			{o.strikeFirst ? <Sfx at={0} s="hit" v={0.45} /> : <Sfx at={0} s="whoosh" v={0.4} />}
@@ -537,6 +579,9 @@ const OfferScene: React.FC<{o: Offer; dur: number}> = ({o, dur}) => {
 			<Sfx at={DL} s="hit" v={0.45} />
 			<Sfx at={CD} s="hit" v={0.5} />
 			<Sfx at={CD + 12} s="ding" v={0.35} />
+			{[EXT, EXT + EX.nat, EXT + EX.beard, EXT + EX.guide, EXT + EX.easy].map((t, k) => (
+				<Sfx key={`x${k}`} at={t} s={k === 1 ? 'shimmer' : 'hit'} v={k === 1 ? 0.35 : 0.4} />
+			))}
 			<Sfx at={CT} s="impact" v={0.55} />
 			<Sfx at={CT + 6} s="shimmer" v={0.3} />
 		</AbsoluteFill>
