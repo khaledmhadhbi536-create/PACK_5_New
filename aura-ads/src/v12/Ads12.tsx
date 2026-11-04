@@ -505,7 +505,22 @@ const OfferScene: React.FC<{o: Offer; dur: number}> = ({o, dur}) => {
 					) : null}
 					{stage === 'extra' ? (
 						<>
-							{xs === 0 ? <Slam at={EXT} text="باك فعّال" y={cy - 40} max={300} color={P.ink} shadow={false} echo echoColor={P.ink} /> : null}
+							{xs === 0 ? (
+								<>
+									{/* « باك فعّال » : son avant / après (même homme, même plantes) */}
+									<div style={{position: 'absolute', ...(vertical ? {left: 0, right: 0, top: 0, height: '50%'} : {left: 0, top: 0, bottom: 0, width: '50%'}), overflow: 'hidden'}}>
+										<Push src="photos/perso/avant.png" dur={EX.nat} pos="50% 30%" from={1.05} to={1.15} pan={10} />
+									</div>
+									<div style={{position: 'absolute', ...(vertical ? {left: 0, right: 0, bottom: 0, height: '50%'} : {right: 0, top: 0, bottom: 0, width: '50%'}), overflow: 'hidden', transform: `translate${vertical ? 'X' : 'Y'}(${(1 - tw(f, EXT + 4, 6)) * 100}%)`}}>
+										<Push src="photos/perso/apres.png" dur={EX.nat} pos="50% 30%" from={1.05} to={1.15} pan={-10} />
+									</div>
+									<div style={{position: 'absolute', ...(vertical ? {left: 0, right: 0, top: '50%', height: 10, marginTop: -5} : {top: 0, bottom: 0, left: '50%', width: 10, marginLeft: -5}), background: P.accent}} />
+									<Slam at={EXT} text="باك فعّال" y={vertical ? cy - 300 : cy - 40} max={240} />
+									<div dir="rtl" style={{position: 'absolute', left: 30, right: 30, top: vertical ? top + h - 40 : H - 50, textAlign: 'center', fontFamily: F.body, fontWeight: 700, fontSize: 26, color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 8px rgba(0,0,0,0.9)'}}>
+										تجربة شخصية · النتيجة تختلف من شخص لآخر
+									</div>
+								</>
+							) : null}
 							{xs === 1 ? (
 								<>
 									<Kicker at={EXT + EX.nat} text="والأهم" y={cy - 380} size={70} bg={P.accent} color={P.ink} />
@@ -518,8 +533,18 @@ const OfferScene: React.FC<{o: Offer; dur: number}> = ({o, dur}) => {
 							) : null}
 							{xs === 2 ? (
 								<>
-									<Slam at={EXT + EX.beard} text="صالح زادة" y={cy - 280} max={220} color={P.ink} shadow={false} />
-									<Slam at={EXT + EX.beard + 18} text="للّحية" y={cy + 120} max={300} color={P.ink} shadow={false} />
+									<Sequence from={EXT + EX.beard} durationInFrames={EX.guide - EX.beard} layout="none">
+									<AbsoluteFill>
+										<AbsoluteFill style={{filter: 'blur(26px) brightness(0.5)', transform: 'scale(1.25)'}}>
+											<Clip src="rushs/perso/barbe_sidr.mp4" trim={0} rate={0.85} />
+										</AbsoluteFill>
+										<div style={{position: 'absolute', left: vertical ? 110 : 90, right: vertical ? 110 : 90, top: cy + (vertical ? 20 : 0) - (vertical ? 860 : 900) * (540 / 576) / 2, height: (vertical ? 860 : 900) * (540 / 576), overflow: 'hidden', border: `6px solid ${P.accent}`, borderRadius: 24}}>
+											<Clip src="rushs/perso/barbe_sidr.mp4" trim={0} rate={0.85} pos="50% 50%" zoom={1.03} />
+										</div>
+									</AbsoluteFill>
+									</Sequence>
+									<Slam at={EXT + EX.beard} text="صالح زادة" y={vertical ? top + 30 : cy - 520} max={vertical ? 150 : 190} />
+									<Slam at={EXT + EX.beard + 18} text="للّحية" y={cy + (vertical ? 500 : 520)} max={vertical ? 190 : 230} color={P.accent} />
 								</>
 							) : null}
 							{xs === 3 ? (
