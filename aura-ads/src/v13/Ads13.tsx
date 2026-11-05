@@ -720,7 +720,7 @@ const Strands: React.FC<{at?: number; n?: number; color?: string}> = ({at = 0, n
 				const y = -140 + ((k * (3 + 5 * seed) + i * 150) % (H + 280));
 				const r = Math.sin((k + i * 20) / 16) * 28 + i * 17;
 				return (
-					<svg key={i} width={70} height={140} viewBox="0 0 70 140" style={{position: 'absolute', left: x, top: y, transform: `rotate(${r}deg)`, opacity: Math.min(1, k / 8) * 0.9}}>
+					<svg key={i} width={70} height={140} viewBox="0 0 70 140" style={{position: 'absolute', left: x, top: y, transform: `rotate(${r}deg)`, opacity: (at === 0 ? 1 : Math.min(1, k / 8)) * 0.9}}>
 						<path d={`M35 6 C ${12 + seed * 24} 45, ${58 - seed * 24} 95, 35 134`} stroke={color} strokeWidth={3} fill="none" strokeLinecap="round" />
 					</svg>
 				);
@@ -850,7 +850,8 @@ const HookEverywhere: React.FC<HookP> = ({dur, k}) => {
 	const gap = vertical ? 210 : 165;
 	return (
 		<HookWrap id="c2c" dur={dur} hits={[0, k[0] - LEAD, k[1] - LEAD, k[2] - LEAD]} after={<>{[k[0], k[1]].map((t, i) => <Sfx key={i} at={t} s="pop2" v={0.4} />)}<Sfx at={k[2]} s="hit" v={0.5} /></>}>
-			<Strands at={0} n={12} />
+			<Push src="photos/v13/crane_haut.jpg" dur={dur} pos="50% 50%" from={1.1} to={1.3} pan={0} dim={0.62} />
+			<Strands at={0} n={16} />
 			<IconLine at={0} y={cy - gap * 2} kind="comb" text="في المشط" size={s} />
 			<IconLine at={k[0] - LEAD} y={cy - gap} kind="shower" text="في الدوش" size={s} />
 			<IconLine at={k[1] - LEAD} y={cy} kind="pillow" text="على المخدّة" size={s} />
@@ -871,10 +872,9 @@ const HookShampoo: React.FC<HookP> = ({dur, k}) => {
 			<Slam at={0} from={1.1} text="بدّلت الشامبو" y={cy - (vertical ? 470 : 420)} max={200} color={P.ink} shadow={false} />
 			<div style={{position: 'absolute', left: (W - cell * 5) / 2, top: cy - (vertical ? 330 : 300), width: cell * 5, display: 'flex', flexWrap: 'wrap'}}>
 				{Array.from({length: 10}, (_, i) => {
-					const t = i * 2;
-					const p = i === 0 ? 1 : f < t ? 0 : spring({frame: f - t, fps: 30, config: theme.spring.bouncy});
+					const p = 1 + Math.sin((f + i * 7) / 5) * 0.04;
 					return (
-						<div key={i} style={{width: cell, height: cell, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: p * (1 - fade * 0.6), transform: `scale(${0.5 + 0.5 * p}) rotate(${(i % 3 - 1) * 6}deg)`}}>
+						<div key={i} style={{width: cell, height: cell, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 1 - fade * 0.6, transform: `scale(${p}) rotate(${(i % 3 - 1) * 6 + Math.sin((f + i * 5) / 7) * 4}deg)`}}>
 							<Ico kind="bottle" size={cell * 0.85} color={i % 2 ? P.ink : theme.colors.bg} />
 						</div>
 					);
@@ -1044,11 +1044,11 @@ const LeadMyth: React.FC<{b: readonly number[]; dur: number}> = ({b, dur}) => {
 							<Fill g="bg" />
 							<Scalp roots={b[0]} weak={b[1]} y={dy} w={dw} />
 							<Kicker at={0} text="الشامبو" y={vertical ? top + 40 : 40} size={70} until={b[0]} />
-							<Slam at={2} text="يغسل الشعر من الفوق" y={vertical ? top + 230 : 180} max={lab} until={b[0]} />
+							<Slam at={2} text="يغسل الشعر من الفوق" y={vertical ? top + 230 : 255} max={lab} until={b[0]} />
 							<Kicker at={b[0]} text="أما الجذور" y={vertical ? top + 40 : 40} size={70} until={b[1]} />
-							<Slam at={b[0] + 2} text="تعيش في جلدة الراس" y={vertical ? top + 230 : 180} max={lab} color={P.accent} until={b[1]} />
+							<Slam at={b[0] + 2} text="تعيش في جلدة الراس" y={vertical ? top + 230 : 255} max={lab} color={P.accent} until={b[1]} />
 							<Kicker at={b[1]} text="قشرة + دورة دموية ضعيفة" y={vertical ? top + 40 : 40} size={62} bg={theme.colors.danger} color={P.paper} />
-							<Slam at={b[1] + 8} text="= شعر ضعيف" y={vertical ? top + 230 : 180} max={lab + 20} color={P.paper} />
+							<Slam at={b[1] + 8} text="= شعر ضعيف" y={vertical ? top + 230 : 255} max={lab + 20} color={P.paper} />
 						</>
 					) : st === 1 ? (
 						<Sequence from={b[2]} layout="none">
