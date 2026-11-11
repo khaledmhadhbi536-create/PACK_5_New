@@ -86,7 +86,7 @@ const StopSign: React.FC<{size: number}> = ({size}) => {
 	);
 };
 
-type ClipS = {src: string; trim?: number; pos?: string; rate?: number; photo?: boolean};
+type ClipS = {src: string; trim?: number; pos?: string; rate?: number; photo?: boolean; contain?: string};
 type Split = {name: string; img: string; ground: 'paper' | 'accent'; clips: ClipS[]; chips: string[]; head?: string; pre?: string};
 const SPLITS: Split[] = [
 	{
@@ -103,12 +103,12 @@ const SPLITS: Split[] = [
 	{
 		name: 'ديرما رولر 540', img: 'products/v8/derma.png', ground: 'paper', head: 'قبل الزيت',
 		chips: ['يعاون الزيت يدخل للجذور', 'تنشيط جلدة الراس'],
-		clips: [{src: 'rushs/derma_roll_crown.mp4', trim: 0, pos: '50% 50%'}, {src: 'rushs/real/v2_derma.mp4', trim: 1.0, pos: '50% 50%'}],
+		clips: [{src: 'rushs/derma_roll_crown.mp4', trim: 0, pos: '50% 50%'}, {src: 'photos/v13/derma_schema.jpg', photo: true, contain: '#ECEAEF'}, {src: 'photos/v13/derma_barbe.jpg', photo: true, pos: '62% 45%'}],
 	},
 	{
 		name: 'بروس الماساج', img: 'products/v8/brosse.png', ground: 'accent', pre: 'يساعد في',
 		chips: ['تنشيط الدورة الدموية', 'توزيع الزيت والسدر', 'تنظيف جلدة الراس بالعمق'],
-		clips: [{src: 'rushs/sidra/sidra_massage.mp4', trim: 0.5, pos: '50% 55%'}, {src: 'rushs/real/v2_brosse.mp4', trim: 1.0, pos: '50% 50%'}],
+		clips: [{src: 'rushs/sidra/sidra_massage.mp4', trim: 0.5, pos: '50% 55%'}, {src: 'photos/v13/brosses_trio.jpg', photo: true, pos: '50% 62%'}, {src: 'photos/v13/brosse_rose.jpg', photo: true, contain: '#F4F0EF'}],
 	},
 ];
 
@@ -143,7 +143,7 @@ const SplitShot: React.FC<{s: Split; i: number; dur: number; tags: number[]; hea
 			<div style={{...half, ...(vertical ? {top: 0, height: splitY} : {left: 0, width: W / 2}), overflow: 'hidden', transform: vertical ? `translateX(${sg * (1 - enter) * W}px)` : `translateY(${sg * (1 - enter) * H}px)`}}>
 				{s.clips.map((c, k) => (
 					<Sequence key={k} from={k * per} durationInFrames={per}>
-						{c.photo ? <Push src={c.src} dur={per} pos={c.pos} from={1.05} to={1.2} pan={30} /> : <Clip src={c.src} trim={c.trim} rate={c.rate} pos={c.pos} zoom={1.1} />}
+						{c.photo ? <Push src={c.src} dur={per} pos={c.pos} from={c.contain ? 1 : 1.05} to={c.contain ? 1.08 : 1.2} pan={c.contain ? 0 : 30} contain={c.contain} /> : <Clip src={c.src} trim={c.trim} rate={c.rate} pos={c.pos} zoom={1.1} />}
 						<Blink at={0} len={2} />
 					</Sequence>
 				))}
