@@ -94,42 +94,39 @@ export const Collage: React.FC = () => {
 
 // ---------- LETTRE : petit message pour Nadine ----------
 const LETTER = [
-  { t: "Ma petite Nadine,", big: true },
-  { t: "en un an, tu as rempli" },
-  { t: "nos cœurs de bonheur." },
-  { t: "Reste aussi cool," },
-  { t: "aussi drôle et aussi douce." },
-  { t: "On t'aime fort !", big: true },
+  "Il y a tout juste un an, tu es arrivée et tu as illuminé notre monde d'une manière que je n'aurais jamais cru possible.",
+  "Depuis ce jour, chaque sourire, chaque regard, chaque petit progrès de ta part est devenu notre plus grande source de bonheur et de fierté.",
+  "Tu nous as appris ce qu'est l'amour inconditionnel, celui qui dépasse tout et qui donne un sens nouveau à chaque journée.",
 ];
 export const Letter: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const card = spring({ frame, fps, config: theme.spring.smooth });
-  const float = Math.sin(frame / 30) * 5;
-  let delay = 10;
+  const float = Math.sin(frame / 30) * 4;
+  const head = spring({ frame: frame - 12, fps, config: theme.spring.bouncy });
+  let delay = 30;
   return (
     <AbsoluteFill>
       <BgMesh />
       <FloatingHearts count={9} seed="let" />
-      <div style={{ position: "absolute", left: 90, right: 90, top: 400, padding: "80px 50px 90px", background: "#FFFDF8",
+      <div style={{ position: "absolute", left: 60, right: 60, top: 300, padding: "90px 50px 60px", background: "#FFFDF8",
         borderRadius: 36, boxShadow: "0 40px 90px -24px rgba(91,31,62,0.5)", border: `3px solid ${C.blush}`,
-        opacity: card, transform: `translateY(${interpolate(card, [0, 1], [120, 0]) + float}px) rotate(${interpolate(card, [0, 1], [6, -1.5])}deg) scale(${interpolate(card, [0, 1], [0.9, 1])})` }}>
-        {/* ruban */}
-        <div style={{ position: "absolute", top: -46, left: "50%", transform: "translateX(-50%) rotate(-3deg)", background: C.primary,
-          color: "#FFFFFF", fontFamily: theme.fonts.body, fontWeight: 600, fontSize: 44, padding: "10px 40px", borderRadius: 999, whiteSpace: "nowrap",
-          boxShadow: `0 0 40px ${C.glow}` }}>Un petit mot pour toi</div>
-        {LETTER.map((l, i) => {
+        opacity: card, transform: `translateY(${interpolate(card, [0, 1], [120, 0]) + float}px) rotate(${interpolate(card, [0, 1], [5, -1])}deg) scale(${interpolate(card, [0, 1], [0.9, 1])})` }}>
+        <div style={{ position: "absolute", top: -46, left: "50%", transform: `translateX(-50%) rotate(-3deg) scale(${head})`, background: C.primary,
+          color: "#FFFFFF", fontFamily: theme.fonts.body, fontWeight: 600, fontSize: 46, padding: "10px 44px", borderRadius: 999,
+          whiteSpace: "nowrap", boxShadow: `0 0 40px ${C.glow}` }}>Pour toi, Nadine</div>
+        {LETTER.map((t, i) => {
           const d = delay;
-          delay += l.t.split(" ").length * 3 + 10;
+          delay += t.split(" ").length * 4 + 24;
           return (
-            <WordReveal key={i} text={l.t} delay={d} per={3}
-              style={{ fontFamily: theme.fonts.hand, fontWeight: 700, fontSize: l.big ? 92 : 74, lineHeight: 1.3, columnGap: 18,
-                color: l.big ? C.primary : C.ink, marginTop: i === 5 ? 30 : 0 }} />
+            <WordReveal key={i} text={t} delay={d} per={4}
+              style={{ fontFamily: theme.fonts.hand, fontWeight: 600, fontSize: 60, lineHeight: 1.28, columnGap: 14,
+                color: C.ink, marginBottom: 34 }} />
           );
         })}
-        <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
-          <div style={{ transform: `scale(${spring({ frame: frame - delay, fps, config: theme.spring.bouncy }) * (1 + Math.sin(frame / 6) * 0.07)})` }}>
-            <Heart size={110} color={C.primary} style={{ filter: `drop-shadow(0 8px 18px ${C.glow})` }} />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ transform: `scale(${spring({ frame: frame - delay + 10, fps, config: theme.spring.bouncy }) * (1 + Math.sin(frame / 6) * 0.07)})` }}>
+            <Heart size={100} color={C.primary} style={{ filter: `drop-shadow(0 8px 18px ${C.glow})` }} />
           </div>
         </div>
       </div>

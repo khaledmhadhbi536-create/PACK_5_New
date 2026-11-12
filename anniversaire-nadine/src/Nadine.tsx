@@ -23,7 +23,7 @@ const photo = (src: string, lines: string[], o: { dir?: 1 | -1; x?: number; y?: 
 
 const SCENES: Scene[] = [
   { len: 4 * B, el: <Intro />, flash: false, pops: [3, 20, 3 * B], shimmer: [2 * B] },
-  { len: 5 * B, pops: [26], el: (<><Clip src="videos/room.mp4" /><Sticker lines={["Surprise", "Nadine !"]} delay={28} y={1340} heart /></>) },
+  { len: 4 * B, pops: [26], el: (<><Clip src="videos/room.mp4" /><Sticker lines={["Surprise", "Nadine !"]} delay={28} y={1590} size={70} heart /></>) },
   { len: 2 * B, pops: [14], el: (<><FitPhoto src="photos/e018990c.jpg" top={330} /><Sticker lines={["La plus cool", "de la fête !"]} delay={16} y={1430} rot={3} /></>) },
   photo("bcae7b7b", ["Ton tout premier", "gâteau"], { x: 40, dir: -1 }),
   photo("4a77f28d", ["Des éclats de rire"], { x: 40, rot: 3 }),
@@ -32,23 +32,10 @@ const SCENES: Scene[] = [
   { len: 3 * B, el: <Collage />, pops: [2] },
   photo("335fa163", ["Petite princesse"], { x: 48, dir: -1, heart: true }),
   photo("274fb991", ["Douce comme", "une fleur"], { x: 52, rot: 3 }),
-  {
-    len: 5 * B, pops: [16],
-    el: (
-      <>
-        <Sequence durationInFrames={78}><Clip src="videos/car.mp4" /></Sequence>
-        <Sequence from={78} durationInFrames={56}><Clip src="videos/cart.mp4" /></Sequence>
-        <Sequence from={134} durationInFrames={68}><Clip src="videos/sea.mp4" /></Sequence>
-        <Sequence from={202} durationInFrames={68}><CutIn exit={false}><KenBurns src="photos/5279ea5a.jpg" x={45} /></CutIn></Sequence>
-        <Sequence durationInFrames={134}><Sticker lines={["Pilote", "en herbe !"]} delay={16} y={1380} rot={-4} /></Sequence>
-        <Sequence from={134}><Sticker lines={["Toujours", "en vadrouille"]} delay={14} y={1380} rot={3} /></Sequence>
-      </>
-    ),
-  },
   { len: 3 * B, pops: [14], el: (<><Clip src="videos/park.mp4" rate={0.985} /><Sticker lines={["Notre rayon", "de soleil"]} delay={16} y={1380} /></>) },
   { len: 2 * B, pops: [14], el: (<><FitPhoto src="photos/6ffefcc8.jpg" top={200} dir={-1} /><FloatingHearts count={6} seed="fam" /><Sticker lines={["Entourée", "d'amour"]} delay={16} y={1500} heart rot={-2} /></>) },
-  { len: 4 * B, el: <Letter /> },
-  { len: 7 * B, el: <Finale />, shimmer: [26, 4 * B - 2], flash: true },
+  { len: 10 * B, el: <Letter /> },
+  { len: 5 * B, el: <Finale />, shimmer: [26, 2 * B - 2], flash: true },
 ];
 
 const starts: number[] = [];
