@@ -275,7 +275,44 @@ const Hook3: React.FC<HookP> = ({dur}) => {
 		</HookFrame>
 	);
 };
-const HOOKS = {h1: Hook1, h2: Hook2, h3: Hook3};
+
+// ---------------------------------------------------------------- accroches par profil (vidéos P1 → P7)
+
+type Prof = {src: string; trim: number; pos?: string; l1: string; l2: string; l3?: string; badge?: string};
+const PROF: Record<string, Prof> = {
+	P1: {src: 'mozon/visite1.mp4', trim: 17.8, pos: '50% 40%', l1: 'Ausbildung', l2: 'Formation + salaire', badge: 'B1'},
+	P2: {src: 'mozon/visite2.mp4', trim: 27.9, l1: 'Infirmiers', l2: 'Diplôme reconnu', l3: 'en Allemagne', badge: 'B2'},
+	P3: {src: 'mozon/visite2.mp4', trim: 31.0, l1: 'Chancenkarte', l2: '1 an pour chercher', l3: 'un emploi', badge: '+ points'},
+	P4: {src: 'mozon/visite1.mp4', trim: 21.0, pos: '50% 45%', l1: 'Bacheliers', l2: 'Étudier en Allemagne', badge: 'B2'},
+	P5: {src: 'mozon/visite1.mp4', trim: 13.0, l1: 'Regroupement', l2: 'familial', l3: '1er document :', badge: 'A1'},
+	P6: {src: 'mozon/visite1.mp4', trim: 30.7, l1: 'Allemand au bac', l2: 'Chaque point compte'},
+	P7: {src: 'mozon/visite2.mp4', trim: 33.0, l1: 'Électricien, soudeur,', l2: 'mécanicien, plombier', l3: 'Ton métier est recherché'},
+};
+const ProfHook: React.FC<HookP & {k: string}> = ({dur, k}) => {
+	const c = PROF[k];
+	const {vertical, top, h, H} = useLay();
+	const T1 = vertical ? top + 80 : 150;
+	const k2 = Math.round(dur * 0.35);
+	const k3 = Math.round(dur * 0.55);
+	const kb = Math.round(dur * 0.72);
+	return (
+		<AbsoluteFill>
+			<Cam id={`p${k}`} dur={dur} whipIn={null} whipOut="y" push={0.07} roll={0}>
+				<Shot src={c.src} trim={c.trim} pos={c.pos} dark={0.62} />
+			</Cam>
+			<Word at={0} text={c.l1} y={T1} size={130} latin />
+			<Word at={k2} text={c.l2} y={T1 + 150} size={105} latin color={M.orange} />
+			{c.l3 ? <Word at={k3} text={c.l3} y={T1 + 280} size={90} latin /> : null}
+			{c.badge ? <Stamp at={kb} text={c.badge} y={vertical ? top + h - 300 : H - 380} size={120} /> : null}
+			<Sfx at={0} s="impact" v={0.45} />
+			<Sfx at={k2} s="pop2" v={0.35} />
+			{c.badge ? <Sfx at={kb} s="hit" v={0.45} /> : null}
+			<Sfx at={dur - 5} s="whoosh" v={0.4} />
+		</AbsoluteFill>
+	);
+};
+const mk = (k: string): React.FC<HookP> => ({dur}) => <ProfHook dur={dur} k={k} />;
+const HOOKS = {h1: Hook1, h2: Hook2, h3: Hook3, P1: mk('P1'), P2: mk('P2'), P3: mk('P3'), P4: mk('P4'), P5: mk('P5'), P6: mk('P6'), P7: mk('P7')};
 
 // ---------------------------------------------------------------- corps
 
@@ -403,7 +440,7 @@ const CtaScene: React.FC<{dur: number}> = ({dur}) => {
 // ---------------------------------------------------------------- une pub
 
 type Tm = {hookDur: number; qual: number; profs: number; groups: number; day1: number; cours: number; exam: number; acc: number; dossier: number; cv: number; trad: number; orient: number; test: number; remise: number; cta: number; end: number};
-type Ad = {id: string; hook: keyof typeof HOOKS; voice: keyof typeof TIMINGS};
+type Ad = {id: string; hook: keyof typeof HOOKS; voice: keyof typeof TIMINGS; parents?: boolean};
 
 const Film: React.FC<{ad: Ad}> = ({ad}) => {
 	const tm = TIMINGS[ad.voice] as unknown as Tm;
@@ -467,7 +504,7 @@ const Film: React.FC<{ad: Ad}> = ({ad}) => {
 				<Scene id="se" dur={d} hits={[0, Math.round(d * 0.42)]} shots={[{src: 'mozon/visite2.mp4', trim: 31.0}, {src: 'mozon/visite2.mp4', trim: 33.0}]}>
 					<Word at={0} text="Préparation ciblée" y={T1} size={110} latin />
 					<div dir="ltr" style={{position: 'absolute', left: 0, right: 0, top: T2 - 20, display: 'flex', justifyContent: 'center', gap: 18}}>
-						{['Goethe', 'ÖSD', 'telc'].map((x, i) => <Chip key={x} at={Math.round(d * (0.55 + i * 0.1))} text={x} size={66} latin from="left" />)}
+						{(ad.parents ? ['Allemand au bac'] : ['Goethe', 'ÖSD', 'telc']).map((x, i) => <Chip key={x} at={Math.round(d * (0.55 + i * 0.1))} text={x} size={66} latin from="left" />)}
 					</div>
 					<Stamp at={Math.round(d * 0.42)} text="Réussir" icon="check" y={LOW} size={96} />
 				</Scene>
@@ -477,10 +514,10 @@ const Film: React.FC<{ad: Ad}> = ({ad}) => {
 				const items: [IconK, string][] = [['folder', 'Traitement du dossier'], ['doc', 'CV'], ['trad', 'Traduction des documents'], ['compass', 'Orientation']];
 				return (
 					<Scene id="sa" dur={d} hits={[0, ...ts]} shots={[{src: 'mozon/visite1.mp4', trim: 13.0, pos: '50% 50%'}, {src: 'mozon/visite1.mp4', trim: 6.5, pos: '50% 40%'}]}>
-						<Word at={0} text="Accompagnement" y={T1} size={110} latin />
-						<Word at={5} text="complet" y={T1 + 125} size={120} latin color={M.orange} />
+						<Word at={0} text={ad.parents ? 'Suivi régulier' : 'Accompagnement'} y={T1} size={110} latin />
+						<Word at={5} text={ad.parents ? 'des progrès' : 'complet'} y={T1 + 125} size={120} latin color={M.orange} />
 						<div style={{position: 'absolute', left: 0, right: 0, top: T2 + 120, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 22}}>
-							{items.map(([ic, tx], i) => <Chip key={tx} at={ts[i]} icon={ic} text={tx} size={56} latin bg={i % 2 ? M.orange : M.white} color={i % 2 ? M.white : M.ink} />)}
+							{(ad.parents ? [] : items).map(([ic, tx], i) => <Chip key={tx} at={ts[i]} icon={ic} text={tx} size={56} latin bg={i % 2 ? M.orange : M.white} color={i % 2 ? M.white : M.ink} />)}
 						</div>
 						{ts.map((t, i) => <Sfx key={i} at={t} s="pop3" v={0.35} />)}
 					</Scene>
@@ -519,6 +556,7 @@ const ADS: Ad[] = [
 	{id: 'tous-h1', hook: 'h1', voice: 'M_h1'},
 	{id: 'tous-h2', hook: 'h2', voice: 'M_h2'},
 	{id: 'tous-h3', hook: 'h3', voice: 'M_h3'},
+	...(['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7'] as const).filter((k) => k in TIMINGS).map((k) => ({id: `profil-${k}`, hook: k, voice: k as keyof typeof TIMINGS, parents: k === 'P6'})),
 ];
 
 export const MOZON_VIDEOS = ADS.flatMap((ad) =>

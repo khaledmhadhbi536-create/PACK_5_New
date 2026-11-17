@@ -34,17 +34,27 @@ def main():
     src, out = Path(sys.argv[1]), Path(sys.argv[2])
     m = WhisperModel('medium', device='cpu', compute_type='int8')
     res = {}
-    for wav in sorted(src.glob('M_h*.wav')):
+    for wav in sorted(list(src.glob('M_h*.wav')) + list(src.glob('P*.wav'))):
         a = np.frombuffer(subprocess.run(['ffmpeg', '-v', 'error', '-i', str(wav), '-f', 'f32le', '-ac', '1', '-ar', '16000', '-'], capture_output=True).stdout, np.float32)
-        ar = [(w.start, w.word.strip(), w.end) for s in m.transcribe(a[:16000 * 8], language='ar', word_timestamps=True)[0] for w in s.words]
+        ar = [(w.start, w.word.strip(), w.end) for s in m.transcribe(a[:16000 * 14], language='ar', word_timestamps=True)[0] for w in s.words]
         ar_end = [(w.start + len(a) / 16000 - 7, w.word.strip(), w.end + len(a) / 16000 - 7) for s in m.transcribe(a[-16000 * 7:], language='ar', word_timestamps=True)[0] for w in s.words]
         fr = [(w.start, w.word.strip(), w.end) for s in m.transcribe(a, language='fr', word_timestamps=True, condition_on_previous_text=False)[0] for w in s.words]
         # le nom = le mot juste avant « أكاديمي » (évite de confondre « مدن » et « موزون »)
         ac = [i for i, w in enumerate(ar) if sim(norm(w[1]), norm('اكاديمي')) >= 0.75 or 'academ' in norm(w[1])]
-        name = ar[ac[0] - 1][0] if ac else find(ar, ['المزون', 'الموزون', 'مزون', 'موزون'], 0)[0]
+        frac = [i for i, w in enumerate(fr) if 'academ' in norm(w[1]) and w[0] > 1.0]
+        if ac:
+            name = ar[ac[0] - 1][0]
+        elif frac:
+            name = fr[max(0, frac[0] - 1)][0]
+        else:
+            name = find(ar, ['المزون', 'الموزون', 'مزون', 'موزون'], 0)[0]
         t = {'name': name}
         cur = name
-        for k, c in KEYS:
+        keys = KEYS
+        if wav.stem.startswith('P6'):
+            keys = [(k, c) for k, c in KEYS if k not in ('dossier', 'cv', 'trad', 'orient')]
+            keys = [(k, ['suivi', 'progrès'] if k == 'acc' else c) for k, c in keys]
+        for k, c in keys:
             try:
                 st, en = find(fr, c, cur, ahead=8)
             except ValueError:
@@ -52,6 +62,8 @@ def main():
                 print(f'  {wav.stem} : {k} estimé', flush=True)
             t[k] = st
             cur = st + 0.05
+        for k in ('dossier', 'cv', 'trad', 'orient'):
+            t.setdefault(k, t['acc'])
         # « WhatsApp » / numéro : dernier tiers de la prise
         try:
             t['cta'] = find(ar_end + fr, ['واتساب', 'whatsapp', 'مساج', 'message'], cur)[0]
@@ -59,6 +71,7 @@ def main():
             t['cta'] = cur + 1.5
         hook = round(name * FPS)
         r = {k: round(v * FPS) - hook for k, v in t.items() if k != 'name'}
+        r = {k: r[k] for k in ['qual', 'profs', 'groups', 'day1', 'cours', 'exam', 'acc', 'dossier', 'cv', 'trad', 'orient', 'test', 'remise', 'cta']}
         r['hookDur'] = hook
         r['end'] = round(len(a) / 16000 * FPS) - hook
         res[wav.stem] = r
