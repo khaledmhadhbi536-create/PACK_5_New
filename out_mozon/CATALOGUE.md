@@ -14,7 +14,7 @@
 > Des profs qualifiés et expérimentés، يتبّعوك personnellement في des petits groupes. Des cours interactifs, avec de la pratique orale à chaque séance.
 > Les cours في النهار، في العشية، ولا le week-end. Une préparation ciblée pour réussir Goethe, ÖSD et telc.
 > Et un accompagnement complet : traitement du dossier, CV, traduction des documents, orientation.
-> Le test de niveau gratuit، وتوّا فمّا une remise! ابعثلنا message على WhatsApp: 99 008 008.
+> Le test de niveau gratuit، وتوّا فمّا une remise de 25% ! ابعثلنا message على WhatsApp: 99 008 008.
 
 ## Les 3 accroches (test A/B)
 
@@ -37,7 +37,7 @@ Al Mozon Academy à Radès : une formation en allemand de qualité, de A1 jusqu'
 ✅ Cours interactifs, pratique orale à chaque séance
 ✅ Préparation ciblée pour réussir Goethe, ÖSD et telc
 ✅ Accompagnement complet : dossier, CV, traduction, orientation
-🎁 Test de niveau gratuit + remise en ce moment
+🎁 Test de niveau gratuit + remise de 25 % en ce moment
 👇 Écris-nous sur WhatsApp : 99 008 008
 ```
 **Titre :** `Allemand de A1 à B2 à Radès` · **Description :** `Test de niveau gratuit`

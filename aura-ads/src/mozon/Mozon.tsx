@@ -492,7 +492,7 @@ const Film: React.FC<{ad: Ad}> = ({ad}) => {
 					<Scene id="st" dur={d} hits={[0, k]} shots={[{src: 'mozon/visite1.mp4', trim: 22.6, pos: '50% 40%'}]}>
 						<Word at={0} text="Test de niveau" y={T1} size={115} latin />
 						<Stamp at={4} text="GRATUIT" y={T2 - 10} size={92} />
-						<Stamp at={k} text="Remise" icon="pct" y={LOW} size={96} />
+						<Stamp at={k} text="Remise -25%" y={LOW} size={92} />
 						<Sfx at={k} s="coin" v={0.45} />
 					</Scene>
 				);
