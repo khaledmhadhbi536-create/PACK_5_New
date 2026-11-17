@@ -118,13 +118,13 @@ const Shot: React.FC<{src: string; trim: number; pos?: string; rate?: number; da
 );
 
 /** Plusieurs plans à la suite dans une scène. */
-const Shots: React.FC<{dur: number; list: {src: string; trim: number; pos?: string}[]}> = ({dur, list}) => {
+const Shots: React.FC<{dur: number; list: {src: string; trim: number; pos?: string}[]; dark?: number}> = ({dur, list, dark}) => {
 	const per = Math.ceil(dur / list.length);
 	return (
 		<>
 			{list.map((c, i) => (
 				<Sequence key={i} from={i * per} durationInFrames={per}>
-					<Shot {...c} />
+					<Shot {...c} dark={dark} />
 				</Sequence>
 			))}
 		</>
@@ -278,15 +278,15 @@ const Hook3: React.FC<HookP> = ({dur}) => {
 
 // ---------------------------------------------------------------- accroches par profil (vidéos P1 → P7)
 
-type Prof = {src: string; trim: number; pos?: string; l1: string; l2: string; l3?: string; badge?: string};
+type Prof = {src: string; trim: number; pos?: string; more?: {src: string; trim: number; pos?: string}[]; l1: string; l2: string; l3?: string; badge?: string};
 const PROF: Record<string, Prof> = {
 	P1: {src: 'mozon/visite1.mp4', trim: 17.8, pos: '50% 40%', l1: 'Ausbildung', l2: 'Formation + salaire', badge: 'B1'},
 	P2: {src: 'mozon/visite2.mp4', trim: 27.9, l1: 'Infirmiers', l2: 'Diplôme reconnu', l3: 'en Allemagne', badge: 'B2'},
-	P3: {src: 'mozon/visite2.mp4', trim: 31.0, l1: 'Chancenkarte', l2: '1 an pour chercher', l3: 'un emploi', badge: '+ points'},
+	P3: {src: 'mozon/visite2.mp4', trim: 21.8, more: [{src: 'mozon/visite2.mp4', trim: 29.6}], l1: 'Chancenkarte', l2: '1 an pour chercher', l3: 'un emploi', badge: '+ points'},
 	P4: {src: 'mozon/visite1.mp4', trim: 21.0, pos: '50% 45%', l1: 'Bacheliers', l2: 'Étudier en Allemagne', badge: 'B2'},
 	P5: {src: 'mozon/visite1.mp4', trim: 13.0, l1: 'Regroupement', l2: 'familial', l3: '1er document :', badge: 'A1'},
 	P6: {src: 'mozon/visite1.mp4', trim: 30.7, l1: 'Allemand au bac', l2: 'Chaque point compte'},
-	P7: {src: 'mozon/visite2.mp4', trim: 33.0, l1: 'Électricien, soudeur,', l2: 'mécanicien, plombier', l3: 'Ton métier est recherché'},
+	P7: {src: 'mozon/visite1.mp4', trim: 31.0, more: [{src: 'mozon/visite2.mp4', trim: 23.4}], l1: 'Électricien, soudeur,', l2: 'mécanicien, plombier', l3: 'Ton métier est recherché'},
 };
 const ProfHook: React.FC<HookP & {k: string}> = ({dur, k}) => {
 	const c = PROF[k];
@@ -298,7 +298,7 @@ const ProfHook: React.FC<HookP & {k: string}> = ({dur, k}) => {
 	return (
 		<AbsoluteFill>
 			<Cam id={`p${k}`} dur={dur} whipIn={null} whipOut="y" push={0.07} roll={0}>
-				<Shot src={c.src} trim={c.trim} pos={c.pos} dark={0.62} />
+				{c.more ? <Shots dur={dur} dark={0.62} list={[{src: c.src, trim: c.trim, pos: c.pos}, ...c.more]} /> : <Shot src={c.src} trim={c.trim} pos={c.pos} dark={0.62} />}
 			</Cam>
 			<Word at={0} text={c.l1} y={T1} size={130} latin />
 			<Word at={k2} text={c.l2} y={T1 + 150} size={105} latin color={M.orange} />
