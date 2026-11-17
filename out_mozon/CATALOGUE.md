@@ -52,3 +52,102 @@ Al Mozon Academy à Radès : une formation en allemand de qualité, de A1 jusqu'
 - Après 4 à 5 jours, garde l'accroche qui donne le coût par conversation le plus bas. Ensuite, ajoute les vidéos par profil (Ausbildung, santé, regroupement familial…) dans d'autres ensembles.
 
 Pas de promesse de visa, de travail ni de salaire dans la vidéo ou dans le texte : ce sont les règles de Meta.
+
+## Vidéos par profil (P1 → P7)
+
+Même suite commune que la vidéo « tout le monde » (formation A1→B2, profs, petits groupes, cours interactifs, horaires, préparation ciblée, accompagnement, test gratuit, remise de 25 %, WhatsApp). Seule l'accroche change. Pour P6 (parents), la fin parle de « l'allemand au bac » et du « suivi régulier des progrès ».
+
+Fichiers : `videos/ALMOZON_profil_P<n>_<format>_<durée>.mp4`.
+
+| Profil | Accroche (voix) | Texte à l'écran |
+|---|---|---|
+| P1 Ausbildung | « في ألمانيا، l'Ausbildung تتعلّم فيها صنعة وتاخو salaire كل شهر. وأوّل حاجة يطلبوها: le B1. » | Ausbildung · Formation + salaire · B1 |
+| P2 Santé | « Infirmier ولا technicien de santé؟ باش ألمانيا تعترف بالديبلوم متاعك، تطلب منك le B2. » | Infirmiers · Diplôme reconnu en Allemagne · B2 |
+| P3 Ingénieurs / IT | « Ingénieur ولا développeur؟ la Chancenkarte تعطيك عام كامل في ألمانيا باش تلوّج على خدمة، والألماني يزيدلك des points. » | Chancenkarte · 1 an pour chercher un emploi · + points |
+| P4 Étudiants | « Bachelier هالعام؟ أغلب les universités publiques في ألمانيا ما فيهاش frais de scolarité… أما يطلبو le B2. » | Bacheliers · Étudier en Allemagne · B2 |
+| P5 Regroupement familial | « باش تلحق شريك حياتك في ألمانيا، أوّل ورقة تطلبها السفارة: le certificat A1. » | Regroupement familial · 1er document : A1 |
+| P6 Parents | « ولدك عندو l'allemand في le bac؟ كل point يحسب في la moyenne، والتحضير يبدا من توّا. » | Allemand au bac · Chaque point compte |
+| P7 Métiers techniques | « Électricien، soudeur، mécanicien ولا plombier؟ ألمانيا تلوّج على صنايعية كيفك، والألماني هو اللي يفتحلك الباب. » | Électricien, soudeur, mécanicien, plombier · Ton métier est recherché |
+
+### Textes Ads Manager par profil
+
+Bouton « Envoyer un message » (WhatsApp) pour tous. Même ciblage géographique (Radès + 12 km), un ensemble par profil.
+
+**P1 · Ausbildung** (18-30 ans)
+```
+L'Ausbildung en Allemagne : tu apprends un métier et tu touches un salaire chaque mois. Le niveau demandé : B1.
+Al Mozon Academy à Radès : allemand de A1 jusqu'à B2, petits groupes, profs qualifiés.
+✅ Cours en journée, le soir ou le week-end
+✅ Accompagnement : dossier, CV, traduction, orientation
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Ausbildung : le B1 à Radès` · Description : `Remise de 25 %`
+
+**P2 · Santé** (22-45 ans)
+```
+Infirmier ou technicien de santé ? Pour faire reconnaître ton diplôme en Allemagne, il te faut le B2.
+Al Mozon Academy à Radès : de A1 jusqu'à B2, préparation ciblée Goethe, ÖSD et telc.
+✅ Petits groupes, profs qualifiés et expérimentés
+✅ Accompagnement : dossier, traduction des documents, orientation
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Infirmiers : votre B2 à Radès` · Description : `Test de niveau gratuit`
+
+**P3 · Ingénieurs / IT** (23-40 ans)
+```
+Ingénieur ou développeur ? La Chancenkarte te donne un an en Allemagne pour chercher un emploi, et l'allemand te rapporte des points.
+Al Mozon Academy à Radès : allemand de A1 jusqu'à B2, cours le soir et le week-end.
+✅ Préparation ciblée Goethe, ÖSD, telc
+✅ CV au format allemand, traduction des documents, orientation
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Chancenkarte : l'allemand d'abord` · Description : `Cours le soir et le week-end`
+
+**P4 · Étudiants** (17-22 ans)
+```
+Bachelier cette année ? La plupart des universités publiques allemandes n'ont pas de frais de scolarité, mais elles demandent le B2.
+Al Mozon Academy à Radès : de A1 jusqu'à B2, petits groupes, cours interactifs.
+✅ Préparation ciblée Goethe, ÖSD, telc
+✅ Orientation et traduction des documents
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Études en Allemagne : le B2 à Radès` · Description : `Test de niveau gratuit`
+
+**P5 · Regroupement familial** (20-45 ans)
+```
+Pour rejoindre ton conjoint en Allemagne, le premier document demandé par l'ambassade est le certificat A1.
+Al Mozon Academy à Radès : cours d'allemand en petits groupes, avec préparation à l'examen A1.
+✅ Cours en journée, le soir ou le week-end
+✅ Accompagnement : dossier, traduction des documents
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Regroupement familial : votre A1` · Description : `Remise de 25 %`
+
+**P6 · Parents** (parents de 35-55 ans)
+```
+Votre enfant a l'allemand au bac ? Chaque point compte dans la moyenne, et la préparation commence maintenant.
+Al Mozon Academy à Radès : petits groupes, profs qualifiés et expérimentés, cours interactifs.
+✅ Préparation ciblée à l'épreuve d'allemand du bac
+✅ Suivi régulier des progrès de votre enfant
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Allemand au bac : préparez-le à Radès` · Description : `Test de niveau gratuit`
+
+**P7 · Métiers techniques** (20-45 ans)
+```
+Électricien, soudeur, mécanicien ou plombier ? L'Allemagne recherche des professionnels comme toi, et l'allemand t'ouvre la porte.
+Al Mozon Academy à Radès : allemand de A1 jusqu'à B2, cours le soir et le week-end.
+✅ Préparation ciblée Goethe, ÖSD, telc
+✅ Accompagnement : dossier, CV, traduction, orientation
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Ton métier + l'allemand = l'Allemagne` · Description : `Remise de 25 %`
+
+Aucune promesse de visa, de travail ou de salaire garanti. Les accroches citent les règles générales allemandes (B1 pour l'Ausbildung, B2 pour la reconnaissance des diplômes de santé, A1 pour le regroupement familial, Chancenkarte d'un an).
