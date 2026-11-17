@@ -151,3 +151,43 @@ Al Mozon Academy à Radès : allemand de A1 jusqu'à B2, cours le soir et le wee
 Titre : `Ton métier + l'allemand = l'Allemagne` · Description : `Remise de 25 %`
 
 Aucune promesse de visa, de travail ou de salaire garanti. Les accroches citent les règles générales allemandes (B1 pour l'Ausbildung, B2 pour la reconnaissance des diplômes de santé, A1 pour le regroupement familial, Chancenkarte d'un an).
+
+## Images fixes (3 concepts, chacun en 4:5 et 9:16)
+
+Fichiers : `statics/MZS-S<n>-<concept>-<format>.png`. Photos : vraies images du centre (vidéo visite2, en haute définition). En 9:16, le haut et le bas restent libres pour l'interface des Stories. Même offre partout : test de niveau gratuit, remise de 25 %, WhatsApp 99 008 008.
+
+| Image | Modèle (skill ad-creative) | Idée |
+|---|---|---|
+| S1 grille | Grille (tier A, audience froide) | « Ton projet en Allemagne : quel niveau ? » 4 cases : Ausbildung B1, diplôme de santé B2, études B2, regroupement familial A1. Chacun se reconnaît dans une case. |
+| S2 classe | Photo + preuves | Une vraie classe du centre, « قرايتك للألماني في راداس, en petits groupes », 3 preuves : profs, horaires, Goethe/ÖSD/telc. |
+| S3 carte | Local | « تسكن في بن عروس؟ » La carte des 12 délégations, Radès en orange, même angle que les vidéos « tout le monde ». |
+
+**S1 grille**, texte principal :
+```
+Ausbildung, diplôme de santé, études ou regroupement familial : chaque projet demande un niveau d'allemand précis.
+Al Mozon Academy à Radès : de A1 jusqu'à B2, en petits groupes.
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Quel niveau pour ton projet ?` · Description : `Test de niveau gratuit`
+
+**S2 classe**, texte principal :
+```
+قرايتك للألماني في راداس 📍
+Petits groupes, profs qualifiés et expérimentés, cours en journée, le soir ou le week-end.
+✅ Préparation Goethe, ÖSD et telc
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Allemand en petits groupes à Radès` · Description : `Remise de 25 %`
+
+**S3 carte**, texte principal :
+```
+تسكن في بن عروس ولا حذاها؟ 📍
+Al Mozon Academy à Radès : allemand de A1 jusqu'à B2.
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Cours d'allemand à Radès` · Description : `Test de niveau gratuit`
+
+**Conseil (ads-test) :** mets les 3 images dans l'ensemble « Tout le monde · Ben Arous », à côté des vidéos, avec le 4:5 et le 9:16 dans la même pub. Après environ 1 000 impressions chacune, compare le coût par conversation WhatsApp : garde la meilleure image et coupe celle qui coûte au moins 2 fois plus cher.

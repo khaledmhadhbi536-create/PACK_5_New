@@ -60,8 +60,8 @@ const Word: React.FC<{at: number; text: string; y: number; size: number; color?:
 	);
 };
 
-type IconK = 'sun' | 'moon' | 'cal' | 'folder' | 'doc' | 'trad' | 'compass' | 'people' | 'check' | 'wa' | 'pin' | 'book' | 'pct' | 'mic';
-const Icon: React.FC<{k: IconK; size: number; color?: string}> = ({k, size, color = M.ink}) => {
+export type IconK = 'sun' | 'moon' | 'cal' | 'folder' | 'doc' | 'trad' | 'compass' | 'people' | 'check' | 'wa' | 'pin' | 'book' | 'pct' | 'mic';
+export const Icon: React.FC<{k: IconK; size: number; color?: string}> = ({k, size, color = M.ink}) => {
 	const s = {stroke: color, strokeWidth: 7, fill: 'none', strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const};
 	return (
 		<svg width={size} height={size} viewBox="0 0 100 100">
@@ -152,7 +152,7 @@ const MGrade: React.FC = () => (
 // ---------------------------------------------------------------- carte de Ben Arous
 
 // coordonnées approximatives des 12 délégations (lon, lat) ; dx/dy : place de l'étiquette
-const CITIES: {n: string; lon: number; lat: number; dx: number; dy: number}[] = [
+export const CITIES: {n: string; lon: number; lat: number; dx: number; dy: number}[] = [
 	{n: 'راداس', lon: 10.275, lat: 36.768, dx: 0, dy: -44},
 	{n: 'الزهراء', lon: 10.307, lat: 36.744, dx: 70, dy: -26},
 	{n: 'حمام الأنف', lon: 10.338, lat: 36.727, dx: 6, dy: -34},
@@ -166,12 +166,12 @@ const CITIES: {n: string; lon: number; lat: number; dx: number; dy: number}[] = 
 	{n: 'المحمدية', lon: 10.150, lat: 36.676, dx: 60, dy: 44},
 	{n: 'مرناق', lon: 10.290, lat: 36.683, dx: 0, dy: 40},
 ];
-const MAPW = 1000;
-const MAPH = 600;
+export const MAPW = 1000;
+export const MAPH = 600;
 // cadre resserré sur les 12 délégations (lon 10.13 → 10.39, lat 36.79 → 36.665)
-const px = (lon: number) => ((lon - 10.13) / 0.26) * MAPW;
-const py = (lat: number) => ((36.79 - lat) / 0.125) * MAPH;
-const COAST: [number, number][] = [[10.285, 36.84], [10.29, 36.8], [10.3, 36.781], [10.316, 36.762], [10.331, 36.745], [10.35, 36.733], [10.39, 36.716], [10.45, 36.7], [10.45, 36.84]];
+export const px = (lon: number) => ((lon - 10.13) / 0.26) * MAPW;
+export const py = (lat: number) => ((36.79 - lat) / 0.125) * MAPH;
+export const COAST: [number, number][] = [[10.285, 36.84], [10.29, 36.8], [10.3, 36.781], [10.316, 36.762], [10.331, 36.745], [10.35, 36.733], [10.39, 36.716], [10.45, 36.7], [10.45, 36.84]];
 const RADES = CITIES[0];
 
 /** La carte : villes qui s'allument (popAt), Radès en orange ; zoom sur Radès de zoomAt à zoomAt + 24. */
