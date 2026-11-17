@@ -26,7 +26,7 @@ def find(words, cands, t0, ahead=None):
 
 # repères (mot français), dans l'ordre de la voix
 KEYS = [('qual', ['formation', 'informations']), ('profs', ['profs', 'prof']), ('groups', ['groupes', 'groupe']),
-        ('day1', ['interactifs', 'interactif']), ('cours', ['cours']), ('exam', ['préparation', 'preparation', 'ciblée']), ('acc', ['accompagnement']),
+        ('day1', ['interactifs', 'interactif']), ('cours', ['cours']), ('exam', ['préparation', 'preparation', 'ciblée']), ('acc', ['accompagnement', 'accompagne', 'complet']),
         ('dossier', ['dossier']), ('cv', ['cv']), ('trad', ['traduction']), ('orient', ['orientation']),
         ('test', ['test']), ('remise', ['remise'])]
 
@@ -39,7 +39,9 @@ def main():
         ar = [(w.start, w.word.strip(), w.end) for s in m.transcribe(a[:16000 * 8], language='ar', word_timestamps=True)[0] for w in s.words]
         ar_end = [(w.start + len(a) / 16000 - 7, w.word.strip(), w.end + len(a) / 16000 - 7) for s in m.transcribe(a[-16000 * 7:], language='ar', word_timestamps=True)[0] for w in s.words]
         fr = [(w.start, w.word.strip(), w.end) for s in m.transcribe(a, language='fr', word_timestamps=True, condition_on_previous_text=False)[0] for w in s.words]
-        name = find(ar, ['المزون', 'الموزون', 'مزون', 'موزون'], 0)[0]
+        # le nom = le mot juste avant « أكاديمي » (évite de confondre « مدن » et « موزون »)
+        ac = [i for i, w in enumerate(ar) if sim(norm(w[1]), norm('اكاديمي')) >= 0.75 or 'academ' in norm(w[1])]
+        name = ar[ac[0] - 1][0] if ac else find(ar, ['المزون', 'الموزون', 'مزون', 'موزون'], 0)[0]
         t = {'name': name}
         cur = name
         for k, c in KEYS:
