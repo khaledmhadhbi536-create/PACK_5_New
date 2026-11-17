@@ -20,6 +20,7 @@ import {V10_VIDEOS, V10Video} from './v10/Film10';
 import {V11_VIDEOS, V11Video} from './v11/Film11';
 import {V12_VIDEOS, V12Video} from './v12/Ads12';
 import {V13_VIDEOS, V13Video} from './v13/Ads13';
+import {MOZON_VIDEOS, MozonVideo} from './mozon/Mozon';
 
 /** Identifiant = nom du fichier final (les « - » deviennent « _ »). */
 export const adId = (ad: AdSpec) => {
@@ -132,6 +133,11 @@ export const Root: React.FC = () => (
 		<Folder name="V13">
 			{V13_VIDEOS.map((v) => (
 				<Composition key={v.id} id={v.id} component={V13Video} durationInFrames={v.dur} fps={FPS} width={stageFor(v.fmt).W} height={stageFor(v.fmt).H} defaultProps={{id: v.id}} />
+			))}
+		</Folder>
+		<Folder name="AlMozon">
+			{MOZON_VIDEOS.map((v) => (
+				<Composition key={v.id} id={v.id} component={MozonVideo} durationInFrames={v.dur} fps={FPS} width={stageFor(v.fmt).W} height={stageFor(v.fmt).H} defaultProps={{id: v.id}} />
 			))}
 		</Folder>
 	</>

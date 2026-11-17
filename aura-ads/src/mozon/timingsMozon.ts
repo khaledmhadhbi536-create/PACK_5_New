@@ -1,0 +1,57 @@
+// Généré par scripts/align_mozon.py : minutage mesuré mot à mot (images à 30 i/s), relatif à la fin de l'accroche (hookDur).
+export const TIMINGS = {
+ "M_h1": {
+  "qual": 68,
+  "profs": 170,
+  "groups": 279,
+  "day1": 305,
+  "cours": 359,
+  "exam": 458,
+  "acc": 566,
+  "dossier": 620,
+  "cv": 642,
+  "trad": 659,
+  "orient": 696,
+  "test": 726,
+  "remise": 785,
+  "cta": 816,
+  "hookDur": 62,
+  "end": 947
+ },
+ "M_h2": {
+  "qual": 79,
+  "profs": 199,
+  "groups": 315,
+  "day1": 343,
+  "cours": 400,
+  "exam": 492,
+  "acc": 585,
+  "dossier": 631,
+  "cv": 652,
+  "trad": 666,
+  "orient": 703,
+  "test": 734,
+  "remise": 798,
+  "cta": 838,
+  "hookDur": 124,
+  "end": 936
+ },
+ "M_h3": {
+  "qual": 68,
+  "profs": 168,
+  "groups": 264,
+  "day1": 293,
+  "cours": 346,
+  "exam": 427,
+  "acc": 519,
+  "dossier": 573,
+  "cv": 594,
+  "trad": 609,
+  "orient": 646,
+  "test": 672,
+  "remise": 732,
+  "cta": 777,
+  "hookDur": 49,
+  "end": 881
+ }
+} as const;
