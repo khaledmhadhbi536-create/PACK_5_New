@@ -191,3 +191,21 @@ Al Mozon Academy à Radès : allemand de A1 jusqu'à B2.
 Titre : `Cours d'allemand à Radès` · Description : `Test de niveau gratuit`
 
 **Conseil (ads-test) :** mets les 3 images dans l'ensemble « Tout le monde · Ben Arous », à côté des vidéos, avec le 4:5 et le 9:16 dans la même pub. Après environ 1 000 impressions chacune, compare le coût par conversation WhatsApp : garde la meilleure image et coupe celle qui coûte au moins 2 fois plus cher.
+
+## Images fixes V2 (à utiliser à la place de la V1)
+
+Fichiers : `statics_v2/MZS2-S<n>-<concept>-<format>.png`. Changements : « رادس » (et non راداس) ; autres photos du centre (l'escalier, l'entrée, la consultation, une classe avec plusieurs élèves) ; S2 montre la prof avec plusieurs élèves en classe.
+
+- **S1 grille** : Ausbildung (le prof au tableau avec un élève), diplôme de santé (la consultation), études (la classe avec plusieurs élèves), regroupement familial (l'escalier du centre).
+- **S2 classe** : la prof et plusieurs élèves autour de la table.
+- **S3 carte** : « رادس » sur la carte, photo de l'entrée du centre.
+
+Texte principal **S2** corrigé :
+```
+قرايتك للألماني في رادس 📍
+Petits groupes, profs qualifiés et expérimentés, cours en journée, le soir ou le week-end.
+✅ Préparation Goethe, ÖSD et telc
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Les textes S1 et S3 de la V1 restent valables.
