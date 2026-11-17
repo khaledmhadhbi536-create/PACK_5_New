@@ -26,7 +26,7 @@ def find(words, cands, t0, ahead=None):
 
 # repères (mot français), dans l'ordre de la voix
 KEYS = [('qual', ['formation', 'informations']), ('profs', ['profs', 'prof']), ('groups', ['groupes', 'groupe']),
-        ('day1', ['premier']), ('cours', ['cours']), ('exam', ['examen', 'goethe', 'gertee']), ('acc', ['accompagnement']),
+        ('day1', ['interactifs', 'interactif']), ('cours', ['cours']), ('exam', ['préparation', 'preparation', 'ciblée']), ('acc', ['accompagnement']),
         ('dossier', ['dossier']), ('cv', ['cv']), ('trad', ['traduction']), ('orient', ['orientation']),
         ('test', ['test']), ('remise', ['remise'])]
 

@@ -447,8 +447,9 @@ const Film: React.FC<{ad: Ad}> = ({ad}) => {
 						<div style={{position: 'absolute', left: 0, right: 0, top: LOW, display: 'flex', justifyContent: 'center'}}>
 							<Chip at={0} icon="people" text="des petits groupes" size={64} latin />
 						</div>
-						<Word at={k} text="Dès le 1er jour" y={T1} size={110} latin />
-						<Word at={k + 8} text="تحكي في la classe!" y={T2} size={110} color={M.orange} />
+						<Word at={k} text="Cours interactifs" y={T1} size={110} latin />
+						<Word at={k + 8} text="Pratique orale" y={T2 + 20} size={110} latin color={M.orange} />
+						<Word at={k + 14} text="à chaque séance" y={T2 + 160} size={96} latin />
 					</Scene>
 				);
 			})}
@@ -463,12 +464,12 @@ const Film: React.FC<{ad: Ad}> = ({ad}) => {
 				</Scene>
 			))}
 			{seg(A(tm.exam), A(tm.acc), (d) => (
-				<Scene id="se" dur={d} hits={[0, Math.round(d * 0.72)]} shots={[{src: 'mozon/visite2.mp4', trim: 31.0}, {src: 'mozon/visite2.mp4', trim: 33.0}]}>
-					<Word at={0} text="L'examen" y={T1} size={120} latin />
+				<Scene id="se" dur={d} hits={[0, Math.round(d * 0.42)]} shots={[{src: 'mozon/visite2.mp4', trim: 31.0}, {src: 'mozon/visite2.mp4', trim: 33.0}]}>
+					<Word at={0} text="Préparation ciblée" y={T1} size={110} latin />
 					<div dir="ltr" style={{position: 'absolute', left: 0, right: 0, top: T2 - 20, display: 'flex', justifyContent: 'center', gap: 18}}>
-						{['Goethe', 'ÖSD', 'telc'].map((x, i) => <Chip key={x} at={Math.round(d * (0.15 + i * 0.17))} text={x} size={66} latin from="left" />)}
+						{['Goethe', 'ÖSD', 'telc'].map((x, i) => <Chip key={x} at={Math.round(d * (0.55 + i * 0.1))} text={x} size={66} latin from="left" />)}
 					</div>
-					<Stamp at={Math.round(d * 0.72)} text="Prêt" icon="check" y={LOW} size={96} />
+					<Stamp at={Math.round(d * 0.42)} text="Réussir" icon="check" y={LOW} size={96} />
 				</Scene>
 			))}
 			{seg(A(tm.acc), A(tm.test), (d) => {

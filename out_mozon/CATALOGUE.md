@@ -11,8 +11,8 @@
 > تسكن في وحدة من مدن بن عروس؟ *(la carte de Ben Arous)*
 > Al Mozon Academy à Radès! *(zoom sur Radès → l'enseigne du centre)*
 > يوفّرلك une formation en allemand de qualité, de A1 jusqu'à B2.
-> Des profs qualifiés et expérimentés، يتبّعوك personnellement في des petits groupes، ومن le premier jour تحكي في la classe.
-> Les cours في النهار، في العشية، ولا le week-end، وتدخل l'examen Goethe، ÖSD ولا telc وانت prêt.
+> Des profs qualifiés et expérimentés، يتبّعوك personnellement في des petits groupes. Des cours interactifs, avec de la pratique orale à chaque séance.
+> Les cours في النهار، في العشية، ولا le week-end. Une préparation ciblée pour réussir Goethe, ÖSD et telc.
 > Et un accompagnement complet : traitement du dossier, CV, traduction des documents, orientation.
 > Le test de niveau gratuit، وتوّا فمّا une remise! ابعثلنا message على WhatsApp: 99 008 008.
 
@@ -34,7 +34,8 @@ Fichiers : `videos/ALMOZON_tous_h<n>_<format>_<durée>.mp4`.
 Al Mozon Academy à Radès : une formation en allemand de qualité, de A1 jusqu'à B2.
 ✅ Des profs qualifiés et expérimentés, en petits groupes
 ✅ Les cours en journée, le soir ou le week-end
-✅ Préparation Goethe, ÖSD, telc
+✅ Cours interactifs, pratique orale à chaque séance
+✅ Préparation ciblée pour réussir Goethe, ÖSD et telc
 ✅ Accompagnement complet : dossier, CV, traduction, orientation
 🎁 Test de niveau gratuit + remise en ce moment
 👇 Écris-nous sur WhatsApp : 99 008 008
