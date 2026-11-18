@@ -23,6 +23,7 @@ import {V13_VIDEOS, V13Video} from './v13/Ads13';
 import {MOZON_VIDEOS, MozonVideo} from './mozon/Mozon';
 import {MOZON_STATICS, MozonStatic} from './mozon/StaticsMozon';
 import {MOZON_STATICS2, MozonStatic2} from './mozon/StaticsMozon2';
+import {MOZON_STATICS3, MozonStatic3} from './mozon/StaticsMozon3';
 
 /** Identifiant = nom du fichier final (les « - » deviennent « _ »). */
 export const adId = (ad: AdSpec) => {
@@ -145,6 +146,11 @@ export const Root: React.FC = () => (
 		<Folder name="AlMozon-Images-V2">
 			{MOZON_STATICS2.map((s) => (
 				<Composition key={s.id} id={s.id} component={MozonStatic2} durationInFrames={1} fps={FPS} width={s.W} height={s.H} defaultProps={{id: s.id}} />
+			))}
+		</Folder>
+		<Folder name="AlMozon-Images-V3">
+			{MOZON_STATICS3.map((s) => (
+				<Composition key={s.id} id={s.id} component={MozonStatic3} durationInFrames={1} fps={FPS} width={s.W} height={s.H} defaultProps={{id: s.id}} />
 			))}
 		</Folder>
 		<Folder name="AlMozon">

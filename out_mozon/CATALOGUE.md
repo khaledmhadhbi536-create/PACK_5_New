@@ -209,3 +209,16 @@ Petits groupes, profs qualifiés et expérimentés, cours en journée, le soir o
 👇 WhatsApp : 99 008 008
 ```
 Les textes S1 et S3 de la V1 restent valables.
+
+## Image fixe V3 : S4 « carte + profils » (combinaison de S1 et S3)
+
+Fichiers : `statics_v3/MZS3-S4-carte-profils-<format>.png`. « تسكن في بن عروس؟ », la carte (رادس en orange), puis 4 profils avec leur niveau : Ausbildung B1, santé B2, études B2, famille A1.
+
+Texte principal :
+```
+تسكن في بن عروس ولا حذاها؟ 📍
+Ausbildung, santé, études ou regroupement familial : Al Mozon Academy à Radès te prépare au niveau d'allemand demandé, de A1 jusqu'à B2.
+🎁 Test de niveau gratuit + remise de 25 %
+👇 WhatsApp : 99 008 008
+```
+Titre : `Ton niveau d'allemand à Radès` · Description : `Test de niveau gratuit`
