@@ -39,7 +39,18 @@ export const ItalienEnd: React.FC = () => (
 	</AbsoluteFill>
 );
 
+/** Texte jaune (même style que les sous-titres de la vidéo d'origine), remis par-dessus les plans de coupe. */
+const Cap: React.FC<{text: string}> = ({text}) => (
+	<AbsoluteFill style={{background: 'transparent'}}>
+		<div style={{position: 'absolute', left: 0, right: 0, top: 1395, display: 'flex', justifyContent: 'center'}}>
+			<div style={{fontFamily: F.latin, fontWeight: 900, fontSize: 66, color: '#FFE81A', textTransform: 'uppercase', letterSpacing: 1, WebkitTextStroke: '3px #1a1a1a', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,0.55)'}}>{text}</div>
+		</div>
+	</AbsoluteFill>
+);
+const CAPS: Record<string, string> = {certifiee: 'Formation certifiée', soir: 'Cours du soir', weekend: 'Et les week-ends', presentiel: 'Présentiel'};
+
 export const ITALIEN_STILLS = [
+	...Object.entries(CAPS).map(([k, t]) => ({id: `MZI-cap-${k}`, C: () => <Cap text={t} />})),
 	{id: 'MZI-pill', C: ItalienPill},
 	{id: 'MZI-end', C: ItalienEnd},
 ];
