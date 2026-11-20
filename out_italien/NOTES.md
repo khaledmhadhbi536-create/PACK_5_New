@@ -18,3 +18,20 @@ Même voix et même montage que la v1, avec des plans par-dessus :
 - 17,4 – 19,05 s : villa, escalier + « PRÉSENTIEL », pastille 99 008 008 gardée.
 Plans écartés : drapeau allemand et livres d'allemand de visite2 (pub pour l'italien).
 Formats : 9:16 et 4:5 (recadrage 1080×1350, y = 240). −14 LUFS, BT.709, check.py : 13 contrôles, 0 échec.
+
+## Image fixe italien : S1 « villa + en ligne + 3 mois » (dossier `statics/`)
+Fichiers : `statics/MZIT-S1-villa-enligne-4x5.png` et `-9x16.png`. Fond : l'escalier éclairé de la villa (vidéo Drive « Villa italien », 8K).
+« تحب تحكي الطلياني؟ » · « 3 mois de formation certifiée » · deux cartes « En ligne / Dans notre villa (présentiel à Radès) » · cours du soir, week-end, profs spécialisés · WhatsApp 99 008 008.
+Pas d'offre affichée (test gratuit / remise de 25 % à confirmer pour l'italien). Plans avec drapeau allemand évités.
+Code : `aura-ads/src/mozon/italien/StaticItalien.tsx`.
+
+Texte Ads Manager :
+```
+تحب تحكي الطلياني؟ 🇮🇹
+3 mois de formation certifiée avec Al Mozon Academy.
+💻 En ligne, depuis chez toi
+🏛 Ou en présentiel dans notre villa à Radès
+✅ Cours du soir ou le week-end, profs spécialisés
+👇 WhatsApp : 99 008 008
+```
+Titre : `Italien en 3 mois, en ligne ou à Radès` · Description : `Cours du soir et le week-end`

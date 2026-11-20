@@ -25,6 +25,7 @@ import {MOZON_STATICS, MozonStatic} from './mozon/StaticsMozon';
 import {MOZON_STATICS2, MozonStatic2} from './mozon/StaticsMozon2';
 import {MOZON_STATICS3, MozonStatic3} from './mozon/StaticsMozon3';
 import {ITALIEN_STILLS} from './mozon/italien/ItalienOverlay';
+import {ITALIEN_STATICS, ItalienStaticComp} from './mozon/italien/StaticItalien';
 
 /** Identifiant = nom du fichier final (les « - » deviennent « _ »). */
 export const adId = (ad: AdSpec) => {
@@ -152,6 +153,11 @@ export const Root: React.FC = () => (
 		<Folder name="AlMozon-Images-V3">
 			{MOZON_STATICS3.map((s) => (
 				<Composition key={s.id} id={s.id} component={MozonStatic3} durationInFrames={1} fps={FPS} width={s.W} height={s.H} defaultProps={{id: s.id}} />
+			))}
+		</Folder>
+		<Folder name="AlMozon-Italien-Images">
+			{ITALIEN_STATICS.map((s) => (
+				<Composition key={s.id} id={s.id} component={ItalienStaticComp} durationInFrames={1} fps={FPS} width={s.W} height={s.H} defaultProps={{id: s.id}} />
 			))}
 		</Folder>
 		<Folder name="AlMozon-Italien">
